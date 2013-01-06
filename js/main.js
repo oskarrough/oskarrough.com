@@ -3,8 +3,8 @@ $(function(){
 	// If a theme is chosen
 	if (monster.get('theme')) {
 		$('body').removeClass('cosmic proinquotes funky').addClass(monster.get('theme'));
-		$('.sister-sledge').addClass('visible');
 	}
+	$('.sister-sledge').addClass('visible');
 
 	// Theme chooser
 	$('#cosmic, #proinquotes, #funky').click(function(){
