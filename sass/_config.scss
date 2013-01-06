@@ -14,12 +14,6 @@ $base-line-height: $base-font-size * $base-line-height-unitless;
 	font-style:normal;
 }
 @mixin font-body {
-	font-family: "Apercu Regular", sans-serif;
-	font-size-adjust:0.508;
-	font-weight:normal;
-	font-style:normal;
-}
-@mixin font-body-light {
 	font-family: "Apercu Light", sans-serif;
 	font-size-adjust:0.508;
 	font-weight: 200;
@@ -47,7 +41,7 @@ $lightgray: darken($white, 25);
 $gray: mix($white, $black);
 $darkgray: lighten($black, 25);
 $anchor-color: $green;
-$anchor-color-hover: lighten($anchor-color, 25);
+$anchor-color-hover: lighten($anchor-color, 20%);
 $anchor-color-active: $red;
 $anchor-color-selected: $white;
 

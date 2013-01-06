@@ -1,7 +1,6 @@
 
 // Layout
 // ============================================================================
-// See Susy settings in _config.scss
 * {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -10,9 +9,16 @@ html,
 body {
 	height: 100%;
 }
+
+// Site load animation
 .sister-sledge {
-	@include opacity(0);
-	@include transition(opacity 200ms);
+	@include transition(opacity 100ms);
+	opacity: 0;
+	.wf-active & {
+		opacity: 1;
+	}
+}
+.sister-sledge {
 	max-width: 45em;
 	margin-left: auto;
 	margin-right: auto;
@@ -20,9 +26,6 @@ body {
 	z-index: 10;
 	padding-left: 2em;
 	padding-right: 2em;
-}
-.visible {
-	@include opacity(1);
 }
 #starwarswrap {
 	position: fixed;
@@ -32,6 +35,7 @@ body {
 	height: 100%;
 	z-index: 1;
 }
-.l-primary {
+.l-main {
+	@include pie-clearfix;
 	padding-bottom: 40/18*1em;
 }

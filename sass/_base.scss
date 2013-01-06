@@ -1,14 +1,14 @@
 
 // Base
 // ============================================================================
-
 // Typography
 html {
-	@include font-body-light;
+	@include font-body;
 	line-height: $base-line-height-unitless;
 	font-size: $base-font-size;
-	color: #fff;
 }
+
+
 
 // Links
 a,
@@ -24,17 +24,14 @@ a:active, a:focus {
 	color: $anchor-color-active;
 }
 
-img {
-	max-width: 100%;
-}
 
+
+// Headers
 h1,
 h2,
 h3 {
 	@include font-header;
 }
-
-// Headers
 h1 {
 	@include rem(font-size, $font-size-xl);
 	margin: 0 0 ($base-font-size / $font-size-xl) * 1.25em;
@@ -53,6 +50,10 @@ h3 {
 	margin: 0;
 	font-weight: bold;
 }
+
+
+
+// Other elements
 p,
 ul,
 ol,
@@ -61,7 +62,6 @@ blockquote,
 img {
 	margin: 0 0 1.25em;
 }
-
 code {
 	background-color: lighten($blue, 40%);
 }

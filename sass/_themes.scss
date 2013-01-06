@@ -1,29 +1,36 @@
 
 
-// Animate text in and out
-.no-touch {
-	.page-index {
-		&.cosmic {
-			@include transition(color 12s);
-			color: #111;
-			h1 span {
-				color: #fff !important;
-			}
-			&.imsomoved {
-				@include transition-duration(6s);
-				color: #fff;
-			}
-		}
-	}
-}
+
+// Cosmic style
 .cosmic {
+	background-color: #000;
+	background-color: rgb(7,15,17);
+	color: #fff;
 	.selected {
 		color: #fff;
 	}
-	.project {
-		border: 3px solid #fff;
+}
+
+// Animate text in and out
+.no-touch {
+	.page-index.cosmic {
+		@include transition(color 12s);
+		color: #111;
+		.selected {
+			color: #111;
+		}
+		h1 span {
+			color: #fff !important;
+		}
+
+		// when the mouse moves…
+		&.imsomoved {
+			@include transition-duration(6s);
+			color: #fff;
+		}
 	}
 }
+
 
 
 
@@ -36,6 +43,11 @@
 	}
 	.list li {
 		border-color: darken(#fff, 8%);
+	}
+	.project {
+		width: auto;
+		float: none;
+		border: 0;
 	}
 }
 
@@ -52,8 +64,6 @@
 		height: 100%;
 		background: rgba(255, 0, 0, 0.6);
 		border-radius: 50%;
-		border: 2em solid rgba(40, 20, 180, 0.3);
-		padding-left: 5%;
-		padding-right: 5%;
+		border: 1em solid rgba(40, 20, 180, 0.3);
 	}
 }

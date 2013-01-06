@@ -1,7 +1,8 @@
+@import url(../components/normalize-css/normalize.css);
 /*
 	by: Oskar Rough Mosumgaard
 */
-/* line 6, ../sass/_base.scss */
+/* line 5, ../sass/_base.scss */
 html {
   font-family: "Apercu Light", sans-serif;
   font-size-adjust: 0.508;
@@ -9,7 +10,6 @@ html {
   font-style: normal;
   line-height: 1.5;
   font-size: 18px;
-  color: #fff;
 }
 
 /* line 15, ../sass/_base.scss */
@@ -21,7 +21,7 @@ a:visited {
 
 /* line 19, ../sass/_base.scss */
 a:hover {
-  color: #9ee894;
+  color: #8be37f;
   text-decoration: underline;
 }
 
@@ -30,12 +30,7 @@ a:active, a:focus {
   color: red;
 }
 
-/* line 27, ../sass/_base.scss */
-img {
-  max-width: 100%;
-}
-
-/* line 33, ../sass/_base.scss */
+/* line 32, ../sass/_base.scss */
 h1,
 h2,
 h3 {
@@ -44,7 +39,7 @@ h3 {
   font-style: normal;
 }
 
-/* line 38, ../sass/_base.scss */
+/* line 35, ../sass/_base.scss */
 h1 {
   font-size: 36px;
   font-size: 2rem;
@@ -54,7 +49,7 @@ h1 {
   text-transform: uppercase;
 }
 
-/* line 45, ../sass/_base.scss */
+/* line 42, ../sass/_base.scss */
 h2 {
   font-size: 23px;
   font-size: 1.25rem;
@@ -63,7 +58,7 @@ h2 {
   font-weight: bold;
 }
 
-/* line 51, ../sass/_base.scss */
+/* line 48, ../sass/_base.scss */
 h3 {
   font-size: 18px;
   font-size: 1rem;
@@ -71,7 +66,7 @@ h3 {
   font-weight: bold;
 }
 
-/* line 61, ../sass/_base.scss */
+/* line 62, ../sass/_base.scss */
 p,
 ul,
 ol,
@@ -86,26 +81,33 @@ code {
   background-color: #ccccff;
 }
 
-/* line 5, ../sass/_layout.scss */
+/* line 4, ../sass/_layout.scss */
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
 
-/* line 10, ../sass/_layout.scss */
+/* line 9, ../sass/_layout.scss */
 html,
 body {
   height: 100%;
 }
 
-/* line 13, ../sass/_layout.scss */
+/* line 14, ../sass/_layout.scss */
 .sister-sledge {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -webkit-transition: opacity 100ms;
+  -moz-transition: opacity 100ms;
+  -o-transition: opacity 100ms;
+  transition: opacity 100ms;
   opacity: 0;
-  -webkit-transition: opacity 200ms;
-  -moz-transition: opacity 200ms;
-  -o-transition: opacity 200ms;
-  transition: opacity 200ms;
+}
+/* line 17, ../sass/_layout.scss */
+.wf-active .sister-sledge {
+  opacity: 1;
+}
+
+/* line 21, ../sass/_layout.scss */
+.sister-sledge {
   max-width: 45em;
   margin-left: auto;
   margin-right: auto;
@@ -115,13 +117,7 @@ body {
   padding-right: 2em;
 }
 
-/* line 24, ../sass/_layout.scss */
-.visible {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-}
-
-/* line 27, ../sass/_layout.scss */
+/* line 30, ../sass/_layout.scss */
 #starwarswrap {
   position: fixed;
   top: 0;
@@ -131,80 +127,107 @@ body {
   z-index: 1;
 }
 
-/* line 35, ../sass/_layout.scss */
-.l-primary {
+/* line 38, ../sass/_layout.scss */
+.l-main {
+  *zoom: 1;
   padding-bottom: 2.22222em;
 }
+/* line 38, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.l-main:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-/* line 17, ../sass/_module.scss */
+/* line 5, ../sass/_module.scss */
 .project {
   margin-bottom: 1.25em;
+  width: 90%;
+  clear: both;
+  color: #fff;
 }
-/* line 21, ../sass/_module.scss */
+/* line 11, ../sass/_module.scss */
 .project p:last-child {
   margin-bottom: 0;
 }
-/* line 25, ../sass/_module.scss */
+/* line 15, ../sass/_module.scss */
 .project a {
   display: block;
   padding: 1.25em;
   text-decoration: none;
   color: inherit;
 }
-/* line 30, ../sass/_module.scss */
+/* line 20, ../sass/_module.scss */
 .project a:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
-/* line 32, ../sass/_module.scss */
+/* line 22, ../sass/_module.scss */
 .project a:hover h2 {
-  color: #9ee894;
+  color: #8be37f;
 }
 
-/* line 39, ../sass/_module.scss */
-.project-dd {
-  border-color: #b30000;
-  background-color: red;
-  color: #fff;
-}
-
-/* line 44, ../sass/_module.scss */
-.project-hg {
-  background: url(../img/hg.png) 0 0.94444em;
-  color: #fff;
-  border-color: gray;
-}
-
-/* line 49, ../sass/_module.scss */
+/* line 29, ../sass/_module.scss */
 .project-alivefestival {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background: url(../img/alive12.jpg) 50% -30%;
-  color: #fff;
-  border-color: yellow;
+  -webkit-transition: background-position 5s ease-in;
+  -moz-transition: background-position 5s ease-in;
+  -o-transition: background-position 5s ease-in;
+  transition: background-position 5s ease-in;
+  float: left;
+  background: url(../img/alive12.jpg) 50% 0;
+  border: 3px solid yellow;
+}
+/* line 34, ../sass/_module.scss */
+.js .project-alivefestival {
+  background-position: 50% 80%;
+}
+/* line 37, ../sass/_module.scss */
+.project-alivefestival:hover {
+  background-position: 50% -5000%;
 }
 
-/* line 55, ../sass/_module.scss */
+/* line 41, ../sass/_module.scss */
+.project-danskdynamit {
+  float: right;
+  border: 3px solid white;
+  background-color: red;
+}
+/* line 46, ../sass/_module.scss */
+.proinquotes .project-danskdynamit {
+  border-color: #b30000;
+}
+/* line 47, ../sass/_module.scss */
+.project-danskdynamit a:hover h2 {
+  color: #fff;
+}
+
+/* line 51, ../sass/_module.scss */
+.project-hopeglory {
+  float: left;
+  background: url(../img/hg.png) 0 0.88889em;
+  border: 3px solid black;
+}
+
+/* line 57, ../sass/_module.scss */
 .project-schlagerbits {
+  float: right;
   background: url(../img/stars.png);
-  color: #fff;
-  border-color: blue;
+  border: 3px solid black;
 }
 
-/* line 61, ../sass/_module.scss */
+/* line 63, ../sass/_module.scss */
 .list {
   font-size: 16px;
   font-size: 0.88889rem;
   list-style: none;
   padding: 0;
 }
-/* line 65, ../sass/_module.scss */
+/* line 67, ../sass/_module.scss */
 .list li {
   border-bottom: 1px solid #262626;
+  margin-bottom: 0.11111em;
 }
 
-/* line 69, ../sass/_module.scss */
+/* line 72, ../sass/_module.scss */
 .date {
   display: inline-block;
   min-width: 2.75em;
@@ -223,28 +246,42 @@ nav ul {
   }
 }
 
-/* line 18, ../sass/_m-navigation.scss */
+/* line 16, ../sass/_m-navigation.scss */
 .m-nav-primary {
   font-size: 22px;
   font-size: 1.22222rem;
 }
-/* line 21, ../sass/_m-navigation.scss */
+/* line 18, ../sass/_m-navigation.scss */
 .m-nav-primary a {
   display: block;
   padding: 0.25em 0.5em;
+  text-decoration: none;
 }
 @media (min-width: 42em) {
-  /* line 21, ../sass/_m-navigation.scss */
+  /* line 18, ../sass/_m-navigation.scss */
   .m-nav-primary a {
     display: inline-block;
     padding: 1.5em 0.5em;
   }
 }
-/* line 35, ../sass/_m-navigation.scss */
+/* line 28, ../sass/_m-navigation.scss */
 .m-nav-primary li:first-child a {
   background: url(../img/dance-round.png) 0 50% no-repeat;
   background-size: 10%;
   padding-left: 2em;
+}
+
+/* line 34, ../sass/_m-navigation.scss */
+.m-nav-development {
+  position: fixed;
+  bottom: 0;
+  right: 1em;
+  z-index: 5;
+}
+/* line 39, ../sass/_m-navigation.scss */
+.m-nav-development li {
+  font-size: 14px;
+  font-size: 0.77778rem;
 }
 
 /* line 44, ../sass/_m-navigation.scss */
@@ -254,15 +291,24 @@ nav ul {
   color: #000;
 }
 
-/* line 57, ../sass/_m-navigation.scss */
-.m-nav-development {
-  position: fixed;
-  bottom: 0;
-  right: 1em;
-  z-index: 5;
+/* line 48, ../sass/_m-navigation.scss */
+button {
+  background-color: #fff;
+  border: 0;
 }
 
-/* line 6, ../sass/_themes.scss */
+/* line 5, ../sass/_themes.scss */
+.cosmic {
+  background-color: #000;
+  background-color: #070f11;
+  color: #fff;
+}
+/* line 9, ../sass/_themes.scss */
+.cosmic .selected {
+  color: #fff;
+}
+
+/* line 16, ../sass/_themes.scss */
 .no-touch .page-index.cosmic {
   -webkit-transition: color 12s;
   -moz-transition: color 12s;
@@ -270,11 +316,15 @@ nav ul {
   transition: color 12s;
   color: #111;
 }
-/* line 9, ../sass/_themes.scss */
+/* line 19, ../sass/_themes.scss */
+.no-touch .page-index.cosmic .selected {
+  color: #111;
+}
+/* line 22, ../sass/_themes.scss */
 .no-touch .page-index.cosmic h1 span {
   color: white !important;
 }
-/* line 12, ../sass/_themes.scss */
+/* line 27, ../sass/_themes.scss */
 .no-touch .page-index.cosmic.imsomoved {
   -webkit-transition-duration: 6s;
   -moz-transition-duration: 6s;
@@ -283,43 +333,38 @@ nav ul {
   color: #fff;
 }
 
-/* line 20, ../sass/_themes.scss */
-.cosmic .selected {
-  color: #fff;
-}
-/* line 23, ../sass/_themes.scss */
-.cosmic .project {
-  border: 3px solid white;
-}
-
-/* line 31, ../sass/_themes.scss */
+/* line 38, ../sass/_themes.scss */
 .proinquotes {
   color: #000;
 }
-/* line 34, ../sass/_themes.scss */
+/* line 41, ../sass/_themes.scss */
 .proinquotes #starwarswrap {
   display: none;
 }
-/* line 37, ../sass/_themes.scss */
+/* line 44, ../sass/_themes.scss */
 .proinquotes .list li {
   border-color: #ebebeb;
 }
+/* line 47, ../sass/_themes.scss */
+.proinquotes .project {
+  width: auto;
+  float: none;
+  border: 0;
+}
 
-/* line 44, ../sass/_themes.scss */
+/* line 56, ../sass/_themes.scss */
 .funky {
   background: url(../img/1775166611.gif) repeat fixed;
   border: 1em solid rgba(40, 20, 180, 0.3);
 }
-/* line 48, ../sass/_themes.scss */
+/* line 60, ../sass/_themes.scss */
 .funky #starwarswrap {
   display: none;
 }
-/* line 51, ../sass/_themes.scss */
+/* line 63, ../sass/_themes.scss */
 .funky .sister-sledge {
   height: 100%;
   background: rgba(255, 0, 0, 0.6);
   border-radius: 50%;
-  border: 2em solid rgba(40, 20, 180, 0.3);
-  padding-left: 5%;
-  padding-right: 5%;
+  border: 1em solid rgba(40, 20, 180, 0.3);
 }

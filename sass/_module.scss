@@ -2,21 +2,11 @@
 // Modules
 // ============================================================================
 
-
-
-// Logo
-// ============================================================================
-// .site-title {
-// 	@include rem(font-size, $base-font-size);
-// 	> a {
-// 		display: block;
-// 		text-decoration: none;
-// 	}
-// }
-
 .project {
-	//border: 5px solid;
 	margin-bottom: 1.25em;
+	width: 90%;
+	clear: both;
+	color: #fff;
 
 	p:last-child {
 		margin-bottom: 0;
@@ -36,26 +26,38 @@
 	}
 }
 
-.project-dd {
-	border-color: darken(red, 15%);
-	background-color: red;
-	color: #fff;
-}
-.project-hg {
-	background: url(../img/hg.png) 0 17/18*1em;
-	color: #fff;
-	border-color: gray;
-}
 .project-alivefestival {
-	@include background-size(cover);
-	background: url(../img/alive12.jpg) 50% -30%;
-	color: #fff;
-	border-color: yellow;
+	@include transition(background-position 5s ease-in);
+	float: left;
+	background: url(../img/alive12.jpg) 50% 0;
+	border: 3px solid yellow;
+	.js & {
+		background-position: 50% 80%;
+	}
+	&:hover {
+		background-position: 50% -5000%;
+	}
+}
+.project-danskdynamit {
+	float: right;
+	border: 3px solid #fff;
+	background-color: red;
+	//background: red url(../img/dd-logo.jpg);
+	.proinquotes & { border-color: darken(red, 15%); }
+	a:hover h2 {
+		color: #fff;
+	}
+}
+.project-hopeglory {
+	float: left;
+	background: url(../img/hg.png) 0 16/18*1em;
+	border: 3px solid #000;
+
 }
 .project-schlagerbits {
+	float: right;
 	background: url(../img/stars.png);
-	color: #fff;
-	border-color: blue;
+	border: 3px solid #000;
 }
 
 .list {
@@ -64,6 +66,7 @@
 	padding: 0;
 	li {
 		border-bottom: 1px solid darken(#fff, 85%);
+		margin-bottom: 2 / $base-font-size-unitless * 1em;
 	}
 }
 .date {
