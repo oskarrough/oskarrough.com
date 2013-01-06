@@ -71,16 +71,17 @@ h3 {
   font-weight: bold;
 }
 
-/* line 60, ../sass/_base.scss */
+/* line 61, ../sass/_base.scss */
 p,
 ul,
 ol,
 dl,
-blockquote {
+blockquote,
+img {
   margin: 0 0 1.25em;
 }
 
-/* line 64, ../sass/_base.scss */
+/* line 65, ../sass/_base.scss */
 code {
   background-color: #ccccff;
 }
@@ -99,6 +100,12 @@ body {
 
 /* line 13, ../sass/_layout.scss */
 .sister-sledge {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 200ms;
+  -moz-transition: opacity 200ms;
+  -o-transition: opacity 200ms;
+  transition: opacity 200ms;
   max-width: 45em;
   margin-left: auto;
   margin-right: auto;
@@ -108,14 +115,25 @@ body {
   padding-right: 2em;
 }
 
-/* line 22, ../sass/_layout.scss */
+/* line 24, ../sass/_layout.scss */
+.visible {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+/* line 27, ../sass/_layout.scss */
 #starwarswrap {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 5;
+  z-index: 1;
+}
+
+/* line 35, ../sass/_layout.scss */
+.l-primary {
+  padding-bottom: 2.22222em;
 }
 
 /* line 17, ../sass/_module.scss */
@@ -241,6 +259,7 @@ nav ul {
   position: fixed;
   bottom: 0;
   right: 1em;
+  z-index: 5;
 }
 
 /* line 6, ../sass/_themes.scss */

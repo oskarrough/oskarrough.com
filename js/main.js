@@ -1,14 +1,21 @@
 $(function(){
 
-
-	//alert(monster.get(theme));
+	// If a theme is chosen
+	if (monster.get('theme')) {
+		$('body').removeClass('cosmic proinquotes funky').addClass(monster.get('theme'));
+		$('.sister-sledge').addClass('visible');
+	}
 
 	// Theme chooser
 	$('#cosmic, #proinquotes, #funky').click(function(){
-		var name = $(this).attr('id');
-		$('body').removeClass('cosmic proinquotes funky');
-		$('body').addClass(theme);
-		monster.set(theme, name, 1);
+
+		if (monster.get('theme')) {
+			monster.remove('theme');
+		}
+		var theme = $(this).attr('id');
+		monster.set('theme', theme, 1);
+		$('body').removeClass('cosmic proinquotes funky').addClass(monster.get('theme'));
+
 	});
 
 

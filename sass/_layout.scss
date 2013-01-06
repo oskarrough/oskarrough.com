@@ -11,6 +11,8 @@ body {
 	height: 100%;
 }
 .sister-sledge {
+	@include opacity(0);
+	@include transition(opacity 200ms);
 	max-width: 45em;
 	margin-left: auto;
 	margin-right: auto;
@@ -19,11 +21,17 @@ body {
 	padding-left: 2em;
 	padding-right: 2em;
 }
+.visible {
+	@include opacity(1);
+}
 #starwarswrap {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	z-index: 5;
+	z-index: 1;
+}
+.l-primary {
+	padding-bottom: 40/18*1em;
 }
