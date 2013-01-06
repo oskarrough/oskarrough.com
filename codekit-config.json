@@ -107,17 +107,6 @@
       "outputAbbreviatedPath" : "\/components\/cookie-monster\/test\/monster.test.min.js",
       "fileType" : 64
     },
-    "\/js\/footer.min.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/footer.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/footer.min.min.js",
-      "fileType" : 64
-    },
     "\/js\/starfield.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -129,14 +118,16 @@
       "outputAbbreviatedPath" : "\/js\/starfield.min.js",
       "fileType" : 64
     },
-    "\/components\/rem\/test\/css\/test-rem.css" : {
+    "\/js\/footer.min.js" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/components\/rem\/test\/css\/test-rem.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
+      "inputAbbreviatedPath" : "\/js\/footer.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/footer.min.min.js",
+      "fileType" : 64
     },
     "\/jade\/resume.jade" : {
       "ignoreWasSetByUser" : 0,
@@ -166,6 +157,15 @@
       "inputAbbreviatedPath" : "\/components\/dropdown\/dropdown.html",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
+    },
+    "\/components\/rem\/test\/css\/test-rem.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/components\/rem\/test\/css\/test-rem.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/components\/cookie-monster\/components\/assert\/assert.js" : {
       "ignoreWasSetByUser" : 0,
@@ -266,17 +266,6 @@
       "outputAbbreviatedPath" : "\/components\/jquery\/jquery.min.js",
       "fileType" : 64
     },
-    "\/jade\/projects.jade" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/jade\/projects.jade",
-      "outputStyle" : 0,
-      "compileDebug" : 1,
-      "outputAbbreviatedPath" : "\/projects.html",
-      "fileType" : 512
-    },
     "\/jade\/includes\/nav-primary.jade" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -286,6 +275,17 @@
       "outputStyle" : 0,
       "compileDebug" : 1,
       "outputAbbreviatedPath" : "\/nav-primary.html",
+      "fileType" : 512
+    },
+    "\/jade\/projects.jade" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/jade\/projects.jade",
+      "outputStyle" : 0,
+      "compileDebug" : 1,
+      "outputAbbreviatedPath" : "\/projects.html",
       "fileType" : 512
     },
     "\/components\/cookie-monster\/grunt.js" : {
@@ -345,17 +345,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/components\/cookie-monster\/test\/live.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/components\/cookie-monster\/test\/live.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/components\/cookie-monster\/test\/live.min.js",
-      "fileType" : 64
-    },
     "\/jade\/includes\/nav-development.jade" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -378,6 +367,17 @@
       "initialSize" : 166165,
       "fileType" : 4096
     },
+    "\/components\/cookie-monster\/test\/live.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/components\/cookie-monster\/test\/live.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/components\/cookie-monster\/test\/live.min.js",
+      "fileType" : 64
+    },
     "\/components\/jquery\/jquery.min.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -398,6 +398,15 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
+    "\/resume.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/resume.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/jade\/mixins\/form-helpers.jade" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -408,15 +417,6 @@
       "compileDebug" : 1,
       "outputAbbreviatedPath" : "\/form-helpers.html",
       "fileType" : 512
-    },
-    "\/resume.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/resume.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/js\/footer.js" : {
       "ignoreWasSetByUser" : 0,
@@ -441,15 +441,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/config.rb" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/config.rb",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 32768
-    },
     "\/sass\/_m-navigation.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -462,17 +453,25 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/sass\/_base.scss" : {
+    "\/config.rb" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/config.rb",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 32768
+    },
+    "\/jade\/layouts\/layout-header.jade" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sass\/_base.scss",
+      "inputAbbreviatedPath" : "\/jade\/layouts\/layout-header.jade",
       "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/css\/_base.css",
-      "fileType" : 4,
-      "debugStyle" : 0
+      "compileDebug" : 1,
+      "outputAbbreviatedPath" : "\/layout-header.html",
+      "fileType" : 512
     },
     "\/components\/cookie-monster\/lib\/monster.js" : {
       "ignoreWasSetByUser" : 0,
@@ -494,16 +493,17 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/jade\/layouts\/layout-header.jade" : {
+    "\/sass\/_base.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/jade\/layouts\/layout-header.jade",
+      "inputAbbreviatedPath" : "\/sass\/_base.scss",
       "outputStyle" : 0,
-      "compileDebug" : 1,
-      "outputAbbreviatedPath" : "\/layout-header.html",
-      "fileType" : 512
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/css\/_base.css",
+      "fileType" : 4,
+      "debugStyle" : 0
     },
     "\/components\/cookie-monster\/dist\/monster.js" : {
       "ignoreWasSetByUser" : 0,
@@ -562,17 +562,16 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/sass\/_themes.scss" : {
+    "\/components\/dropdown\/dropdown.js" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sass\/_themes.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/css\/_themes.css",
-      "fileType" : 4,
-      "debugStyle" : 0
+      "inputAbbreviatedPath" : "\/components\/dropdown\/dropdown.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/components\/dropdown\/dropdown.min.js",
+      "fileType" : 64
     },
     "\/jade\/layouts\/layout-footer.jade" : {
       "ignoreWasSetByUser" : 0,
@@ -636,16 +635,17 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/components\/dropdown\/dropdown.js" : {
+    "\/sass\/_themes.scss" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/components\/dropdown\/dropdown.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/components\/dropdown\/dropdown.min.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/sass\/_themes.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/css\/_themes.css",
+      "fileType" : 4,
+      "debugStyle" : 0
     },
     "\/jade\/includes\/nav-meta.jade" : {
       "ignoreWasSetByUser" : 0,
