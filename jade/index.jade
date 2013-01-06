@@ -1,0 +1,34 @@
+
+block vars
+	- var title = "Oskar Rough Mosumgaard"
+	- var bodyClass = "page-index"
+
+extends layouts/layout-page
+
+prepend head
+	title #{title}
+
+block header
+	include layouts/layout-header
+
+block main
+	.l-primary
+		article.article
+			h1 Hello, I'm <span>Oskar Rough Mosumgaard.</span>
+			p So, this looks pretty good now.
+			p What do I do? I make things. Wow, what a cliché. Scratch that. No. Okay, I like music, food, information and technology.
+			p Also find me on <a href="https://twitter.com/oskarrough" target="_blank">Twitter</a>, <a href="http://soundcloud.com/oskarrough" target="_blank">Soundcloud</a>, <a href="http://github.com/oskarrough" target="_blank">Github</a> and <a href="http://www.discogs.com/collection?user=oskarrough" target="_blank">Discogs</a>.
+			p Between tweets I also post this and that about coding and technology on <a href="http://code.hopeglory.com" target="_blank">code.hopeglory.com</a>.
+
+		//- | <a class="twitter-timeline" data-dnt=true href="https://twitter.com/oskarrough" data-widget-id="287929202009841665">Tweets by @oskarrough</a>
+		//- | <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+
+
+	.l-secondary
+		include includes/nav-secondary.jade
+
+block footer
+	include layouts/layout-footer.jade

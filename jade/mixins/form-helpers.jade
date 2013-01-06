@@ -1,0 +1,10 @@
+mixin field(type, name, label)
+	.field(class='field-type-' + type + ' field-name-' + name)
+		if (type == 'textarea')
+			label #{label}
+			textarea(name="#{name}", placeholder=label)
+		else if (type == 'submit')
+			input(type=type, name="#{name}", value=label)
+		else
+			label #{label}
+			input(type=type, name="#{name}", placeholder=label)

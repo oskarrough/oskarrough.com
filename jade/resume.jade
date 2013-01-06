@@ -1,0 +1,75 @@
+
+block vars
+	- var title = "Resumé"
+	- var bodyClass = "page-" + title.toLowerCase()
+
+extends layouts/layout-page
+
+prepend head
+	title #{title} - Oskar Rough Mosumgaard
+
+block header
+	include layouts/layout-header
+
+block main
+	.l-primary
+		article
+			h1 Resumé
+			p My name is Oskar Rough Mosumgaard and I was born in Thy (Denmark) in 1988. Living in Berlin with my wife.
+
+			h2 Press
+			ul.list.list-press
+				li <span class="date">2011</span> ComOn, "Udvikler-konkurrence gør Rejseplanen mere intelligent", <a href="http://www.comon.dk/art/123768/udvikler-konkurrence-goer-rejseplanen-mere-intelligent" target="_blank">Link</a>
+				li <span class="date">2011</span> TV2 Beep, "De klæder Rejseplanen på til fremtiden", <a href="http://beep.tv2.dk/article/de-kl%C3%A6der-rejseplanen-p%C3%A5-til-fremtiden" target="_blank">Link</a>
+				li <span class="date">2011</span> Midttraffik "Rejseplanen Klædt på til fremtiden", <a href="http://www.midttrafik.dk/kundeservice/nyhedsarkiv/2011/nyhed?newsid=2829" target="_blank">Link</a>
+				li <span class="date">2011</span> Sydtraffik, "Rejseplanen Klædt på til fremtiden", <a href="http://www.sydtrafik.dk/Default.aspx?ID=33&M=News&PID=613&NewsID=2205" target="_blank">Link</a>
+				li <span class="date">2010</span> Journalisten, "Her er fremtidens 38 nye medietalenter", <a href="http://journalisten.dk/her-er-fremtidens-38-nye-medietalenter" target="_blank">Link</a>
+
+			h2 Experience
+			ul.list.list-cv
+				li <span class="date">2010</span> Hope/Glory, front-end developer
+				li <span class="date">2010</span> Moved to Berlin, Germany
+				li <span class="date">2008</span> Moved to Aarhus, Denmark
+				li <span class="date">2009</span> Alive Festival, everything
+				li <span class="date">2008</span> GrafiskHus, developer
+				li <span class="date">2008</span> Dansk Dynamit, everything
+				li <span class="date">2007</span> Photographer Knud E Jensen, intern
+				li <span class="date">2007</span> Thisted Gymnasium, German &amp; society studies
+				li <span class="date">2006</span> GrafiskHus, intern
+
+			p: img(src="img/oskar.jpg", alt="Oskar Rough Mosumgaard")
+
+//- http://paulirish.com/2010/my-harmonious-background-canvas/
+//- http://www.bmxcopenhagen.com/
+//- http://www.superschwarz.dk
+//- http://www.trainingpartner.dk (one of the biggest excercise-networks in DK, built in zend framework)
+//- http://www.eucnordvest.dk/webtv (YouTube clone for education in DK)
+//- http://www.evosion.dk
+//- http://www.thy360.dk
+//- http://tsb.fe4.tangora.com
+//- https://www.sparthy.dk/
+//- http://www.505sapworldchampionship2010.com/
+//- http://www.fiskeriskolen.dk
+//- http://www.reamed.dk
+//- http://www.okop.dk
+//- http://www.polar-is.dk/
+//- http://www.jeanettelund.dk
+//- http://www.nptmarathon.dk
+
+//- Matthæus Passionen
+//- På Den Grønne Gren
+//- Artificial Brothers
+//- Wonder Rubber Stars
+//- LYF
+//- Rough.dk
+//- Teukort
+//- URT-medlemskort
+//- URT plakater
+//- Spoken Word plakat
+//- ShaLaLas
+
+	.l-secondary
+		include includes/nav-secondary.jade
+
+block footer
+	include layouts/layout-footer.jade

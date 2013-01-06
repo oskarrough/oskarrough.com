@@ -1,0 +1,18 @@
+nav.m-menu.m-menu-secondary
+	//ul
+		li.category Base
+			ul
+				li: mixin menu-item('Colors', 'colors.html')
+				li: mixin menu-item('Typography', 'typography.html')
+				li: mixin menu-item('Forms', 'forms.html')
+		li.category Layout
+			ul
+				li: mixin menu-item('Grid', 'grid.html')
+
+
+		li.expanded
+			a(href="#") Seite Level 1
+			ul
+				li
+					a(href="#") Seite Level 2
+				

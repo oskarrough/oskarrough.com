@@ -1,0 +1,36 @@
+@import "../../stylesheets/rem"
+
+@function double($value)
+	@return $value * 2
+
+/* Test rem() for pixel values and mixed values */
+.foo
+	+rem(font-size, 16px)
+
+.bar
+	+rem(margin, 15px auto 0)
+	+rem(border-left, 1px solid #bff)
+
+.baz
+	+rem(padding, 5px 15px 5px 15px)
+	
+.quux
+	+rem(border, 1px solid #ccc)
+	+rem(padding, double(7px))
+	+rem(margin, 0 0 0 0)
+	
+/* Test passing rem values */
+.oof
+	+rem(font-size, 1rem)
+
+.rab
+	+rem(margin, .9375rem auto 0)
+
+/* Test passing weird mixed values */
+.zab
+	+rem(padding, .5rem 16pt 8px .5em)
+	+rem(margin, .5rem 0 .25em)
+
+/* Test not printing pixel fallbacks */
+.squee
+	+rem(margin, .5rem auto, false)

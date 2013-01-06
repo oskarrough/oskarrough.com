@@ -1,0 +1,14 @@
+{
+  "name": "cookie-monster",
+  "version": "0.0.4",
+  "main": "./dist/monster.js",
+  "gitHead": "6da161940badd12c783c7fa9c72949a34d8217b4",
+  "readme": "# Cookie Monster\nA javascript libary to manage cookies\n\n## Installation\n\ndownload [monster.js](https://github.com/jgallen23/cookie-monster/raw/master/dist/monster.js) from dist directory. \n\nor\n\n\tender build cookie-monster \n\n## Usage\n\n\tmonster.set(name, value, days, path) //days and path are optional\n\tmonster.get(name)\n\tmonster.remove(name)\n\n## Example\n\n\t//set a cookie named 'cookiename' to '123' for 1 day then remove it\n\tvar name = 'cookiename';\n\tvar value = '123';\n\tvar days = 1;\n\tmonster.set(name, value, days);\n\tmonster.remove(name);\n",
+  "readmeFilename": "README.md",
+  "_id": "cookie-monster@0.0.4",
+  "description": "A javascript libary to manage cookies",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jgallen23/cookie-monster"
+  }
+}

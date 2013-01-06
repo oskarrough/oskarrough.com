@@ -1,0 +1,45 @@
+
+block vars
+	- var title = "Projects"
+	- var bodyClass = "page-" + title.toLowerCase()
+
+extends layouts/layout-page
+
+prepend head
+	title #{title} - Oskar Rough Mosumgaard
+
+block header
+	include layouts/layout-header
+
+block main
+	.l-primary
+		article
+			h1 #{title}
+			p Ongoing projects.
+
+			.project.project-alivefestival
+				a(href="http://alivefestival.dk", target="_blank")
+					h2 Alive Festival
+					p A cozy, yearly and very fun music festival located in my homearea, Thisted Thy in Denmark. We started in 2009 and here in 2013 the dates will be the 16th and 17th of August.
+
+			.project.project-dd
+				a(href="http://danskdynamit.com", target="_blank")
+					h2 Dansk Dynamit
+					p A network for Danish designers, architects and the like. Since 2006.
+
+			.project.project-hg
+				a(href="http://hopeglory.com", target="_blank")
+					h2 Hope/Glory
+					p In 2010 I joined Hope/Glory and we're producing some very well made websites, if I may say so myself.
+
+			.project.project-schlagerbits
+				a(href="http://schlagerbits.com", target="_blank")
+					h2 Schlagerbits
+					p Where me and my friends share the good, loving doctor music that makes you feel good. Enjoy!
+
+
+	.l-secondary
+		include includes/nav-secondary.jade
+
+block footer
+	include layouts/layout-footer.jade

@@ -1,0 +1,66 @@
+
+// Base
+// ============================================================================
+
+// Typography
+html {
+	@include font-body-light;
+	line-height: $base-line-height-unitless;
+	font-size: $base-font-size;
+	color: #fff;
+}
+
+// Links
+a,
+a:visited {
+	color: $anchor-color;
+	text-decoration: underline;
+}
+a:hover {
+	color: $anchor-color-hover;
+	text-decoration: underline;
+}
+a:active, a:focus {
+	color: $anchor-color-active;
+}
+
+img {
+	max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+	@include font-header;
+}
+
+// Headers
+h1 {
+	@include rem(font-size, $font-size-xl);
+	margin: 0 0 ($base-font-size / $font-size-xl) * 1.25em;
+	line-height: 1;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+h2 {
+	@include rem(font-size, $font-size-l);
+	margin: 0 0 ($base-font-size / $font-size-l) * 0.5em;
+	line-height: 1;
+	font-weight: bold;
+}
+h3 {
+	@include rem(font-size, $font-size-m);
+	margin: 0;
+	font-weight: bold;
+}
+p,
+ul,
+ol,
+dl,
+blockquote {
+	margin: 0 0 1.25em;
+}
+
+code {
+	background-color: lighten($blue, 40%);
+}

@@ -1,0 +1,29 @@
+
+// Layout
+// ============================================================================
+// See Susy settings in _config.scss
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+html,
+body {
+	height: 100%;
+}
+.sister-sledge {
+	max-width: 45em;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	z-index: 10;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+#starwarswrap {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 5;
+}

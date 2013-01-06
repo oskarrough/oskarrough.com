@@ -1,0 +1,39 @@
+// Colors
+// ============================================================================
+.color {
+	height: 2em;
+	line-height: 2em;
+	margin-bottom: 0.5em;
+}
+.color--white {
+	background-color: $white;
+	color: invert($white);
+}
+.color--lightgray {
+	background-color: $lightgray;
+	color: invert($lightgray);
+}
+.color--gray {
+	background-color: $gray;
+	color: $black;
+}
+.color--darkgray {
+	background-color: $darkgray;
+	color: invert($darkgray);
+}
+.color--black {
+	background-color: $black;
+	color: invert($black);
+}
+.color--anchor-color {
+	background-color: $anchor-color;
+	color: invert($anchor-color);
+}
+.color--anchor-color-hover {
+	background-color: $anchor-color-hover;
+	color: invert($anchor-color-hover);
+}
+.color--anchor-color-active {
+	background-color: $anchor-color-active;
+	color: invert($anchor-color-active);
+}

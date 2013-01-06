@@ -1,0 +1,306 @@
+/*
+	by: Oskar Rough Mosumgaard
+*/
+/* line 6, ../sass/_base.scss */
+html {
+  font-family: "Apercu Light", sans-serif;
+  font-size-adjust: 0.508;
+  font-weight: 200;
+  font-style: normal;
+  line-height: 1.5;
+  font-size: 18px;
+  color: #fff;
+}
+
+/* line 15, ../sass/_base.scss */
+a,
+a:visited {
+  color: #40cf2d;
+  text-decoration: underline;
+}
+
+/* line 19, ../sass/_base.scss */
+a:hover {
+  color: #9ee894;
+  text-decoration: underline;
+}
+
+/* line 23, ../sass/_base.scss */
+a:active, a:focus {
+  color: red;
+}
+
+/* line 27, ../sass/_base.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 33, ../sass/_base.scss */
+h1,
+h2,
+h3 {
+  font-family: "Chapeau Regular", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 38, ../sass/_base.scss */
+h1 {
+  font-size: 36px;
+  font-size: 2rem;
+  margin: 0 0 0.625em;
+  line-height: 1;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* line 45, ../sass/_base.scss */
+h2 {
+  font-size: 23px;
+  font-size: 1.25rem;
+  margin: 0 0 0.4em;
+  line-height: 1;
+  font-weight: bold;
+}
+
+/* line 51, ../sass/_base.scss */
+h3 {
+  font-size: 18px;
+  font-size: 1rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* line 60, ../sass/_base.scss */
+p,
+ul,
+ol,
+dl,
+blockquote {
+  margin: 0 0 1.25em;
+}
+
+/* line 64, ../sass/_base.scss */
+code {
+  background-color: #ccccff;
+}
+
+/* line 5, ../sass/_layout.scss */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+/* line 10, ../sass/_layout.scss */
+html,
+body {
+  height: 100%;
+}
+
+/* line 13, ../sass/_layout.scss */
+.sister-sledge {
+  max-width: 45em;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 10;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+/* line 22, ../sass/_layout.scss */
+#starwarswrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+/* line 17, ../sass/_module.scss */
+.project {
+  margin-bottom: 1.25em;
+}
+/* line 21, ../sass/_module.scss */
+.project p:last-child {
+  margin-bottom: 0;
+}
+/* line 25, ../sass/_module.scss */
+.project a {
+  display: block;
+  padding: 1.25em;
+  text-decoration: none;
+  color: inherit;
+}
+/* line 30, ../sass/_module.scss */
+.project a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/* line 32, ../sass/_module.scss */
+.project a:hover h2 {
+  color: #9ee894;
+}
+
+/* line 39, ../sass/_module.scss */
+.project-dd {
+  border-color: #b30000;
+  background-color: red;
+  color: #fff;
+}
+
+/* line 44, ../sass/_module.scss */
+.project-hg {
+  background: url(../img/hg.png) 0 0.94444em;
+  color: #fff;
+  border-color: gray;
+}
+
+/* line 49, ../sass/_module.scss */
+.project-alivefestival {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background: url(../img/alive12.jpg) 50% -30%;
+  color: #fff;
+  border-color: yellow;
+}
+
+/* line 55, ../sass/_module.scss */
+.project-schlagerbits {
+  background: url(../img/stars.png);
+  color: #fff;
+  border-color: blue;
+}
+
+/* line 61, ../sass/_module.scss */
+.list {
+  font-size: 16px;
+  font-size: 0.88889rem;
+  list-style: none;
+  padding: 0;
+}
+/* line 65, ../sass/_module.scss */
+.list li {
+  border-bottom: 1px solid #262626;
+}
+
+/* line 69, ../sass/_module.scss */
+.date {
+  display: inline-block;
+  min-width: 2.75em;
+  opacity: 0.5;
+}
+
+/* line 6, ../sass/_m-navigation.scss */
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+@media (min-width: 42em) {
+  /* line 11, ../sass/_m-navigation.scss */
+  nav li {
+    display: inline;
+  }
+}
+
+/* line 18, ../sass/_m-navigation.scss */
+.m-nav-primary {
+  font-size: 22px;
+  font-size: 1.22222rem;
+}
+/* line 21, ../sass/_m-navigation.scss */
+.m-nav-primary a {
+  display: block;
+  padding: 0.25em 0.5em;
+}
+@media (min-width: 42em) {
+  /* line 21, ../sass/_m-navigation.scss */
+  .m-nav-primary a {
+    display: inline-block;
+    padding: 1.5em 0.5em;
+  }
+}
+/* line 35, ../sass/_m-navigation.scss */
+.m-nav-primary li:first-child a {
+  background: url(../img/dance-round.png) 0 50% no-repeat;
+  background-size: 10%;
+  padding-left: 2em;
+}
+
+/* line 44, ../sass/_m-navigation.scss */
+.selected,
+.selected:visited {
+  text-decoration: none;
+  color: #000;
+}
+
+/* line 57, ../sass/_m-navigation.scss */
+.m-nav-development {
+  position: fixed;
+  bottom: 0;
+  right: 1em;
+}
+
+/* line 6, ../sass/_themes.scss */
+.no-touch .page-index.cosmic {
+  -webkit-transition: color 12s;
+  -moz-transition: color 12s;
+  -o-transition: color 12s;
+  transition: color 12s;
+  color: #111;
+}
+/* line 9, ../sass/_themes.scss */
+.no-touch .page-index.cosmic h1 span {
+  color: white !important;
+}
+/* line 12, ../sass/_themes.scss */
+.no-touch .page-index.cosmic.imsomoved {
+  -webkit-transition-duration: 6s;
+  -moz-transition-duration: 6s;
+  -o-transition-duration: 6s;
+  transition-duration: 6s;
+  color: #fff;
+}
+
+/* line 20, ../sass/_themes.scss */
+.cosmic .selected {
+  color: #fff;
+}
+/* line 23, ../sass/_themes.scss */
+.cosmic .project {
+  border: 3px solid white;
+}
+
+/* line 31, ../sass/_themes.scss */
+.proinquotes {
+  color: #000;
+}
+/* line 34, ../sass/_themes.scss */
+.proinquotes #starwarswrap {
+  display: none;
+}
+/* line 37, ../sass/_themes.scss */
+.proinquotes .list li {
+  border-color: #ebebeb;
+}
+
+/* line 44, ../sass/_themes.scss */
+.funky {
+  background: url(../img/1775166611.gif) repeat fixed;
+  border: 1em solid rgba(40, 20, 180, 0.3);
+}
+/* line 48, ../sass/_themes.scss */
+.funky #starwarswrap {
+  display: none;
+}
+/* line 51, ../sass/_themes.scss */
+.funky .sister-sledge {
+  height: 100%;
+  background: rgba(255, 0, 0, 0.6);
+  border-radius: 50%;
+  border: 2em solid rgba(40, 20, 180, 0.3);
+  padding-left: 5%;
+  padding-right: 5%;
+}

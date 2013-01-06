@@ -1,0 +1,59 @@
+
+
+// Animate text in and out
+.no-touch {
+	.page-index {
+		&.cosmic {
+			@include transition(color 12s);
+			color: #111;
+			h1 span {
+				color: #fff !important;
+			}
+			&.imsomoved {
+				@include transition-duration(6s);
+				color: #fff;
+			}
+		}
+	}
+}
+.cosmic {
+	.selected {
+		color: #fff;
+	}
+	.project {
+		border: 3px solid #fff;
+	}
+}
+
+
+
+// CLEAN STYLE
+.proinquotes {
+	color: #000;
+
+	#starwarswrap {
+		display: none;
+	}
+	.list li {
+		border-color: darken(#fff, 8%);
+	}
+}
+
+
+// FUNKY STYLE
+.funky {
+	background: url(../img/1775166611.gif) repeat fixed;
+	border: 1em solid rgba(40, 20, 180, 0.3);
+
+	#starwarswrap {
+		display: none;
+	}
+	.sister-sledge {
+		height: 100%;
+		background: rgba(255, 0, 0, 0.6);
+		border-radius: 50%;
+		border: 2em solid rgba(40, 20, 180, 0.3);
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+}

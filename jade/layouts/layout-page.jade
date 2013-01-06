@@ -1,0 +1,33 @@
+include ../mixins/mixin-menu.jade
+
+block vars
+	- var bodyClass = "page-" + title.toLowerCase()
+	- var headerImage = ""
+	- var title = title || ''
+
+extends layout-html5
+
+append head
+
+append body
+
+	.sister-sledge
+		header.l-header
+			.inner
+				block header
+
+		section.l-main(role="main")
+			.inner
+				block main
+
+		footer.l-footer
+			.inner
+				block footer
+					include layout-footer
+
+	#starwarswrap
+		canvas#starwars
+
+	block scripts
+		script(src="js/footer.min.js")
+		script(src="js/main.js")

@@ -1,0 +1,74 @@
+
+// Modules
+// ============================================================================
+
+
+
+// Logo
+// ============================================================================
+// .site-title {
+// 	@include rem(font-size, $base-font-size);
+// 	> a {
+// 		display: block;
+// 		text-decoration: none;
+// 	}
+// }
+
+.project {
+	//border: 5px solid;
+	margin-bottom: 1.25em;
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+
+	a {
+		display: block;
+		padding: 1.25em;
+		text-decoration: none;
+		color: inherit;
+		&:hover {
+			background-color: rgba(#fff,0.10);
+			h2 {
+				color: $anchor-color-hover;
+			}
+		}
+	}
+}
+
+.project-dd {
+	border-color: darken(red, 15%);
+	background-color: red;
+	color: #fff;
+}
+.project-hg {
+	background: url(../img/hg.png) 0 17/18*1em;
+	color: #fff;
+	border-color: gray;
+}
+.project-alivefestival {
+	@include background-size(cover);
+	background: url(../img/alive12.jpg) 50% -30%;
+	color: #fff;
+	border-color: yellow;
+}
+.project-schlagerbits {
+	background: url(../img/stars.png);
+	color: #fff;
+	border-color: blue;
+}
+
+.list {
+	@include rem(font-size, 16px);
+	list-style: none;
+	padding: 0;
+	li {
+		border-bottom: 1px solid darken(#fff, 85%);
+	}
+}
+.date {
+	display: inline-block;
+	min-width: 2.75em;
+	//font-weight: 600;
+	opacity: 0.5;
+}

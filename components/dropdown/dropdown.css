@@ -1,0 +1,54 @@
+/* necessary styles */
+nav ul { padding: 0; }
+nav li { list-style: none; float: left; position: relative; }
+nav ul ul { display: none; position: absolute;}
+.open > ul { display: block; }
+
+
+
+/* makeup */
+nav li {
+	border: 0.2em solid #fbfbfb;
+}
+nav a {
+	display: block;
+	padding: 0.5em 1em;
+	background: #eee;
+	color: blue;
+	text-decoration: none;
+}
+nav a:hover {
+	background-color: #e1e1e1;
+	text-decoration: underline;
+}
+.dropdown > a {
+	font-weight: bold;
+	cursor: text;
+}
+nav li ul {
+	display: none;
+	position: absolute;
+	left: -0.2em;
+	top: 2.1em;
+	z-index: 10;
+	border: 0.2em solid #000;
+	border-top: 0;
+	padding: 0.2em 0.1em 0.2em;
+	background-color: #fff;
+}
+nav li li {
+	float: none;
+}
+nav li ul a {
+	background-color: #e1e1e1;
+}
+nav li ul a:hover {
+	background-color: #d5d5d5;
+}
+.dropdown.open,
+nav li ul {
+	border-color: #000;
+}
+.dropdown.open > a {
+	background-color: #e1e1e1;
+}
