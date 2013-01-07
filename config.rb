@@ -7,8 +7,8 @@ sass_dir = "sass"
 images_dir = "img"
 javascripts_dir = "js"
 
-environment = :development
-# environment = :production
+#environment = :development
+environment = :production
 
 output_style = (environment == :production) ? :compressed : :expanded
 

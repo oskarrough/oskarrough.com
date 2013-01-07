@@ -11,10 +11,13 @@ body {
 }
 
 // Site load animation
-.sister-sledge {
+.wf-loading .sister-sledge {
 	@include transition(opacity 100ms);
 	opacity: 0;
-	.wf-active & {
+}
+.wf-active,
+.wf-inactive {
+	.sister-sledge {
 		opacity: 1;
 	}
 }

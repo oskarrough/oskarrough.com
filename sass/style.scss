@@ -24,7 +24,7 @@
 // Remember to include the script in footer.js as well.
 //@import "../components/fancybox/source/jquery.fancybox.css";
 
-@import "../components/normalize-css/normalize.css";
+@import url(../components/normalize-css/normalize.css);
 
 // Project styles (should be emptied for every new project)
 @import "_base.scss";
