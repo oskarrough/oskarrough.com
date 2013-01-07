@@ -32,15 +32,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/projects.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/projects.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/img\/oskar.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -51,6 +42,15 @@
       "outputAbbreviatedPath" : "\/img\/oskar.jpg",
       "initialSize" : 469889,
       "fileType" : 4096
+    },
+    "\/projects.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/projects.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/jade\/layouts\/layout-page.jade" : {
       "ignoreWasSetByUser" : 0,
@@ -85,16 +85,16 @@
       "outputAbbreviatedPath" : "\/index.html",
       "fileType" : 512
     },
-    "\/img\/oskar-web.jpg" : {
+    "\/js\/header.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/oskar-web.jpg",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/oskar-web.jpg",
-      "initialSize" : 102841,
-      "fileType" : 4096
+      "inputAbbreviatedPath" : "\/js\/header.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 0,
+      "outputAbbreviatedPath" : "\/js\/header.min.js",
+      "fileType" : 64
     },
     "\/components\/cookie-monster\/test\/monster.test.js" : {
       "ignoreWasSetByUser" : 0,
@@ -118,15 +118,15 @@
       "outputAbbreviatedPath" : "\/js\/starfield.min.js",
       "fileType" : 64
     },
-    "\/js\/header.js" : {
+    "\/js\/footer.min.js" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/header.js",
+      "inputAbbreviatedPath" : "\/js\/footer.min.js",
       "outputStyle" : 1,
-      "syntaxCheckerStyle" : 0,
-      "outputAbbreviatedPath" : "\/js\/header.min.js",
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/footer.min.min.js",
       "fileType" : 64
     },
     "\/jade\/resume.jade" : {
@@ -140,6 +140,15 @@
       "outputAbbreviatedPath" : "\/resume.html",
       "fileType" : 512
     },
+    "\/index.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/index.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/components\/dropdown\/dropdown.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -149,25 +158,16 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/js\/footer.min.js" : {
+    "\/img\/oskar-web.jpg" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/footer.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/footer.min.min.js",
-      "fileType" : 64
-    },
-    "\/index.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/index.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "inputAbbreviatedPath" : "\/img\/oskar-web.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/oskar-web.jpg",
+      "initialSize" : 102841,
+      "fileType" : 4096
     },
     "\/components\/rem\/test\/css\/test-rem.css" : {
       "ignoreWasSetByUser" : 0,
@@ -277,17 +277,6 @@
       "outputAbbreviatedPath" : "\/components\/jquery\/jquery.min.js",
       "fileType" : 64
     },
-    "\/jade\/includes\/nav-primary.jade" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/jade\/includes\/nav-primary.jade",
-      "outputStyle" : 0,
-      "compileDebug" : 1,
-      "outputAbbreviatedPath" : "\/nav-primary.html",
-      "fileType" : 512
-    },
     "\/jade\/projects.jade" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -309,6 +298,17 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/components\/cookie-monster\/grunt.min.js",
       "fileType" : 64
+    },
+    "\/jade\/includes\/nav-primary.jade" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/jade\/includes\/nav-primary.jade",
+      "outputStyle" : 0,
+      "compileDebug" : 1,
+      "outputAbbreviatedPath" : "\/nav-primary.html",
+      "fileType" : 512
     },
     "\/js\/header.min.js" : {
       "ignoreWasSetByUser" : 0,
@@ -367,17 +367,6 @@
       "outputAbbreviatedPath" : "\/components\/cookie-monster\/test\/live.min.js",
       "fileType" : 64
     },
-    "\/jade\/includes\/nav-development.jade" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/jade\/includes\/nav-development.jade",
-      "outputStyle" : 0,
-      "compileDebug" : 1,
-      "outputAbbreviatedPath" : "\/nav-development.html",
-      "fileType" : 512
-    },
     "\/img\/alive12.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -388,6 +377,17 @@
       "outputAbbreviatedPath" : "\/img\/alive12.jpg",
       "initialSize" : 166165,
       "fileType" : 4096
+    },
+    "\/jade\/includes\/nav-development.jade" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/jade\/includes\/nav-development.jade",
+      "outputStyle" : 0,
+      "compileDebug" : 1,
+      "outputAbbreviatedPath" : "\/nav-development.html",
+      "fileType" : 512
     },
     "\/img\/alive12-web.jpg" : {
       "ignoreWasSetByUser" : 0,
@@ -420,15 +420,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/resume.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/resume.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/jade\/mixins\/form-helpers.jade" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -439,6 +430,15 @@
       "compileDebug" : 1,
       "outputAbbreviatedPath" : "\/form-helpers.html",
       "fileType" : 512
+    },
+    "\/resume.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/resume.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/js\/footer.js" : {
       "ignoreWasSetByUser" : 0,
