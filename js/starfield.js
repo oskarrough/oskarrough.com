@@ -9,8 +9,8 @@ var canvas, ctx;
 canvas = document.getElementById("starwars");
 if(canvas && canvas.getContext ) {
 	var wrapper = document.getElementById("starwarswrap");
-	canvas.height = wrapper.clientHeight;
-	canvas.width = wrapper.clientWidth;
+	// canvas.height = wrapper.clientHeight;
+	// canvas.width = wrapper.clientWidth;
 	ctx = canvas.getContext("2d");
 	initStars(stars);
 }

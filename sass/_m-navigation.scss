@@ -13,7 +13,7 @@ nav {
 		}
 	}
 }
-.m-nav-primary {
+.nav-primary {
 	@include rem(font-size, 22px);
 	a {
 		display: block;
@@ -31,14 +31,15 @@ nav {
 		padding-left: 2em;
 	}
 }
-.m-nav-development {
+.nav-development {
 	position: fixed;
-	bottom: 0;
+	bottom: 1em;
 	right: 1em;
 	z-index: 5;
-	li {
-		@include rem(font-size, $base-font-size - 4);
-	}
+}
+
+.nav-development li {
+	@include rem(font-size, $base-font-size - 4);
 }
 .selected,
 .selected:visited {

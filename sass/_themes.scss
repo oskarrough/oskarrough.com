@@ -14,7 +14,8 @@
 .no-touch {
 	.page-index.cosmic {
 		@include transition(color 12s);
-		color: #111;
+
+		&,
 		.selected {
 			color: #111;
 		}
@@ -55,6 +56,13 @@
 .funky {
 	background: url(../img/1775166611.gif) repeat fixed;
 	border: 1em solid rgba(40, 20, 180, 0.3);
+	border-bottom: 0;
+	text-align: center;
+
+	&,
+	.selected {
+		color: #fff;
+	}
 
 	#starwarswrap {
 		display: none;
@@ -64,5 +72,6 @@
 		background: rgba(255, 0, 0, 0.6);
 		border-radius: 50%;
 		border: 1em solid rgba(40, 20, 180, 0.3);
+		border-bottom: 0;
 	}
 }
