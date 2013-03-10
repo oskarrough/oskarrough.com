@@ -3,14 +3,9 @@
 	by: Oskar Rough Mosumgaard
 */
 
-// Best must be imported first as it includes some needed functions ("em" etc.)
-//@import "best";
 
 // Project configuration
 @import "_config.scss";
-
-// Rem module for easy px-fallbacks
-@import "../components/rem/stylesheets/rem";
 
 // Susy for robust layout math
 //@import "susy";
@@ -19,10 +14,6 @@
 // Compass
 @import "compass";
 
-// Fancybox
-// Remember to include the script in footer.js as well.
-//@import "../components/fancybox/source/jquery.fancybox.css";
-//@import url(../components/normalize-css/normalize.css);
 @import "normalize.scss";
 
 // Project styles (should be emptied for every new project)

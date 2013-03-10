@@ -2,10 +2,10 @@
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "css"
+css_dir = "styles"
 sass_dir = "sass"
 images_dir = "img"
-javascripts_dir = "js"
+javascripts_dir = "scripts"
 
 output_style = :compressed
 
@@ -16,5 +16,3 @@ relative_assets = true
 line_comments = true
 
 require 'susy'
-
-add_import_path "/Users/oskar/Projects/best/framework/best/stylesheets"
