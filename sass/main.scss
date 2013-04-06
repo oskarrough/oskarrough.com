@@ -1,8 +1,9 @@
+/*!
+	
+	Oskar Rough Mosumgaard
+	http://oskarrough.com
 
-/*
-	by: Oskar Rough Mosumgaard
 */
-
 
 // Project configuration
 @import "_config.scss";
@@ -14,11 +15,11 @@
 // Compass
 @import "compass";
 
-@import "normalize.scss";
+@import "_normalize.scss";
 
 // Project styles (should be emptied for every new project)
 @import "_base.scss";
 @import "_layout.scss";
 @import "_module.scss";
-@import "_m-navigation.scss";
+@import "_navigation.scss";
 @import "_themes.scss";
