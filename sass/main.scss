@@ -13,7 +13,8 @@
 //@include border-box-sizing;
 
 // Compass
-@import "compass";
+@import "compass/css3";
+@import "compass/typography"; // rem fallback
 
 @import "_normalize.scss";
 
@@ -22,4 +23,5 @@
 @import "_layout.scss";
 @import "_module.scss";
 @import "_navigation.scss";
+@import "_projects.scss";
 @import "_themes.scss";

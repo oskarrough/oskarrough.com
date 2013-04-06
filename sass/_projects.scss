@@ -1,0 +1,61 @@
+//
+// Projects
+//
+
+.project {
+	margin-bottom: 1.25em;
+	width: 90%;
+	clear: both;
+	color: #fff;
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+
+	a {
+		display: block;
+		padding: 1.25em;
+		text-decoration: none;
+		color: inherit;
+		&:hover {
+			background-color: rgba(#fff,0.10);
+			h2 {
+				color: $anchor-color-hover;
+			}
+		}
+	}
+}
+
+.project-alivefestival {
+	@include transition(background-position 5s ease-in);
+	float: left;
+	background: url(../img/alive12.jpg) 50% 0;
+	border: 3px solid yellow;
+	.js & {
+		background-position: 50% 80%;
+	}
+	&:hover {
+		background-position: 50% -5000%;
+	}
+}
+.project-danskdynamit {
+	float: right;
+	border: 3px solid #fff;
+	background-color: red;
+	//background: red url(../img/dd-logo.jpg);
+	.proinquotes & { border-color: darken(red, 15%); }
+	a:hover h2 {
+		color: #fff;
+	}
+}
+.project-hopeglory {
+	float: left;
+	background: url(../img/hg.png) 0 16/18*1em;
+	border: 3px solid #000;
+
+}
+.project-lyde {
+	float: right;
+	background: url(../img/stars.png);
+	border: 3px solid #000;
+}
