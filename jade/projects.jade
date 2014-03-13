@@ -1,27 +1,23 @@
-
 block vars
 	- var title = "Projects"
 	- var bodyClass = "page-" + title.toLowerCase()
 
-extends layouts/layout-page
+extends layouts/layout
 
 prepend head
 	title #{title} - Oskar Rough Mosumgaard
 
-block header
-	include layouts/layout-header
-
 block main
 	.l-primary
 		article.article
-			h1 #{title}
+			h1 Projects
 			p Some of my ongoing projects. For work references, see my <a href="/resume.html">resumé</a>.
 
 			#danskdynamit.project.project-danskdynamit
 				a(href="http://danskdynamit.com", target="_blank")
 					h2 Dansk Dynamit
 					p A platform and network between Danish designers, architects and creatives. What started as a hobby project turned into the biggest platform of it's kind in Denmark. Since 2006.
-			
+
 			#alivefestival.project.project-alivefestival
 				a(href="http://alivefestival.dk", target="_blank")
 					h2 Alive Festival
@@ -36,6 +32,3 @@ block main
 				a(href="http://lyde.org", target="_blank")
 					h2 Lyde.org
 					p Where me and my friends share the good, loving doctor music that makes you feel good. I see it as a library and reference of our taste in music. Enjoy!
-
-block footer
-	include layouts/layout-footer.jade

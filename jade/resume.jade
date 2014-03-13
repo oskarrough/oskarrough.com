@@ -1,15 +1,11 @@
-
 block vars
 	- var title = "Resumé"
 	- var bodyClass = "page-" + title.toLowerCase()
 
-extends layouts/layout-page
+extends layouts/layout
 
 prepend head
 	title #{title} - Oskar Rough Mosumgaard
-
-block header
-	include layouts/layout-header
 
 block main
 	.l-primary
@@ -86,9 +82,3 @@ block main
 //- URT plakater
 //- Spoken Word plakat
 //- ShaLaLas
-
-	.l-secondary
-		include includes/nav-secondary.jade
-
-block footer
-	include layouts/layout-footer.jade

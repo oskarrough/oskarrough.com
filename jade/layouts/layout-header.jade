@@ -1,1 +1,8 @@
-include ../includes/nav-primary
+include ../mixins/mixin-menu.jade
+
+nav.nav-primary
+	ul
+		li: mixin menu-item('Oskar Rough Mosumgaard', 'index.html')
+		li: mixin menu-item('Projects', 'projects.html')
+		li: mixin menu-item('Resumé', 'resume.html')
+		li: mixin menu-item('Blog', 'http://blog.oskarrough.com')
