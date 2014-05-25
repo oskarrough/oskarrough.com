@@ -1,0 +1,20 @@
+.list {
+	font-size: 16px;
+	list-style: none;
+	padding: 0;
+	li {
+		border-bottom: 1px solid darken(#fff, 85%);
+		margin-bottom: 2 / $base-font-size-unitless * 1em;
+	}
+}
+.list + p {
+	margin-top: 2.5em;
+}
+.date {
+	display: inline-block;
+	min-width: 2.75em;
+	opacity: 0.5;
+}
+.credits {
+	font-size: 14px;
+}

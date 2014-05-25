@@ -1,0 +1,78 @@
+/**
+ * Cosmic style
+ */
+.cosmic {
+	background-color: #070f11;
+	color: #fff;
+	.selected {
+		color: #fff;
+	}
+}
+
+// Animate text in and out
+.no-touch {
+	.page-index.cosmic {
+		transition: color 12s;
+
+		&,
+		.selected {
+			color: #111;
+		}
+		h1 span {
+			color: #fff !important;
+		}
+
+		// when the mouse moves…
+		&.imsomoved {
+			transition-duration: 6s;
+			color: #fff;
+		}
+	}
+}
+
+
+/**
+ * Clean theme
+ */
+.proinquotes {
+	color: #000;
+
+	#starwarswrap {
+		display: none;
+	}
+	.list li {
+		border-color: darken(#fff, 8%);
+	}
+	.project {
+		width: auto;
+		float: none;
+		border: 0;
+	}
+}
+
+
+/**
+ * Funky theme
+ */
+.funky {
+	background: url(../img/1775166611.gif) repeat fixed;
+	border: 1em solid rgba(40, 20, 180, 0.3);
+	border-bottom: 0;
+	text-align: center;
+
+	&,
+	.selected {
+		color: #fff;
+	}
+
+	#starwarswrap {
+		display: none;
+	}
+	.sister-sledge {
+		height: 100%;
+		background: rgba(255, 0, 0, 0.6);
+		border-radius: 50%;
+		border: 1em solid rgba(40, 20, 180, 0.3);
+		border-bottom: 0;
+	}
+}
