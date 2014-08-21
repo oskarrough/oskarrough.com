@@ -1,0 +1,68 @@
+ /**
+ * Base
+ */
+
+html {
+	font-size: $base-font-size;
+	line-height: $base-line-height-unitless;
+	font-family: $font-body;
+	color: $text-color;
+	background-color: $bg-color;
+
+	// Enable kerning and ligatures everywhere
+	text-rendering: optimizeLegibility;
+
+	// Check this for each typeface. Sometimes it makes it worse
+	// -webkit-font-smoothing: antialiased;
+}
+
+// Set a consistent margin between elements
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+ol,
+ul,
+dl,
+dd,
+pre,
+fieldset,
+input,
+table,
+address,
+textarea {
+	margin: 0 0 1rem;
+}
+
+// Headers
+h1,
+h2,
+h3,
+h4 {
+	line-height: 1.1;
+}
+h1 {
+	font-size: rem(32);
+}
+h2 {
+	font-size: rem(24);
+}
+h3 {
+	font-size: 1rem;
+}
+h4 {
+	font-size: rem(14);
+}
+
+// Responsive media
+iframe,
+img,
+canvas,
+video,
+embed {
+	max-width: 100%;
+}

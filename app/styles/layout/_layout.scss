@@ -1,0 +1,27 @@
+// More sensible box-model: http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+html {
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 1rem;
+}
+
+
+/**
+ * Grid tests using Susy
+ */
+.Grid {
+	background-color: #ffc;
+}
+.Grid-u {
+	@include gallery(1 of 5);
+	margin-bottom: 1em;
+	outline: 1px solid red;
+	height: 2em;
+}

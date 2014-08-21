@@ -1,0 +1,11 @@
+//- Adds an active class to the nav item when the active variable matches the nav item title.
+mixin nav-item(url, title)
+	li
+		a(href=url, class=active == title ? 'is-active' : '')= title
+
+ul.Nav.Nav--primary
+	//- li: a(href='index.html', class=active == 'Index'?'is-active':'') Index
+	//- +nav-item('index.html', 'Index')
+	+nav-item('index.html', 'Oskar Rough Mosumgaard')
+	+nav-item('projects.html', 'Projects')
+	+nav-item('resume.html', 'Resumé')

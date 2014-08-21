@@ -1,0 +1,81 @@
+block vars
+	- var title = 'Resumé'
+	- var bodyClass = 'page-resume'
+extends templates/layout
+
+prepend head
+	title #{title} - Oskar Rough Mosumgaard
+
+block outlet
+	h1 Resumé
+	p Here are some of my more professional achievements.
+
+	p I've worked for big and small. Good and bad. Mostly good. Big names as Nike, Adidas, Mercedes, SMART, Ferrero, Kolding School of Design, Sparekassen Thy/Kronjylland but I really enjoy working on small projects as well.
+
+	h2 Work
+	p Most of my recent work are <a href="http://www.hopeglory.com/en/work">things I did as HOPE/GLORY</a>.<br>See <a href="/projects.html">my ongoing projects</a>. And here are some references: <a href="http://danskdynamit.com">Dansk Dynamit</a>, <a href="http://jonasedvard.dk/" target="_blank">Jonas Edvard</a>, <a href="http://maikogubler.com/" target="_blank">Maiko Gubler</a>, <a href="http://www.superschwarz.dk/" target="_blank">Super Schwarz</a>, <a href="http://torstenmosumgaard.dk/" target="_blank">Torsten Mosumgaard Keramik</a> and many others…
+
+	h2 Press
+	ul.list.list-press
+		li <span class="date">2011</span> ComOn, "Udvikler-konkurrence gør Rejseplanen mere intelligent" (<a href="http://www.comon.dk/art/123768/udvikler-konkurrence-goer-rejseplanen-mere-intelligent" target="_blank">article</a>)
+		li <span class="date">2011</span> TV2 Beep, "De klæder Rejseplanen på til fremtiden" (<a href="http://beep.tv2.dk/article/de-kl%C3%A6der-rejseplanen-p%C3%A5-til-fremtiden" target="_blank">article</a>)
+		li <span class="date">2011</span> Midttraffik "Rejseplanen Klædt på til fremtiden" (<a href="http://www.midttrafik.dk/kundeservice/nyhedsarkiv/2011/nyhed?newsid=2829" target="_blank">article</a>)
+		li <span class="date">2011</span> Sydtraffik, "Rejseplanen Klædt på til fremtiden" (<a href="http://www.sydtrafik.dk/Default.aspx?ID=33&M=News&PID=613&NewsID=2205" target="_blank">article</a>)
+		li.promoted <span class="date">2011</span> Rejseplanen Service Design Competition, Winner (<a href="https://speakerdeck.com/oskar/rejseplanen-den-intelligente-rejsepartner">presentation</a>)
+		li <span class="date">2010</span> Journalisten, "Her er fremtidens 38 nye medietalenter" (<a href="http://journalisten.dk/her-er-fremtidens-38-nye-medietalenter" target="_blank">article</a>)
+		li.promoted <span class="date">2010</span> Announced 'Young Danish Media Talent', New Media Days (<a href="http://danskdynamit.com/p/new-media-awards-2010" target="_blank">article</a>)
+
+	h2 Work experience
+	ul.list.list-cv
+		li <span class="date">2010 - Present</span> Hope/Glory, front-end developer
+		li <span class="date">2010</span> Moved to Berlin, Germany
+		li <span class="date">2009 - Present</span> Rough, freelance
+		li <span class="date">2009 - Present</span> Alive Festival, everything
+		li <span class="date">2008</span> GrafiskHus, developer
+		li <span class="date">2007 - Present</span> Dansk Dynamit, everything
+		li <span class="date">2007</span> Photographer Knud E Jensen, intern
+		li <span class="date">2007</span> Thisted Gymnasium, German &amp; society studies
+		li <span class="date">2006</span> GrafiskHus, intern
+
+
+	//- h2 Work references
+	//- ul.list.list-references
+	//- 	li <a href="https://speakerdeck.com/oskar/rejseplanen-den-intelligente-rejsepartner">Rejseplanen - Den intelligente rejsepartner</a>
+	//- 		p Concept for Danish travelplanner Rejseplanen.dk - won first price in a service design competition.
+	//- 		p We looked at Rejseplanen as your eager friend, helping you with both inspiration, entertainment, knowledge and practical info, essentially expanding the focus of the Rejseplanen we know today from A-B to what we’re calling 0-A-B-C.
+	//- 		p Together with Philip Battin.
+
+	p: img(src="images/oskar-web.jpg", alt="Oskar Rough Mosumgaard, 2011")
+
+	.credits
+		h2 Credits
+		p Props to my friends with urls. If you need something, these guys can help you out: <a href="http://wernery.com/">Benjamin</a>, <a href="http://www.hopeglory.com">Christian</a>, <a href="http://flexmotion.dk">Felix</a>, <a href="https://twitter.com/massdahl">Mads</a>, <a href="http://www.metrofarm.net">Metrofarm</a>, <a href="http://noshe.com/">Noshe</a>, <a href="http://www.7nord.dk">Peder</a>, <a href="http://peterurban.info">Peter</a>, <a href="http://philipbattin.com">Philip</a>, <a href="https://twitter.com/roncohen">Ron</a>, <a href="http://sej-ko.dk">Sjoerd</a>, <a href="http://kopfwelt.com">Steve</a> and <a href="http://superschwarz.dk">Troels</a>.</p>
+		p Sublime Text 2, all the open source web components as well as the Terminal.
+
+//- http://www.bmxcopenhagen.com/
+//- http://www.superschwarz.dk
+//- http://www.trainingpartner.dk (one of the biggest excercise-networks in DK, built in zend framework)
+//- http://www.eucnordvest.dk/webtv (YouTube clone for education in DK)
+//- http://www.evosion.dk
+//- http://www.thy360.dk
+//- http://tsb.fe4.tangora.com
+//- https://www.sparthy.dk/
+//- http://www.505sapworldchampionship2010.com/
+//- http://www.fiskeriskolen.dk
+//- http://www.reamed.dk
+//- http://www.okop.dk
+//- http://www.polar-is.dk/
+//- http://www.jeanettelund.dk
+//- http://www.nptmarathon.dk
+
+//- Matthæus Passionen
+//- På Den Grønne Gren
+//- Artificial Brothers
+//- Wonder Rubber Stars
+//- LYF
+//- Rough.dk
+//- Teukort
+//- URT-medlemskort
+//- URT plakater
+//- Spoken Word plakat
+//- ShaLaLas
