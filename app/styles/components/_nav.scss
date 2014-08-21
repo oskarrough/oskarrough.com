@@ -5,54 +5,29 @@
 .Nav {
 	padding: 0;
 	list-style: none;
-
-	a:hover {
-		color: $color-hover;
-	}
-
 	a.is-active {
-		color: $color-active;
-		&:hover {
-			color: $color-hover;
-		}
+		text-decoration: underline;
 	}
 }
 
-/**
- * Modifier: breadcrumbs
- */
-
-.Nav--breadcrumbs {
-	@include clearfix;
-
-	li {
-		float: left;
-		&::after {
-			content: ' →  ';
-		}
-		&:last-child::after {
-			display: none;
-		}
-	}
-
-	a {
-		display: inline;
-	}
-}
-
-/**
- * Pagination (use together with .Nav class)
- */
-
-.Pagination {
-	text-align: center;
-
+.Nav--primary {
+	font-size: 20px;
+	margin-bottom: 2rem;
 	li {
 		display: inline-block;
 	}
-
-	a {
+	li:first-child {
 		display: block;
-		padding: 0.2em 0.4em; // bigger tap area
+		a {
+			font-family: 'AlixFB-BoldItalic';
+			color: black;
+		}
 	}
+	a {
+		text-decoration: none;
+	}
+	// li:nth-child(2n),
+	// li:nth-child(3n) {
+
+	// }
 }

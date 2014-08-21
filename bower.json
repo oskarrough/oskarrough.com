@@ -10,7 +10,7 @@
     "imagesloaded": "~3.1.8",
     "jquery": "~2.1.1",
     "blazy": "*",
-    "jquery-pjax": "~1.8.1",
-    "cookie-monster": "~0.2.0"
+    "cookie-monster": "~0.2.0",
+    "jquery-pjax": "~1.9.2"
   }
 }
