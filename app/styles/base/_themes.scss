@@ -17,3 +17,15 @@
 // a { color: $link-color; }
 // .Nav a:hover { color: $link-color; }
 // .Nav--primary li:first-child a { color: $link-color; }
+
+$theme-yellow: (
+	bg: hsl(50, 100%, 60%),
+	text: hsl(0, 4%, 14%),
+	link: hsl(26, 92%, 27%)
+)
+
+// @each $color, $value in $icons {
+//   .fa-#{$color}:before {
+//     content: $value;
+//   }
+// }
