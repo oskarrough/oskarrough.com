@@ -4,7 +4,7 @@ block vars
 	- var active = active || ''
 
 doctype
-html.no-js
+html.no-js(lang='en')
 	head
 		block head
 			meta(charset='utf-8')
@@ -13,26 +13,31 @@ html.no-js
 			meta(name='description', content='')
 			meta(name='viewport', content='width=device-width, initial-scale=1')
 
+			// build:css styles/vendor.css
+			// bower:css
+			// endbower
+			// endbuild
+
 			// build:css styles/main.css
-			link(rel='stylesheet', href='styles/main.css')
+			link(rel='stylesheet', href='/styles/main.css')
 			// endbuild
 
-			// build:js scripts/vendor/modernizr.js
-			script(src='scripts/vendor/modernizr-custom.js')
+			// build:js scripts/vendor/vendor-header.js
+			script(src='/scripts/vendor/modernizr-custom.js')
+			//- script(src='/scripts/vendor/grunticon.loader.js')
 			// endbuild
 
-			| <script>
-			| WebFontConfig = { fontdeck: { id: '17130' } };
-			| (function() {
-			| var wf = document.createElement('script');
-			| wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-			| '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-			| wf.type = 'text/javascript';
-			| wf.async = 'true';
-			| var s = document.getElementsByTagName('script')[0];
-			| s.parentNode.insertBefore(wf, s);
-			| })();
-			| </script>
+			script.
+				WebFontConfig = { fontdeck: { id: '17130' } };
+				(function() {
+				var wf = document.createElement('script');
+				wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+				'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+				wf.type = 'text/javascript';
+				wf.async = 'true';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(wf, s);
+				})();
 
 	body(class="#{bodyClass}")
 
@@ -41,24 +46,22 @@ html.no-js
 		main#Main.Main
 			block outlet
 
-		//-footer#SiteFooter.SiteFooter
-			include footer
 		//- #starwarswrap
 			canvas#starwars
 
 		.Scripts
 			// build:js scripts/vendor.js
-			script(src='../bower_components/jquery/dist/jquery.js')
-			script(src="../bower_components/imagesloaded/imagesloaded.pkgd.js")
-			script(src='../bower_components/cookie-monster/dist/cookie-monster.js')
-			script(src='../bower_components/jquery-pjax/jquery.pjax.js')
-			script(src='../bower_components/blazy/blazy.js')
+			// bower:js
+			script(src='/bower_components/jquery/dist/jquery.js')
+			//- script(src='/bower_components/imagesloaded/imagesloaded.pkgd.js')
+			//- script(src='/bower_components/lazysizes/lazysizes.min.js')
+			// endbower
 			// endbuild
 
 			// build:js scripts/main.js
 			//- script(src='scripts/starfield.js')
-			script(src='scripts/rough.js')
-			script(src='scripts/app.js')
+			script(src='/scripts/rough.js')
+			script(src='/scripts/app.js')
 			// endbuild
 
 			script.
