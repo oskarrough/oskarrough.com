@@ -1,9 +1,12 @@
 extends templates/layout
+
 block vars
 	- var title = 'Projects'
 	- var bodyClass = 'page-projects'
+
 prepend head
 	title #{title} - Oskar Rough Mosumgaard
+
 block outlet
 	h1 Projects
 	p Some of my ongoing projects.
@@ -13,12 +16,25 @@ block outlet
 		p A network between Danish designers, architects and creatives offering ideas, discourse, jobs and workspaces. What started as a hobby project turned into the biggest network of it's kind in Denmark. Since 2006.
 
 	#kopfwelt.project.project-kopfwelt
-		h2: a(href="http://www.kopfwelt.com", target="_blank") KOPFWELT
-		p @todo
+		h2: a(href="http://www.kopfwelt.com", target="_blank") Kopfwelt
+		//- p
 
 	#alivefestival.project.project-alivefestival
 		h2: a(href="http://alivefestival.dk", target="_blank") Alive Festival
 		p A cozy, yearly and very fun music festival located in my homearea Thy, Denmark. Started in 2009 to celebrate life and music while manifesting a (inter)national focus on the local area. Dates for 2013 are be the 16th and 17th of August.
+
+	#can.project.project-can
+		h2: a(href="http://codesandnotes.com", target="_blank") Codes &amp; Notes
+		p What started out as my own notes turned into a guide to web development that you can trust.
+
+	#radio4000.project.project-radio4000
+		//- h2: a(href="http://radio4000.com", target="_blank") Radio4000
+		h2 Radio4000
+		p Coming soon…
+
+	#strrr.project.project-strrr
+		h2: a(href="http://strrr.tv", target="_blank") Strrr.tv
+		p Hyper-stimulated downtime. A curated online video channel. Coming soon…
 
 	#hopeglory.project.project-hopeglory
 		h2: a(href="http://www.hopeglory.com", target="_blank") HOPE/GLORY
@@ -28,10 +44,5 @@ block outlet
 		h2: a(href="http://lyde.org", target="_blank") Lyde.org
 		p Where me and my friends share the good, loving doctor music that makes you feel good. I see it as a library and reference of our taste in music. Enjoy!
 
-	#can.project.project-can
-		h2: a(href="http://codesandnotes.com", target="_blank") Codes &amp; Notes
-		p @todo
-
-	#strrr.project.project-strrr
-		h2: a(href="http://strrr.tv", target="_blank") Strrr.tv
-		p @todo
+	#wife.project.project-yaso
+		h2 Wife

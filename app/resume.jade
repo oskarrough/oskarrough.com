@@ -1,9 +1,12 @@
 extends templates/layout
+
 block vars
 	- var title = 'Resumé'
 	- var bodyClass = 'page-resume'
+
 prepend head
 	title #{title} - Oskar Rough Mosumgaard
+
 block outlet
 	h1 Resumé
 	p Here are some of my more professional achievements.
@@ -32,7 +35,7 @@ block outlet
 		li <time>2011</time> ComOn, "Udvikler-konkurrence gør Rejseplanen mere intelligent" (<a href="http://www.comon.dk/art/123768/udvikler-konkurrence-goer-rejseplanen-mere-intelligent" target="_blank">article</a>)
 		li <time>2011</time> TV2 Beep, "De klæder Rejseplanen på til fremtiden" (<a href="http://beep.tv2.dk/article/de-kl%C3%A6der-rejseplanen-p%C3%A5-til-fremtiden" target="_blank">article</a>)
 		li <time>2011</time> Midttraffik "Rejseplanen Klædt på til fremtiden" (<a href="http://www.midttrafik.dk/kundeservice/nyhedsarkiv/2011/nyhed?newsid=2829" target="_blank">article</a>)
-		li <time>2011</time> Sydtraffik, "Rejseplanen Klædt på til fremtiden" (<a href="http://www.sydtrafik.dk/Default.aspx?ID=33&M=News&PID=613&NewsID=2205" target="_blank">article</a>)
+		li <time>2011</time> Sydtraffik, "Rejseplanen Klædt på til fremtiden" (<a href="http://www.sydtrafik.dk/Default.aspx?ID=33&amp;M=News&amp;PID=613&amp;NewsID=2205" target="_blank">article</a>)
 		li.promoted <time>2011</time> Rejseplanen Service Design Competition, Winner (<a href="https://speakerdeck.com/oskar/rejseplanen-den-intelligente-rejsepartner">presentation</a>)
 		li <time>2010</time> Journalisten, "Her er fremtidens 38 nye medietalenter" (<a href="http://journalisten.dk/her-er-fremtidens-38-nye-medietalenter" target="_blank">article</a>)
 		li.promoted <time>2010</time> Announced 'Young Danish Media Talent', New Media Days (<a href="http://danskdynamit.com/p/new-media-awards-2010" target="_blank">article</a>)
@@ -48,8 +51,8 @@ block outlet
 
 	.credits
 		h2 Credits
-		p Props to my friends with urls. If you need something, these guys can help you out: <a href="http://wernery.com/">Benjamin</a>, <a href="http://www.arkov.co">Christian</a>, <a href="http://flexmotion.dk">Felix</a>, <a href="https://twitter.com/massdahl">Mads</a>, <a href="http://www.metrofarm.net">Metrofarm</a>, <a href="http://noshe.com/">Noshe</a>, <a href="http://www.7nord.dk">Peder</a>, <a href="http://peterurban.info">Peter</a>, <a href="http://philipbattin.com">Philip</a>, <a href="https://twitter.com/roncohen">Ron</a>, <a href="http://sej-ko.dk">Sjoerd</a>, <a href="http://kopfwelt.com">Steve</a> and <a href="http://superschwarz.dk">Troels</a>.</p>
-		p Sublime Text 2, all the open source web components as well as the Terminal.
+		p Props to my friends with urls. If you need something, these guys in alphabetical order can help you out: <a href="http://wernery.com/">Benjamin</a>, <a href="http://www.arkov.co">Christian</a>, <a href="http://flexmotion.dk">Felix</a>, <a href="https://twitter.com/massdahl">Mads</a>, <a href="http://www.metrofarm.net">Metrofarm</a>, <a href="http://noshe.com/">Noshe</a>, <a href="http://www.7nord.dk">Peder</a>, <a href="http://peterurban.info">Peter</a>, <a href="http://philipbattin.com">Philip</a>, <a href="https://twitter.com/roncohen">Ron</a>, <a href="http://sej-ko.dk">Sjoerd</a>, <a href="http://kopfwelt.com">Steve</a> and <a href="http://superschwarz.dk">Troels</a>.</p>
+		p Sublime Text, all the open source web components and the Terminal.
 
 //- http://www.bmxcopenhagen.com/
 //- http://www.superschwarz.dk

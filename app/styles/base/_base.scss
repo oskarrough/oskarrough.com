@@ -39,7 +39,7 @@ input,
 table,
 address,
 textarea {
-	margin: 0 0 1em;
+	margin: 1.25rem 0;
 }
 
 // Headers
@@ -47,22 +47,23 @@ h1,
 h2,
 h3,
 h4 {
+	font-size: 1rem;
 	line-height: 1.1;
 	font-family: $font-header;
 }
 h1 {
-	font-size: rem(30);
-	margin-bottom: em(16,30);
+	// font-size: rem(30);
+	// margin-bottom: em(16,30);
 }
 h2 {
-	font-size: rem(20);
-	margin-bottom: em(8,20);
+	// font-size: rem(20);
+	// margin-bottom: em(8,20);
 }
 h3 {
-	font-size: 1rem;
+	// font-size: 1rem;
 }
 h4 {
-	font-size: rem(14);
+	// font-size: rem(14);
 }
 
 // Links
@@ -78,47 +79,14 @@ main ul {
 	padding-left: 1em;
 }
 main li {
-	margin-bottom: 0.25em;
-	font-size: 0.875em;
+	// margin-bottom: 0.25em;
+	// font-size: 0.875em;
 }
 
 // Responsive media
 iframe,
 img,
 canvas,
-video,
-embed {
+video {
 	max-width: 100%;
-}
-
-/**
- * Link underlines
- */
-$text-color:  blue;
-$underline-color: #333;
-$bg-color: #fff;
-$bg-size: 1px;
-$stroke-size: 1px;
-$font-size: 16px;
-.Main a {
-	// color: black;
-	// text-decoration: none;
-	// background-repeat: repeat-x;
-	// background-image: linear-gradient(to bottom, $bg-color, $underline-color);
-	// color: $text-color;
-
-	// background-size: $bg-size $bg-size;
-	// background-position: 0 $font-size;
-	// text-shadow: $stroke-size 0 $bg-color, 0px $stroke-size $bg-color,  -#{$stroke-size} 0 $bg-color, 0 -#{$stroke-size} $bg-color;
-
-	// &:hover {
-	// 	background-image: linear-gradient(to bottom, $bg-color, #000);
-	// }
-}
-
-h2 a {
-	// $font-size: 24px;
-	// background-size: $bg-size $bg-size;
-	// background-position: 0 $font-size;
-	// text-shadow: $stroke-size 0 $bg-color, 0px $stroke-size $bg-color,  -#{$stroke-size} 0 $bg-color, 0 -#{$stroke-size} $bg-color;
 }

@@ -4,12 +4,12 @@ block vars
 	- var active = active || ''
 
 doctype
-html.no-js(lang='en')
+html(lang='en')
 	head
 		block head
 			meta(charset='utf-8')
 			meta(http-equiv='X-UA-Compatible', content='IE=edge')
-			title Rough
+			title Oskar Rough Mosumgaard
 			meta(name='description', content='')
 			meta(name='viewport', content='width=device-width, initial-scale=1')
 
@@ -23,11 +23,11 @@ html.no-js(lang='en')
 			// endbuild
 
 			// build:js scripts/vendor/vendor-header.js
-			script(src='/scripts/vendor/modernizr-custom.js')
+			//- script(src='/scripts/vendor/modernizr-custom.js')
 			//- script(src='/scripts/vendor/grunticon.loader.js')
 			// endbuild
 
-			script.
+			//- script.
 				WebFontConfig = { fontdeck: { id: '17130' } };
 				(function() {
 				var wf = document.createElement('script');
@@ -40,6 +40,8 @@ html.no-js(lang='en')
 				})();
 
 	body(class="#{bodyClass}")
+
+		h1.Logo Oskar Rough Mosumgaard
 
 		include navigation
 
@@ -60,8 +62,8 @@ html.no-js(lang='en')
 
 			// build:js scripts/main.js
 			//- script(src='scripts/starfield.js')
-			script(src='/scripts/rough.js')
-			script(src='/scripts/app.js')
+			script(src='scripts/rough.js')
+			script(src='scripts/app.js')
 			// endbuild
 
 			script.

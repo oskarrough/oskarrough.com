@@ -11,23 +11,10 @@
 }
 
 .Nav--primary {
-	font-size: 20px;
-	margin-bottom: 2rem;
 	li {
 		display: inline-block;
-	}
-	li:first-child {
-		display: block;
-		a {
-			font-family: 'AlixFB-BoldItalic';
-			color: black;
-		}
 	}
 	a {
 		text-decoration: none;
 	}
-	// li:nth-child(2n),
-	// li:nth-child(3n) {
-
-	// }
 }

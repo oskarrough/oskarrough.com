@@ -12,11 +12,7 @@
  */
 
 // Use Susy to make layouts easier by abstracting the math
-@import 'susy';
-
-// Imports using 'sass-css-importer'.
-// @import 'CSS:../bower_components/normalize-css/normalize';
-// @import 'CSS:../bower_components/magnific-popup/dist/magnific-popup';
+// @import 'susy';
 
 
 /**
@@ -45,7 +41,7 @@
  * Components
  */
 
-@import 'components/buttons';
+// @import 'components/buttons';
 @import 'components/logo';
 @import 'components/nav';
 
