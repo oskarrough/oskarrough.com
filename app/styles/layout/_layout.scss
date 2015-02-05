@@ -16,6 +16,32 @@ body {
 		margin: 3rem;
 	}
 }
-main {
+p {
 	max-width: 40rem;
+}
+
+
+.Grid {
+	display: flex;
+	flex-flow: row wrap;
+	max-width: 70rem;
+}
+.Grid-item {
+	padding-right: 2rem;
+	@media (min-width: $layout-s) {
+		flex: 1 0 50%;
+	}
+}
+
+
+.Project {
+	h2 {
+		margin-bottom: 0.5rem;
+		a {
+			// color: #black
+		}
+	}
+	p {
+		// font-size: 15px;
+	}
 }

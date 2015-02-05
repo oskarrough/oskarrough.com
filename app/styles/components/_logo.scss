@@ -4,9 +4,11 @@
 
 .Logo {
 	// font-size: 20px;
-	// a {
-	// 	display: block;
-	// }
+	a {
+		// display: block;
+		color: $text-color;
+		text-decoration: none;
+	}
 	// img {
 	// 	width: 100%;
 	// }
