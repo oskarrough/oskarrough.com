@@ -2,21 +2,12 @@
  * Navigation
  */
 
-.Nav {
-	padding: 0;
-	list-style: none;
+nav {
+	a {
+		margin-right: 0.5rem;
+		text-decoration: none;
+	}
 	a.is-active {
 		text-decoration: underline;
-	}
-}
-
-.Nav--primary {
-	margin-bottom: 2rem;
-	li {
-		display: inline-block;
-		margin-right: 0.5rem;
-	}
-	a {
-		text-decoration: none;
 	}
 }

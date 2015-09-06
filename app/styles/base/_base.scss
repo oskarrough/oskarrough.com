@@ -1,17 +1,20 @@
- /**
- * Base
- */
-
 html {
 	font-size: $base-font-size;
 	line-height: $base-line-height-unitless;
 	font-family: $font-body;
-	color: $text-color;
 	background-color: $bg-color;
+	color: $text-color;
 
 	// Enable kerning and ligatures everywhere
 	// to use open-type features, bower install normalize-opentype
 	text-rendering: optimizeLegibility;
+
+	@media (min-width: $layout-m) {
+		font-size: $base-font-size + 1px;
+	}
+	@media (min-width: $layout-l) {
+		font-size: $base-font-size + 2px;
+	}
 }
 
 // Set a consistent margin between elements
@@ -31,10 +34,12 @@ pre,
 fieldset,
 input,
 table,
+nav,
 address,
 textarea,
 figure {
-	margin: 0 0 1rem;
+	margin-top: 0;
+	margin-bottom: rem($space);
 }
 
 // Headers
@@ -43,22 +48,22 @@ h2,
 h3,
 h4 {
 	line-height: 1.1;
-	font-size: 1rem;
-	// font-weight: bold;
-	// font-family: 'Triplicate T3 Bold Italic';
 }
+
 h1 {
-	// font-size: rem(30);
-	text-transform: uppercase;
+	font-size: rem(30);
 }
+
 h2 {
-	// font-size: rem(20);
+	font-size: rem(20);
 }
+
 h3 {
-	// font-size: rem(16);
+	font-size: rem(16);
 }
+
 h4 {
-	// font-size: rem(14);
+	font-size: rem(14);
 }
 
 // Responsive media
@@ -70,6 +75,7 @@ audio,
 embed {
 	max-width: 100%;
 }
+
 img {
 	height: auto;
 	vertical-align: bottom;
