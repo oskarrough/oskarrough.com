@@ -1,9 +1,9 @@
 // var $ = require('jquery');
 // var lazysizes = require('lazysizes'); // this runs by itself
-// var tabs = require('./tabs');
+var starwars = require('./starwars');
+starwars.init();
 
 // on document ready
 // $(() => {
-// 	tabs();
-// 	masonry();
+
 // });

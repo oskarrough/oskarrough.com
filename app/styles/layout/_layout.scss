@@ -39,5 +39,18 @@ p {
 	}
 }
 
+
+#starwarswrap {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 500px;
+	height: 500px;
+	z-index: 1;
+
+	canvas {
+		position: absolute;
+		width: 100%;
+		height: 100%;
 	}
 }
