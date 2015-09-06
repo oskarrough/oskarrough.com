@@ -1,25 +1,30 @@
 module.exports = function(grunt) {
 
-	grunt.initConfig({
+	// Load tasks
+	grunt.loadNpmTasks('grunt-grunticon');
 
+	grunt.initConfig({
 		grunticon: {
-			// 'myIcons' is a set of icons we can define more sets if we need
-			myIcons: {
+
+			// 'files' is a set of icons. If needed we can define more sets
+			files: {
 				files: [{
 					expand: true,
 					cwd: 'app/images/icons',
 					src: ['*.svg', '*.png'],
 					dest: '.tmp/images/icons'
 				}],
-				options: {}
+				options: {
+
+					// This parses markup for icons that should be embedded at runtime
+					// example: <i class="icon-logo" data-grunticon-embed></i>
+					enhanceSVG: true
+				}
 			}
 		}
 	});
 
-	// Load tasks
-	grunt.loadNpmTasks('grunt-grunticon');
-
 	// Register tasks
-	grunt.registerTask('default', ['grunticon']);
+	grunt.registerTask('icons', ['grunticon']);
+	grunt.registerTask('default', ['icons']);
 };
-

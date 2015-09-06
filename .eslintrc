@@ -1,0 +1,12 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jquery": true
+  },
+  "rules": {
+    "strict": 0,
+    "quotes": [1, "single"]
+  }
+}
