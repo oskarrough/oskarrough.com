@@ -8,7 +8,7 @@ module.exports = browserSync;
 gulp.task('serve', ['templates', 'styles', 'scripts', 'icons'], () => {
 	browserSync.init({
 		notify: false,
-		port: 6666,
+		port: 9000,
 		server: {
 			baseDir: ['.tmp', 'app']
 		}
@@ -16,12 +16,11 @@ gulp.task('serve', ['templates', 'styles', 'scripts', 'icons'], () => {
 
 	// Reload the server when these files change
 	gulp.watch([
-		'app/*.html',
 		'app/images/**/*',
 	]).on('change', browserSync.reload);
 
 	// Run tasks (that might reload the server) when these files change
-	gulp.watch('app/**/*.jade', ['jade']);
+	gulp.watch('app/*.html', ['templates']);
 	gulp.watch('app/styles/**/*.scss', ['styles']);
 	gulp.watch('app/scripts/**/*.js', ['scripts']);
 	gulp.watch('app/images/icons/*.{svg,png}', ['icons']);
@@ -31,7 +30,7 @@ gulp.task('serve', ['templates', 'styles', 'scripts', 'icons'], () => {
 gulp.task('serve:dist', () => {
 	browserSync.init({
 		notify: false,
-		port: 6666,
+		port: 9000,
 		server: {
 			baseDir: ['dist']
 		}

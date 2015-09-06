@@ -17,8 +17,7 @@ gulp.task('extras', () => {
 	return gulp.src([
 		'app/*.*',
 		'app/scripts/vendor/**/*',
-		'!app/*.html',
-		'!app/*.jade',
+		'!app/*.html', // because handlebars
 	], {
 		base: 'app', // keep folder structure
 		dot: true // include .dotfiles
