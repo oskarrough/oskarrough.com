@@ -1,7 +1,7 @@
 html {
+	@include regular;
 	font-size: $base-font-size;
 	line-height: $base-line-height-unitless;
-	font-family: $font-body;
 	background-color: $bg-color;
 	color: $text-color;
 
@@ -10,7 +10,7 @@ html {
 	text-rendering: optimizeLegibility;
 
 	@media (min-width: $layout-m) {
-		font-size: $base-font-size + 1px;
+		font-size: $base-font-size;
 	}
 	@media (min-width: $layout-l) {
 		font-size: $base-font-size + 2px;
@@ -47,6 +47,7 @@ h1,
 h2,
 h3,
 h4 {
+	@include bold;
 	line-height: 1.1;
 }
 
@@ -55,11 +56,15 @@ h1 {
 }
 
 h2 {
-	font-size: rem(20);
+	font-size: 1rem;
+	text-transform: uppercase;
+	margin-top: -0.4em;
 }
 
 h3 {
-	font-size: rem(16);
+	font-size: rem(13);
+	margin-bottom: 0;
+	text-transform: uppercase;
 }
 
 h4 {
@@ -90,4 +95,14 @@ a:visited {
 ul,
 ol {
 	font-size: rem(14);
+}
+
+strong {
+	@include bold;
+}
+em {
+	@include italic;
+}
+strong em {
+	@include bold-italic;
 }

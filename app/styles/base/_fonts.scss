@@ -40,3 +40,20 @@
 // 	font-weight: normal;
 // 	font-style: normal;
 // }
+
+@mixin regular {
+	font-family: 'triplicate_t4regular', serif;
+	font-weight: normal;
+}
+@mixin italic {
+	font-family: 'triplicate_t4italic', serif;
+	font-weight: normal;
+}
+@mixin bold {
+	font-family: 'triplicate_t4bold', serif;
+	font-weight: normal;
+}
+@mixin bold-italic {
+	font-family: 'triplicate_t4bold_italic', serif;
+	font-weight: normal;
+}

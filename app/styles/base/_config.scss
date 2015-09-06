@@ -1,7 +1,7 @@
 // Tyopgraphy
-$base-font-size-unitless: 15;
-$base-font-size: 15px;
-$base-line-height-unitless: 1.45;
+$base-font-size-unitless: 14;
+$base-font-size: 14px;
+$base-line-height-unitless: 1.4;
 $font-body: 'triplicate_t4regular', sans-serif;
 $font-header: $font-body;
 
@@ -9,7 +9,7 @@ $font-header: $font-body;
 $blue: #1a70ff;
 $red: #f00;
 $bg-color: #fff !default;
-$text-color: #111 !default;
+$text-color: hsl(0, 0%, 10%) !default;
 $header-color: $text-color !default;
 
 // Layout

@@ -1,5 +1,12 @@
 .App {
-	margin: rem($space*2) 8% 0;
+	position: relative;
+	z-index: 2;
+
+	margin: rem($space*2) 5% 0;
+	@media (min-width: $layout-s) {
+		margin-left: 8%;
+		margin-right: 8%;
+	}
 }
 ul,
 p {
@@ -15,19 +22,22 @@ p {
 }
 .Grid-item {
 	@media (min-width: $layout-sm) {
-		flex: 1 0 50%;
+		flex-basis: 50%;
 		padding-right: 2rem;
 	}
 }
 
 .Project {
-	h2 {
-		margin-bottom: 0.5rem;
+	h3 {
 		a {
-			// color: #black
+			text-decoration: none;
+
 		}
 	}
 	p {
-		// font-size: 15px;
+		font-size: rem(13);
+	}
+}
+
 	}
 }
