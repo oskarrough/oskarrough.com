@@ -48,6 +48,25 @@
     "jquery": "^2.1.4",
     "lazysizes": "^1.1.5",
     "magnific-popup": "^1.0.0",
+    "sanitize.css": "^2.0.0",
     "susy": "^2.2.5"
+  },
+  "xo": {
+    "esnext": true,
+    "envs": [
+      "browser",
+      "commonjs"
+    ],
+    "ignores": [
+      "app/scripts/vendor/**",
+      "dist/**"
+    ],
+    "rules": {
+      "semi": [2, "never"],
+      "babel/object-curly-spacing": [
+        2,
+        "always"
+      ]
+    }
   }
 }

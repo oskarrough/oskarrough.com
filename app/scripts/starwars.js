@@ -7,87 +7,83 @@
 	<canvas id="starwars"></canvas>
 */
 
-const STARWARS_BACKGROUND_COLOR = 'rgb(7,15,17)';
-const STARWARS_AMOUNT = 128;
-const STARWARS_MAX_DEPTH = 32;
-const STARWARS_FPS = 30;
-const STARWARS_WARP_FACTOR = 0.02;
-const STARWARS_XFACTOR = 128.0;
+const STARWARS_BACKGROUND_COLOR = 'rgb(7,15,17)'
+const STARWARS_AMOUNT = 128
+const STARWARS_MAX_DEPTH = 32
+const STARWARS_FPS = 30
+const STARWARS_WARP_FACTOR = 0.02
+const STARWARS_XFACTOR = 128.0
 
 // Creates an an array of star objects [{x, y, z}, …]
 function createStars(amount = STARWARS_AMOUNT, maxDepth = STARWARS_MAX_DEPTH) {
-	let arr = new Array(amount);
-
-	for(var i = 0; i < arr.length; i++) {
+	const arr = new Array(amount)
+	for (let i = 0; i < arr.length; i++) {
 		arr[i] = {
-			x: randomRange(-25,25),
-			y: randomRange(-25,25),
+			x: randomRange(-25, 25),
+			y: randomRange(-25, 25),
 			z: randomRange(1, maxDepth)
 		}
 	}
-
-	return arr;
+	return arr
 }
 
 // Returns a random number in the range [minVal,maxVal]
 function randomRange(minVal, maxVal) {
-	return Math.floor(Math.random() * (maxVal - minVal - 1)) + minVal;
+	return Math.floor(Math.random() * (maxVal - minVal - 1)) + minVal
 }
 
 function loop(canvas, ctx, stars) {
-	let containerWidth = canvas.width;
-	let containerHeight = canvas.width;
+	const containerWidth = canvas.width
+	const containerHeight = canvas.width
 
-	ctx.fillStyle = STARWARS_BACKGROUND_COLOR;
-	ctx.fillRect(0, 0, canvas.width, canvas.height);
+	ctx.fillStyle = STARWARS_BACKGROUND_COLOR
+	ctx.fillRect(0, 0, canvas.width, canvas.height)
 
-	for(var i = 0; i < stars.length; i++) {
-		var star = stars[i];
+	for (let i = 0; i < stars.length; i++) {
+		const star = stars[i]
 
 		// Create some variation.
-		star.z -= STARWARS_WARP_FACTOR;
+		star.z -= STARWARS_WARP_FACTOR
 
 		// If going out view, reposition far away
 		if (star.z <= 0) {
-			star.x = randomRange(-25, 25);
-			star.y = randomRange(-25, 25);
-			star.z = STARWARS_MAX_DEPTH;
+			star.x = randomRange(-25, 25)
+			star.y = randomRange(-25, 25)
+			star.z = STARWARS_MAX_DEPTH
 		}
 
 		// Map to 2D. This is called 'perspective projection'.
-		var k  = STARWARS_XFACTOR / star.z;
-		var px = star.x * k + containerWidth / 2;
-		var py = star.y * k + containerHeight / 2;
+		const k = STARWARS_XFACTOR / star.z
+		const px = star.x * k + containerWidth / 2
+		const py = star.y * k + containerHeight / 2
 
 		if (px >= 0 && px <= containerWidth && py >= 0 && py <= containerHeight) {
-
 			// Change size and color based on the depth (Z value)
 			// e.g. make distant stars smaller and vice versa
-			var size = (1 - star.z / STARWARS_MAX_DEPTH) * 5;
-			var color = parseInt((1 - star.z / STARWARS_MAX_DEPTH) * 255);
-			ctx.fillStyle = 'rgb(' + color + ',' + color + ',' + color + ')';
-			ctx.fillRect(px, py, size, size);
+			const size = (1 - star.z / STARWARS_MAX_DEPTH) * 5
+			const color = parseInt((1 - star.z / STARWARS_MAX_DEPTH) * 255, 10)
+			ctx.fillStyle = `rgb(${color},${color},${color})`
+			ctx.fillRect(px, py, size, size)
 		}
 	}
 }
 
 module.exports = {
 	init(selector = 'starwars') {
-
-		window.onload = function() {
-			let canvas = document.getElementById(selector);
+		window.onload = function () {
+			const canvas = document.getElementById(selector)
 
 			if (!canvas || !canvas.getContext) {
-				console.log('Sorry, no canvas');
-				return false;
+				console.log('Sorry, no canvas')
+				return false
 			}
 
-			let ctx = canvas.getContext('2d');
-			var stars = createStars();
+			const ctx = canvas.getContext('2d')
+			const stars = createStars()
 
-			setInterval(function() {
-				loop(canvas, ctx, stars);
-			}, STARWARS_FPS);
+			setInterval(() => {
+				loop(canvas, ctx, stars)
+			}, STARWARS_FPS)
 		}
 	}
 }
