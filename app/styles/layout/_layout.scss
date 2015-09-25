@@ -2,7 +2,7 @@
 	position: relative;
 	z-index: 2;
 
-	margin: rem($space*2) 5% 0;
+	margin: rem($space*4) 5% 0;
 	@media (min-width: $layout-s) {
 		margin-left: 8%;
 		margin-right: 8%;
@@ -19,6 +19,7 @@ p {
 	display: flex;
 	flex-flow: row wrap;
 	max-width: 70rem;
+	margin-top: rem($space*2);
 }
 .Grid-item {
 	@media (min-width: $layout-sm) {
@@ -44,8 +45,8 @@ p {
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 500px;
-	height: 500px;
+	width: 100%;
+	height: 100%;
 	z-index: 1;
 
 	canvas {
@@ -54,3 +55,32 @@ p {
 		height: 100%;
 	}
 }
+
+
+
+@mixin colorBg($bg-color, $text-color) {
+	h3 a {
+		@include negative-text;
+		background-color: $bg-color;
+		color: $text-color;
+	}
+}
+
+.Project h3 a {
+	display: inline-block;
+	padding: 2px 0.4em 2px;
+	// transition: background-color 600ms 100ms;
+	&:hover {
+		// transition-duration: 10ms;
+		// transition-delay: 0;
+		background-color: transparent;
+		color: $html-color;
+	}
+}
+.Project--danskdynamit { @include colorBg(red, white); }
+.Project--kopfwelt { @include colorBg(white, silver); }
+.Project--alivefestival { @include colorBg(yellow, black); }
+.Project--radio4000 { @include colorBg(#5E19E6, #dadada); }
+.Project--can { @include colorBg(white, black); }
+.Project--strrr { @include colorBg(brown, white); }
+.Project--lyde { @include colorBg(green, red); }

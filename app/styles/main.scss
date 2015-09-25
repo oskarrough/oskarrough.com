@@ -15,16 +15,17 @@
  * Utilities (abstract patterns to be reused in components)
  */
 // @import 'utilities/align';
-@import 'utilities/clearfix';
+// @import 'utilities/clearfix';
 // @import 'utilities/media-block';
-// @import 'utilities/negative-text';
+@import 'utilities/negative-text';
 // @import 'utilities/truncate';
 
 /**
  * Base
  */
+@import 'base/config';
 @import 'base/fonts';
-@import 'base/normalize-custom';
+@import '../../node_modules/sanitize.css/sanitize';
 @import 'base/base';
 @import 'base/icons';
 

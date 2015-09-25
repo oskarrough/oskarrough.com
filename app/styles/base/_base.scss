@@ -1,20 +1,11 @@
-html {
+:root {
 	@include regular;
-	font-size: $base-font-size;
-	line-height: $base-line-height-unitless;
-	background-color: $bg-color;
-	color: $text-color;
-
-	// Enable kerning and ligatures everywhere
-	// to use open-type features, bower install normalize-opentype
-	text-rendering: optimizeLegibility;
-
 	@media (min-width: $layout-m) {
-		font-size: $base-font-size;
+		font-size: $root-font-size + 2px;
 	}
-	@media (min-width: $layout-l) {
-		font-size: $base-font-size + 2px;
-	}
+	// @media (min-width: $layout-l) {
+	// 	font-size: $root-font-size + 2px;
+	// }
 }
 
 // Set a consistent margin between elements
@@ -38,7 +29,7 @@ nav,
 address,
 textarea,
 figure {
-	margin-top: 0;
+	margin-top: rem($space);
 	margin-bottom: rem($space);
 }
 
@@ -48,27 +39,26 @@ h2,
 h3,
 h4 {
 	@include bold;
-	line-height: 1.1;
+	font-size: 1rem;
+	// line-height: 1.1;
 }
 
 h1 {
-	font-size: rem(30);
+	// font-size: rem(30);
 }
-
 h2 {
-	font-size: 1rem;
+	// font-size: 1rem;
 	text-transform: uppercase;
-	margin-top: -0.4em;
+	// margin-top: -0.4em;
+	margin-top: rem($space) * 3;
 }
-
 h3 {
-	font-size: rem(13);
+	// font-size: 1rem;
 	margin-bottom: 0;
 	text-transform: uppercase;
 }
-
 h4 {
-	font-size: rem(14);
+	// font-size: 1rem;
 }
 
 // Responsive media
@@ -89,14 +79,12 @@ img {
 // Links
 a,
 a:visited {
-	color: #00f;
+	color: $html-color;
 }
-
 ul,
 ol {
-	font-size: rem(14);
+	font-size: rem($small-font-size);
 }
-
 strong {
 	@include bold;
 }
