@@ -1,8 +1,8 @@
 :root {
 	@include regular;
-	@media (min-width: $layout-m) {
-		font-size: $root-font-size + 2px;
-	}
+	// @media (min-width: $layout-m) {
+	// 	font-size: $root-font-size + 2px;
+	// }
 	// @media (min-width: $layout-l) {
 	// 	font-size: $root-font-size + 2px;
 	// }
