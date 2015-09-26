@@ -1,3 +1,4 @@
+/*eslint-disable*/
 // Starfield
 var stars = new Array(200);
 var STARFIELD_MAX_DEPTH = 32;
