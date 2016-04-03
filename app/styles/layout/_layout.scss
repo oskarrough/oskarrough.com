@@ -1,7 +1,6 @@
-.App {
-	position: relative;
-	z-index: 2;
-
+.DonaldByrd {
+	// position: relative;
+	// z-index: 1;
 	margin: rem($space*4) 5% 0;
 	@media (min-width: $layout-s) {
 		margin-left: 8%;
@@ -12,19 +11,24 @@ ul,
 p {
 	max-width: 45rem;
 }
-.SiteHeader {
-	// margin-bottom: rem($space*2);
+.SiteHeader {}
+.Logo {
+	font-size: 1rem;
+	a {
+		color: $text-color;
+		text-decoration: none;
+	}
 }
-.Grid {
-	display: flex;
-	flex-flow: row wrap;
-	max-width: 70rem;
-	margin-top: rem($space*4);
-}
-.Grid-item {
-	@media (min-width: $layout-sm) {
-		flex-basis: 50%;
-		padding-right: 2rem;
+
+// Navigation
+
+nav {
+	a {
+		margin-right: 0.5rem;
+		text-decoration: none;
+	}
+	a.is-active {
+		text-decoration: underline;
 	}
 }
 
@@ -33,32 +37,12 @@ p {
 		font-style: italic;
 		a {
 			text-decoration: none;
-
 		}
 	}
 	p {
-		font-size: rem(13);
+		font-size: rem(15);
 	}
 }
-
-
-#starwarswrap {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-
-	canvas {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-	}
-}
-
-
-
 @mixin colorBg($bg-color, $text-color) {
 	h3 a {
 		@include negative-text;
@@ -66,22 +50,39 @@ p {
 		color: $text-color;
 	}
 }
-
 .Project h3 a {
 	display: inline-block;
-	padding: 2px 0.55em 3px 0.4em;
+	padding: 0.2em 0.5em 0.2em;
 	// transition: background-color 600ms 100ms;
 	&:hover {
 		// transition-duration: 10ms;
 		// transition-delay: 0;
 		background-color: transparent;
-		color: $html-color;
+		color: $text-color;
 	}
 }
 .Project--danskdynamit { @include colorBg(red, white); }
-.Project--kopfwelt { @include colorBg(white, silver); }
+.Project--kopfwelt { @include colorBg(white, hsl(0, 0%, 75%)); }
 .Project--alivefestival { @include colorBg(yellow, black); }
 .Project--radio4000 { @include colorBg(#5E19E6, #dadada); }
-.Project--can { @include colorBg(white, black); }
+.Project--can { @include colorBg(#136c6c, #F3B685); }
 .Project--strrr { @include colorBg(brown, white); }
 .Project--lyde { @include colorBg(green, red); }
+
+/**
+ * Canvas background
+ */
+
+#starwarswrap {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	canvas {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+}

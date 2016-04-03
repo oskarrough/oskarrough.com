@@ -1,47 +1,58 @@
-// @todo include critical in build process?
-// @todo this file is a bit (!) messy but the order of tasks is very important
-// @todo consider gulp-sequence ala gulp-starter v2
-
 const gulp = require('gulp');
-const gulpif = require('gulp-if');
 const uglify = require('gulp-uglify');
-const minifyCss = require('gulp-minify-css');
+const cssnano = require('gulp-cssnano');
+const htmlmin = require('gulp-htmlmin');
+const runSequence = require('run-sequence');
 
-// 1. Start of the build process
-gulp.task('build', ['clean', 'test'], () => {
-	gulp.start('build-assets');
+// Build everything
+gulp.task('build', cb => {
+	runSequence(
+		'clean',
+		[/*'icons', */'images', 'templates', 'styles', 'scripts'],
+		['copy-from-app', 'copy-from-tmp'],
+		'rev',
+		['minify-styles', 'minify-scripts', 'minify-templates'],
+		'critical',
+		cb);
 });
 
-// Move files not covered by other tasks to dist
-gulp.task('extras', () => {
+// Copies files not handled by other tasks.
+gulp.task('copy-from-app', () => {
 	return gulp.src([
 		'app/*.*',
+		'app/fonts/**/*',
 		'app/scripts/vendor/**/*',
-		'!app/*.html',
-		'!app/*.jade'
+		'!app/*.html'
 	], {
-		// keep folder structure
+		// Because we copy multiple dirs we have to:
+		// 1. keep folder structure
 		base: 'app',
-		// include .dotfiles
+		// 2. include .dotfiles
 		dot: true
 	}).pipe(gulp.dest('dist'));
 });
 
-// Build assets
-gulp.task('build-assets', ['templates', 'styles', 'scripts', 'icons', 'images', 'extras'], () => {
-	gulp.start('minify');
-});
-
-// Copies all assets (after they are built)
-gulp.task('copy-assets', () => {
-	return gulp.src(['.tmp/**/*'])
+// Copies processed files.
+gulp.task('copy-from-tmp', () => {
+	return gulp.src(['.tmp/**/*', '!.tmp/styles/**', '!.tmp/scripts/**'])
 		.pipe(gulp.dest('dist'));
 });
 
-// After assets are built and copied, we can minify
-gulp.task('minify', ['copy-assets'], () => {
-	return gulp.src(['dist/scripts/*.js', 'dist/styles/*.css'], { base: 'dist' })
-		.pipe(gulpif('*.js', uglify()))
-		.pipe(gulpif('*.css', minifyCss({ compatibility: '*' })))
+gulp.task('minify-templates', () => {
+	return gulp.src('dist/**/*.html', {base: 'dist'})
+		.pipe(htmlmin({collapseWhitespace: true}))
+		.pipe(gulp.dest('dist'));
+});
+
+gulp.task('minify-styles', () => {
+	return gulp.src('dist/styles/*.css', {base: 'dist'})
+		// Don't remove vendor-prefixes and 'safe' until cssnano v4 is released.
+		.pipe(cssnano({safe: true, autoprefixer: false}))
+		.pipe(gulp.dest('dist'));
+});
+
+gulp.task('minify-scripts', () => {
+	return gulp.src('dist/scripts/*.js', {base: 'dist'})
+		.pipe(uglify())
 		.pipe(gulp.dest('dist'));
 });

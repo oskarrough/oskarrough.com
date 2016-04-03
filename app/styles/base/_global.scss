@@ -1,10 +1,14 @@
 :root {
-	@include regular;
+	font-family: $global-font-family;
+	font-size: $global-font-size;
+	line-height: $global-line-height;
+	background-color: $background-color;
+	color: $text-color;
 	// @media (min-width: $layout-m) {
-	// 	font-size: $root-font-size + 2px;
+	// 	font-size: $global-font-size + 2px;
 	// }
 	// @media (min-width: $layout-l) {
-	// 	font-size: $root-font-size + 2px;
+	// 	font-size: $global-font-size + 2px;
 	// }
 }
 
@@ -39,8 +43,8 @@ h2,
 h3,
 h4 {
 	@include bold;
-	font-size: 1rem;
-	// line-height: 1.1;
+	font-size: 1.25rem;
+	// line-height: 1.2;
 }
 
 h1 {
@@ -49,7 +53,6 @@ h1 {
 h2 {
 	// font-size: 1rem;
 	text-transform: uppercase;
-	// margin-top: -0.4em;
 	margin-top: rem($space) * 3;
 }
 h3 {
@@ -79,11 +82,11 @@ img {
 // Links
 a,
 a:visited {
-	color: $html-color;
+	color: $text-color;
 }
 ul,
 ol {
-	font-size: rem($small-font-size);
+	font-size: rem(14);
 }
 strong {
 	@include bold;
