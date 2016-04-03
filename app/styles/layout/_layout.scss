@@ -1,7 +1,6 @@
-.SisterSledge {
-	position: relative;
-	z-index: 2;
-
+.DonaldByrd {
+	// position: relative;
+	// z-index: 1;
 	margin: rem($space*4) 5% 0;
 	@media (min-width: $layout-s) {
 		margin-left: 8%;
@@ -33,18 +32,15 @@ nav {
 	}
 }
 
-// Projects
-
 .Project {
 	h3 {
 		font-style: italic;
 		a {
 			text-decoration: none;
-
 		}
 	}
 	p {
-		font-size: rem(13);
+		font-size: rem(15);
 	}
 }
 @mixin colorBg($bg-color, $text-color) {
@@ -56,7 +52,7 @@ nav {
 }
 .Project h3 a {
 	display: inline-block;
-	padding: 2px 0.55em 3px 0.4em;
+	padding: 0.2em 0.5em 0.2em;
 	// transition: background-color 600ms 100ms;
 	&:hover {
 		// transition-duration: 10ms;
@@ -66,9 +62,27 @@ nav {
 	}
 }
 .Project--danskdynamit { @include colorBg(red, white); }
-.Project--kopfwelt { @include colorBg(white, silver); }
+.Project--kopfwelt { @include colorBg(white, hsl(0, 0%, 75%)); }
 .Project--alivefestival { @include colorBg(yellow, black); }
 .Project--radio4000 { @include colorBg(#5E19E6, #dadada); }
-.Project--can { @include colorBg(white, black); }
+.Project--can { @include colorBg(#136c6c, #F3B685); }
 .Project--strrr { @include colorBg(brown, white); }
 .Project--lyde { @include colorBg(green, red); }
+
+/**
+ * Canvas background
+ */
+
+#starwarswrap {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	canvas {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+}
