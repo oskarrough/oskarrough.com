@@ -15,16 +15,21 @@ p {
 .SiteHeader {
 	// margin-bottom: rem($space*2);
 }
-.Grid {
-	display: flex;
-	flex-flow: row wrap;
-	max-width: 70rem;
-	margin-top: rem($space*4);
+.Logo {
+	font-size: 1rem;
+	a {
+		color: $text-color;
+		text-decoration: none;
+	}
 }
-.Grid-item {
-	@media (min-width: $layout-sm) {
-		flex-basis: 50%;
-		padding-right: 2rem;
+
+nav {
+	a {
+		margin-right: 0.5rem;
+		text-decoration: none;
+	}
+	a.is-active {
+		text-decoration: underline;
 	}
 }
 
@@ -75,7 +80,7 @@ p {
 		// transition-duration: 10ms;
 		// transition-delay: 0;
 		background-color: transparent;
-		color: $html-color;
+		color: $text-color;
 	}
 }
 .Project--danskdynamit { @include colorBg(red, white); }
