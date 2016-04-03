@@ -1,14 +1,5 @@
 {
-  "name": "oskarrough.com",
-  "version": "1.5.0",
-  "authors": [
-    "Oskar Rough <oskar@rough.dk>"
-  ],
-  "license": "MIT",
+  "name": "rough",
   "private": true,
-  "dependencies": {
-    "jquery": "~2.1.0",
-    "jquery-pjax": "~1.8.1",
-    "cookie-monster": "~0.2.0"
-  }
+  "dependencies": {}
 }

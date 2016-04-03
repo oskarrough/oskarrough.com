@@ -1,0 +1,30 @@
+/**
+ * Grid tests using Susy
+ */
+
+.Grid {
+	@include clearfix;
+	margin-bottom: 1rem;
+	background-color: #ffc;
+}
+// example 3 column layout
+.Grid-cell {
+	@include span(1 of 3);
+
+	// example styles to see the cells
+	outline: 1px solid red;
+	height: 2rem;
+	margin-bottom: 1rem;
+
+	&:nth-child(3n+1) {
+		@include last;
+	}
+
+}
+
+// If all cells in a grid have the same width you can use this one instead.
+.Grid--gallery .Grid-cell {
+	@media (min-width: $layout-s) {
+		@include gallery(1 of 5);
+	}
+}

@@ -1,0 +1,96 @@
+:root {
+	@include regular;
+	// @media (min-width: $layout-m) {
+	// 	font-size: $root-font-size + 2px;
+	// }
+	// @media (min-width: $layout-l) {
+	// 	font-size: $root-font-size + 2px;
+	// }
+}
+
+// Set a consistent margin between elements
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+ol,
+ul,
+dl,
+dd,
+pre,
+fieldset,
+input,
+table,
+nav,
+address,
+textarea,
+figure {
+	margin-top: rem($space);
+	margin-bottom: rem($space);
+}
+
+// Headers
+h1,
+h2,
+h3,
+h4 {
+	@include bold;
+	font-size: 1rem;
+	// line-height: 1.1;
+}
+
+h1 {
+	// font-size: rem(30);
+}
+h2 {
+	// font-size: 1rem;
+	text-transform: uppercase;
+	// margin-top: -0.4em;
+	margin-top: rem($space) * 3;
+}
+h3 {
+	// font-size: 1rem;
+	margin-bottom: 0;
+	text-transform: uppercase;
+}
+h4 {
+	// font-size: 1rem;
+}
+
+// Responsive media
+iframe,
+img,
+canvas,
+video,
+audio,
+embed {
+	max-width: 100%;
+}
+
+img {
+	height: auto;
+	vertical-align: bottom;
+}
+
+// Links
+a,
+a:visited {
+	color: $html-color;
+}
+ul,
+ol {
+	font-size: rem($small-font-size);
+}
+strong {
+	@include bold;
+}
+em {
+	@include italic;
+}
+strong em {
+	@include bold-italic;
+}

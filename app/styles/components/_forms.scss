@@ -1,0 +1,44 @@
+/**
+ * Forms
+ */
+
+// Consistent alignment
+label,
+input,
+textarea,
+select {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+// Common styles for text inputs and buttons
+input,
+textarea,
+.Button {
+	padding: 0.3em 0.5em 0.25em;
+}
+
+// Expand to full-width
+input,
+textarea {
+	width: 100%;
+	max-width: 100%;
+}
+
+// Placeholder styles
+// input:-moz-placeholder,
+// input::-moz-placeholder,
+// input:-ms-input-placeholder,
+// input::-webkit-input-placeholder {
+// 	color: red;
+// }
+
+// Form layout
+// <form class="Form">
+//   <div class="Form-input"></div>
+//   <div class="Form-input"></div>
+// </form>
+.Form {}
+.Form-group {
+	margin-bottom: 1rem;
+}

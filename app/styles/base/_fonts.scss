@@ -1,0 +1,59 @@
+/**
+ * Fonts
+ */
+
+@font-face {
+	font-family: 'triplicate_t4regular';
+	src: url('../fonts/triplicate-t4/triplicate_t4_regular-webfont.woff2') format('woff2'),
+		url('../fonts/triplicate-t4/triplicate_t4_regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'triplicate_t4italic';
+	src: url('../fonts/triplicate-t4/triplicate_t4_italic-webfont.woff2') format('woff2'),
+		url('../fonts/triplicate-t4/triplicate_t4_italic-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'triplicate_t4bold';
+	src: url('../fonts/triplicate-t4/triplicate_t4_bold-webfont.woff2') format('woff2'),
+		url('../fonts/triplicate-t4/triplicate_t4_bold-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'triplicate_t4bold_italic';
+	src: url('../fonts/triplicate-t4/triplicate_t4_bold_italic-webfont.woff2') format('woff2'),
+		url('../fonts/triplicate-t4/triplicate_t4_bold_italic-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+// @font-face {
+// 	font-family: 'PixelComicSans-Regular';
+// 	src: url('../fonts/pixel-comic-sans/type/PixelComicSans-Regular.eot?#iefix') format('embedded-opentype'),
+// 		url('../fonts/pixel-comic-sans/type/PixelComicSans-Regular.woff') format('woff'),
+// 		url('../fonts/pixel-comic-sans/type/PixelComicSans-Regular.ttf')  format('truetype'),
+// 		url('../fonts/pixel-comic-sans/type/PixelComicSans-Regular.svg#svgFontName') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+
+@mixin regular {
+	font-family: 'triplicate_t4regular', serif;
+	font-weight: normal;
+}
+@mixin italic {
+	font-family: 'triplicate_t4italic', serif;
+	font-weight: normal;
+}
+@mixin bold {
+	font-family: 'triplicate_t4bold', serif;
+	font-weight: normal;
+}
+@mixin bold-italic {
+	font-family: 'triplicate_t4bold_italic', serif;
+	font-weight: normal;
+}

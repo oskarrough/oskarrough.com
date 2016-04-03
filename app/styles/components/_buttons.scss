@@ -1,0 +1,46 @@
+.Button {
+	-webkit-appearance: none;
+	background: transparent;
+	border: 1px solid gray;
+	box-sizing: border-box;
+	color: black;
+	cursor: pointer;
+	display: inline-block;
+	font: inherit;
+	line-height: normal;
+	margin: 0;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	user-select: none;
+	white-space: normal;
+
+	// Button needs this directly on the element. Inheritance is not enough
+	// @include negative-text;
+}
+
+/**
+ * UI states
+ */
+
+.Button:hover,
+.Button:focus,
+.Button:active {
+	text-decoration: none;
+}
+
+.Button:disabled,
+.Button.is-disabled {
+	cursor: default;
+	opacity: 0.75;
+}
+
+
+/**
+ * Remove excess padding and border in Firefox 4+
+ */
+
+.Button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
