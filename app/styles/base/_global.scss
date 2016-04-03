@@ -1,5 +1,8 @@
 :root {
-	@include regular;
+	font-family: $global-font-family;
+	font-size: $global-font-size;
+	line-height: $global-line-height;
+	background-color: $background-color;
 	color: $text-color;
 	// @media (min-width: $layout-m) {
 	// 	font-size: $global-font-size + 2px;

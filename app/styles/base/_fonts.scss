@@ -3,32 +3,47 @@
  */
 
 @font-face {
-	font-family: 'triplicate_t4regular';
+	font-family: 'triplicate-t4';
 	src: url('../fonts/triplicate-t4/triplicate_t4_regular-webfont.woff2') format('woff2'),
 		url('../fonts/triplicate-t4/triplicate_t4_regular-webfont.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
-	font-family: 'triplicate_t4italic';
+	font-family: 'triplicate-t4';
 	src: url('../fonts/triplicate-t4/triplicate_t4_italic-webfont.woff2') format('woff2'),
 		url('../fonts/triplicate-t4/triplicate_t4_italic-webfont.woff') format('woff');
 	font-weight: normal;
-	font-style: normal;
+	font-style: italic;
 }
 @font-face {
-	font-family: 'triplicate_t4bold';
+	font-family: 'triplicate-t4';
 	src: url('../fonts/triplicate-t4/triplicate_t4_bold-webfont.woff2') format('woff2'),
 		url('../fonts/triplicate-t4/triplicate_t4_bold-webfont.woff') format('woff');
-	font-weight: normal;
+	font-weight: bold;
 	font-style: normal;
 }
 @font-face {
-	font-family: 'triplicate_t4bold_italic';
+	font-family: 'triplicate-t4';
 	src: url('../fonts/triplicate-t4/triplicate_t4_bold_italic-webfont.woff2') format('woff2'),
 		url('../fonts/triplicate-t4/triplicate_t4_bold_italic-webfont.woff') format('woff');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@mixin regular {
 	font-weight: normal;
-	font-style: normal;
+	font-weight: bold;
+}
+@mixin italic {
+	font-style: italic;
+}
+@mixin bold {
+	font-weight: bold;
+}
+@mixin bold-italic {
+	font-style: italic;
+	font-weight: bold;
 }
 
 // @font-face {
@@ -40,20 +55,3 @@
 // 	font-weight: normal;
 // 	font-style: normal;
 // }
-
-@mixin regular {
-	font-family: 'triplicate_t4regular', serif;
-	font-weight: normal;
-}
-@mixin italic {
-	font-family: 'triplicate_t4italic', serif;
-	font-weight: normal;
-}
-@mixin bold {
-	font-family: 'triplicate_t4bold', serif;
-	font-weight: normal;
-}
-@mixin bold-italic {
-	font-family: 'triplicate_t4bold_italic', serif;
-	font-weight: normal;
-}

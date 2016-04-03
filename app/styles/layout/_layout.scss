@@ -1,4 +1,4 @@
-.App {
+.SisterSledge {
 	position: relative;
 	z-index: 2;
 
@@ -12,9 +12,7 @@ ul,
 p {
 	max-width: 45rem;
 }
-.SiteHeader {
-	// margin-bottom: rem($space*2);
-}
+.SiteHeader {}
 .Logo {
 	font-size: 1rem;
 	a {
@@ -22,6 +20,8 @@ p {
 		text-decoration: none;
 	}
 }
+
+// Navigation
 
 nav {
 	a {
@@ -32,6 +32,8 @@ nav {
 		text-decoration: underline;
 	}
 }
+
+// Projects
 
 .Project {
 	h3 {
@@ -45,25 +47,6 @@ nav {
 		font-size: rem(13);
 	}
 }
-
-
-#starwarswrap {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-
-	canvas {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-	}
-}
-
-
-
 @mixin colorBg($bg-color, $text-color) {
 	h3 a {
 		@include negative-text;
@@ -71,7 +54,6 @@ nav {
 		color: $text-color;
 	}
 }
-
 .Project h3 a {
 	display: inline-block;
 	padding: 2px 0.55em 3px 0.4em;
