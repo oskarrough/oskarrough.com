@@ -1,4 +1,5 @@
 const gulp = require('gulp');
 const del = require('del');
 
-gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
+// Deletes the two folders containing compiled output.
+gulp.task('clean', () => del(['.tmp', 'dist']));

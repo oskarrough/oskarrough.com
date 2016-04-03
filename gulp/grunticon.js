@@ -11,15 +11,13 @@ const fs = require('fs');
 
 gulp.task('icons', () => {
 	const deferred = q.defer();
-	const iconDir = 'app/images/icons/';
-	const files = fs.readdirSync(iconDir).map(fileName => path.join(iconDir, fileName));
-	const grunticon = new Grunticon(files, '.tmp/images/icons', {
-		enhanceSVG: true
-	});
-
+	const inputDir = 'app/images/icons/';
+	const outputDir = '.tmp/images/icons/';
+	const options = {enhanceSVG: true};
+	const files = fs.readdirSync(inputDir).map(fileName => path.join(inputDir, fileName));
+	const grunticon = new Grunticon(files, outputDir, options);
 	grunticon.process(() => {
 		deferred.resolve();
 	});
-
 	return deferred.promise;
 });
