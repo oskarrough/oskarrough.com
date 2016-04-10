@@ -9,7 +9,8 @@
     "clean": "rm -rf dist .tmp",
     "start": "gulp serve",
     "build": "gulp build",
-    "test": "gulp build && xo && ava"
+    "test": "gulp build && xo && ava",
+    "deploy": "surge dist oskarrough.com"
   },
   "devDependencies": {
     "autoprefixer": "^6.0.3",
