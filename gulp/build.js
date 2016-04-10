@@ -11,8 +11,9 @@ gulp.task('build', cb => {
 		[/*'icons', */'images', 'templates', 'styles', 'scripts'],
 		['copy-from-app', 'copy-from-tmp'],
 		'rev',
-		['minify-styles', 'minify-scripts', 'minify-templates'],
+		['minify-styles', 'minify-scripts'],
 		'critical',
+		'minify-templates',
 		cb);
 });
 

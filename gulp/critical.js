@@ -6,7 +6,9 @@ gulp.task('critical', () => {
 	return gulp.src('dist/*.html')
 		.pipe(critical({
 			base: 'dist/',
-			inline: true
+			inline: true,
+			minify: true,
+			ignore: ['@font-face']
 		}))
 		.pipe(gulp.dest('dist'));
 });

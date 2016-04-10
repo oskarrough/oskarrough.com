@@ -2,6 +2,10 @@
 	// position: relative;
 	// z-index: 1;
 	margin: rem($space*4) 5% 0;
+	transition: opacity 200ms;
+	.no-fonts & {
+		opacity: 0;
+	}
 	@media (min-width: $layout-s) {
 		margin-left: 8%;
 		margin-right: 8%;
@@ -10,26 +14,6 @@
 ul,
 p {
 	max-width: 45rem;
-}
-.SiteHeader {}
-.Logo {
-	font-size: 1rem;
-	a {
-		color: $text-color;
-		text-decoration: none;
-	}
-}
-
-// Navigation
-
-nav {
-	a {
-		margin-right: 0.5rem;
-		text-decoration: none;
-	}
-	a.is-active {
-		text-decoration: underline;
-	}
 }
 
 .Project {
