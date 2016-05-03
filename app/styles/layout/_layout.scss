@@ -1,12 +1,13 @@
 .DonaldByrd {
 	// position: relative;
 	// z-index: 1;
-	margin: rem($space*4) 5% 0;
+	margin: rem($space*3) 5% rem($space*2);
 	transition: opacity 200ms;
 	.no-fonts & {
 		opacity: 0;
 	}
-	@media (min-width: $layout-s) {
+	@media (min-width: $layout-m) {
+		margin-top: rem($space*4);
 		margin-left: 8%;
 		margin-right: 8%;
 	}
@@ -15,7 +16,12 @@ ul,
 p {
 	max-width: 45rem;
 }
-
+.Manchet {
+	margin-bottom: rem($space*2);
+	@media (min-width: $layout-m) {
+		margin-bottom: rem($space*4);
+	}
+}
 .Project {
 	h3 {
 		font-style: italic;
@@ -24,7 +30,10 @@ p {
 		}
 	}
 	p {
-		font-size: rem(15);
+		font-size: rem(14);
+		@media (min-width: $layout-m) {
+			font-size: rem(15);
+		}
 	}
 }
 @mixin colorBg($bg-color, $text-color) {
@@ -46,7 +55,7 @@ p {
 	}
 }
 .Project--danskdynamit { @include colorBg(red, white); }
-.Project--kopfwelt { @include colorBg(white, hsl(0, 0%, 75%)); }
+.Project--kopfwelt { @include colorBg(white, hsl(0, 0%, 55%)); }
 .Project--alivefestival { @include colorBg(yellow, black); }
 .Project--radio4000 { @include colorBg(#5E19E6, #dadada); }
 .Project--can { @include colorBg(#136c6c, #F3B685); }

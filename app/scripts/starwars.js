@@ -8,8 +8,8 @@
 */
 
 const settings = {
-	backgroundColor: 'rgb(7,15,17)',
-	amount: 128,
+	backgroundColor: 'rgb(20,15,17)',
+	amount: 120,
 	maxDepth: 32,
 	warpFactor: 0.02,
 	xfactor: 128.0
