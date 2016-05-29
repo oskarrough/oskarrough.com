@@ -8,7 +8,7 @@
 */
 
 const settings = {
-	backgroundColor: 'rgb(20,15,17)',
+	backgroundColor: 'rgb(20,15,15)',
 	amount: 120,
 	maxDepth: 32,
 	warpFactor: 0.02,
