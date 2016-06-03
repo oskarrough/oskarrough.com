@@ -33,8 +33,13 @@ table,
 address,
 textarea,
 figure {
-	margin-top: rem($space);
-	margin-bottom: rem($space);
+	margin-top: rem($space * 0.8);
+	margin-bottom: rem($space * 0.8);
+
+	@media (min-width: $layout-s) {
+		margin-top: rem($space);
+		margin-bottom: rem($space);
+	}
 }
 
 // Headers
