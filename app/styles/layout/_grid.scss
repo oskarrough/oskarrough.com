@@ -3,6 +3,7 @@
 	flex-flow: row wrap;
 	max-width: 70rem;
 }
+
 .Grid-item {
 	@media (min-width: $layout-sm) {
 		flex-basis: 50%;

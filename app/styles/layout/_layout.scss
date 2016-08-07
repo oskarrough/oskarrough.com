@@ -12,30 +12,38 @@
 		margin-right: 8%;
 	}
 }
+
 ul,
 p {
 	max-width: 45rem;
 }
+
 .Manchet {
 	margin-bottom: rem($space*2);
+
 	@media (min-width: $layout-m) {
 		margin-bottom: rem($space*4);
 	}
 }
+
 .Project {
 	h3 {
 		font-style: italic;
+
 		a {
 			text-decoration: none;
 		}
 	}
+
 	p {
 		font-size: rem(14);
+
 		@media (min-width: $layout-m) {
 			font-size: rem(15);
 		}
 	}
 }
+
 @mixin colorBg($bg-color, $text-color) {
 	h3 a {
 		@include negative-text;
@@ -43,24 +51,56 @@ p {
 		color: $text-color;
 	}
 }
+
 .Project h3 a {
 	display: inline-block;
-	padding: 0.2em 0.5em 0.2em;
+	padding: 0.25em 0.6em 0.2em;
 	// transition: background-color 600ms 100ms;
-	&:hover {
+	// &:hover {
 		// transition-duration: 10ms;
 		// transition-delay: 0;
-		background-color: transparent;
-		color: $text-color;
-	}
+		// background-color: transparent;
+		// color: $text-color;
+	// }
 }
-.Project--danskdynamit { @include colorBg(red, white); }
+
+// Different title colors
+.Project--danskdynamit { @include colorBg(hsl(0, 94%, 60%), white); }
 .Project--kopfwelt { @include colorBg(white, hsl(0, 0%, 55%)); }
 .Project--alivefestival { @include colorBg(yellow, black); }
 .Project--radio4000 { @include colorBg(#5E19E6, #dadada); }
 .Project--can { @include colorBg(#136c6c, #F3B685); }
 .Project--strrr { @include colorBg(brown, white); }
 .Project--lyde { @include colorBg(green, red); }
+
+// Stupid jelly animation on hover
+@keyframes jello {
+	11.1% { transform: skewX(1.5625deg) skewY(1.5625deg); }
+	33.3% { transform: skewX(-0.78125deg) skewY(-0.78125deg); }
+	66.6% { transform: skewX(0.390625deg) skewY(0.390625deg); }
+	88.8% { transform: skewX(-0.1953125deg) skewY(-0.1953125deg); }
+}
+
+@keyframes jello2 {
+	11.1% { transform: skewY(1.5625deg) skewX(1.5625deg); }
+	33.3% { transform: skewY(-0.78125deg) skewX(-0.78125deg); }
+	66.6% { transform: skewY(0.390625deg) skewX(0.390625deg); }
+	88.8% { transform: skewY(-0.1953125deg) skewX(-0.1953125deg); }
+}
+
+// .Project h3 a:hover {
+// 	transform-origin: center;
+// 	animation-duration: 400ms;
+// 	animation-fill-mode: both;
+// }
+
+// .Project:nth-child(odd) h3 a:hover {
+// 	animation-name: jello2;
+// }
+
+// .Project:nth-child(even) h3 a:hover {
+// 	animation-name: jello;
+// }
 
 /**
  * Canvas background
@@ -79,3 +119,4 @@ p {
 		height: 100%;
 	}
 }
+
