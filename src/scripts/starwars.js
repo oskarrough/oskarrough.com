@@ -9,10 +9,11 @@
 
 const settings = {
 	backgroundColor: 'rgb(20,15,15)',
-	amount: 120,
-	maxDepth: 32,
-	warpFactor: 0.02,
-	xfactor: 128.0
+	// backgroundColor: 'rgb(250,250,250)',
+	amount: 20,
+	maxDepth: 60,
+	warpFactor: 0.01,
+	xfactor: 64.0
 }
 
 // Creates an an array of star objects [{x, y, z}, …]
@@ -65,7 +66,7 @@ function render(canvas, ctx, stars, width, height) {
 	}
 }
 
-const init = selector => {
+var oskar = selector => {
 	const canvas = document.querySelector(selector)
 	if (!canvas || !canvas.getContext) {
 		throw new Error(`You need to supply a selector to the 'init' method`)
@@ -80,5 +81,3 @@ const init = selector => {
 	}
 	requestAnimationFrame(loop)
 }
-
-module.exports = {init}

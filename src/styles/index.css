@@ -1,0 +1,212 @@
+#ok {
+	background: url(../images/1775166611.gif) repeat;
+	height: 1.5rem;
+}
+
+/* Webfonts */
+
+@font-face {
+	font-family: 'triplicate-t4';
+	src: url('../fonts/triplicate-t4/triplicate_t4_regular-webfont.woff2') format('woff2'),
+		url('../fonts/triplicate-t4/triplicate_t4_regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+/*@font-face {
+	font-family: 'triplicate-t4';
+	src: url('../fonts/triplicate-t4/triplicate_t4_italic-webfont.woff2') format('woff2'),
+		url('../fonts/triplicate-t4/triplicate_t4_italic-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+}*/
+@font-face {
+	font-family: 'triplicate-t4';
+	src: url('../fonts/triplicate-t4/triplicate_t4_bold-webfont.woff2') format('woff2'),
+		url('../fonts/triplicate-t4/triplicate_t4_bold-webfont.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'triplicate-t4';
+	src: url('../fonts/triplicate-t4/triplicate_t4_bold_italic-webfont.woff2') format('woff2'),
+		url('../fonts/triplicate-t4/triplicate_t4_bold_italic-webfont.woff') format('woff');
+	font-weight: bold;
+	font-style: italic;
+}
+
+:root {
+	font-family: 'triplicate-t4', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+html {
+	margin: 3rem 3rem 1.5rem 10%;
+	background-color: hsl(0, 0%, 100%);
+	color: hsl(0, 0%, 5%);
+}
+
+body {
+	margin: 0;
+}
+
+/* Vertical rhythm */
+
+html {
+	background-image: linear-gradient(hsla(0, 0%, 70%, 0.15) 5%, transparent 5%);
+	background-size: 100% 1.5em;
+}
+
+h1,
+h3 {
+	font-weight: bold;
+	font-style: italic;
+	margin: 1.5rem 0;
+}
+
+h1 {
+	font-size: 1.5rem;
+	line-height: 1;
+}
+
+h3 {
+	font-size: 1rem;
+}
+
+p {
+	margin: 1.5rem 0;
+}
+
+img {
+	height: auto;
+	vertical-align: bottom;
+}
+
+a,
+a:visited {
+	color: black;
+}
+
+.Grid {
+	display: flex;
+	flex-flow: row wrap;
+	/*justify-content: space-between;*/
+}
+
+@media (min-width: 700px) {
+	.Grid-item {
+		max-width: calc(100% / 2 - 3rem);
+		margin-right: 3rem;
+	}
+}
+
+.Project h3 a {
+	display: inline-block;
+	text-decoration: none;
+	/*padding: 0.25rem 0.5rem;*/
+	padding: 0 0.5rem;
+	background-color: hsl(0, 0%, 98%);
+	color: hsl(0, 0%, 0%);
+}
+
+.Project p {
+	font-size: 0.875rem;
+	line-height: calc(24 / 14);
+	/*margin-bottom: 0;*/
+}
+
+canvas {
+	max-width: 100%;
+}
+
+.Prince {
+	background: hsl(260, 10%, 92%);
+	border: 1px solid black;
+}
+
+.Prince,
+radio4000-player {
+	height: 502px !important;
+	font-family: inherit !important;
+}
+
+@media (min-width: 600px) {
+	.Prince,
+	radio4000-player {
+		height: 21rem !important;
+		font-family: inherit !important;
+	}
+}
+
+radio4000-player .Layout {
+	border: 0 !important;
+}
+
+#starwarswrap {
+	/*min-width: 320px;*/
+	height: 10.5rem;
+	background: rgb(20,15,15);
+}
+
+#starwars {
+	display: block;
+	height: 10.5rem;
+}
+
+/* Dark theme */
+
+.theme-dark {
+	background-color: hsl(0, 0%, 0%);
+	background-color: hsl(0, 14%, 7%);
+	color: hsl(0, 0%, 90%);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.theme-dark a,
+.theme-dark a:visited {
+	color: hsl(0, 0%, 90%);
+}
+
+.theme-dark #starwarswrap canvas {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	top: 0;
+	left: 0;
+}
+
+/* Project colors */
+
+.Project--danskdynamit h3 a {
+	background-color: hsl(0, 94%, 60%);
+	color: white;
+}
+.Project--kopfwelt h3 a {
+	background-color: white;
+	color: hsl(0, 0%, 55%));
+}
+.Project--alivefestival h3 a {
+	background-color: yellow;
+	color: black !important;
+}
+.Project--radio4000 h3 a {
+	background-color: #5E19E6;
+	color: hsl(0, 0%, 98%);
+}
+.Project--can h3 a {
+	background-color: #136c6c;
+	color: #F3B685;
+}
+.Project--strrr h3 a {
+	background-color: brown;
+	color: white;
+}
+.Project--opensource h3 a {
+	background: black;
+	color: hsl(0, 0%, 90%) !important;
+}
+
+.mr0 {
+	margin-right: 0;
+}
