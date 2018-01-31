@@ -1,14 +1,9 @@
 {
-  "name": "rough",
-  "version": "3.0.2",
+  "name": "oskarrough.com",
   "private": true,
-  "engines": {
-    "node": ">=0.12.0"
-  },
   "scripts": {
     "start": "open src/index.html",
-    "build": "rm -rf dist; cp -r src dist && workbox generate:sw",
-    "deploy": "surge dist https://oskarrough.com"
+    "build": "rm -rf dist; cp -r src dist && workbox generate:sw"
   },
   "devDependencies": {
     "workbox-cli": "^2.0.1"

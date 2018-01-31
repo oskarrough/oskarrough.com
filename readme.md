@@ -1,5 +1,5 @@
-# oskarrough.com
-
 My own website.
 
-Made with http://github.com/oskarrough/rough.
+The `master` branch is automatically deployed to https://oskarrough.com via Netlify.
+
+There is no bu9

@@ -205,10 +205,6 @@ find-up@^1.0.0:
     path-exists "^2.0.0"
     pinkie-promise "^2.0.0"
 
-fontfaceobserver@^1.7.1:
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/fontfaceobserver/-/fontfaceobserver-1.7.3.tgz#b06c653171a06ef8d195539cf7c3802208752ecd"
-
 fs-extra@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-3.0.1.tgz#3794f378c58b342ea7dbbb23095109c4b3b62291"
