@@ -35,15 +35,21 @@
 }
 
 :root {
-	font-family: 'triplicate-t4', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+	font-family: 'triplicate-t4', -apple-system, BlinkMacSystemFont, sans-serif;
 	font-size: 16px;
 	line-height: 1.5;
 }
 
 html {
-	margin: 3rem 3rem 1.5rem 10%;
+	margin: 3rem 1rem 1.5rem;
 	background-color: hsl(0, 0%, 100%);
 	color: hsl(0, 0%, 5%);
+}
+
+@media (min-width: 600px) {
+	html {
+		margin: 3rem 3rem 1.5rem 10%;
+	}
 }
 
 body {
@@ -133,8 +139,7 @@ radio4000-player {
 @media (min-width: 600px) {
 	.Prince,
 	radio4000-player {
-		height: 21rem !important;
-		font-family: inherit !important;
+		height: calc(21rem - 2px) !important;
 	}
 }
 
