@@ -29,8 +29,10 @@ append body
 		canvas#starwars
 
 	block scripts
-		script(src="js/footer.min.js")
-		script(src="js/main.min.js")
+		// scripts concatenated and minified via build script 
+		script(src="js/plugins.js")
+		script(src="js/main.js")
+		// end scripts 
 
 	| <script type="text/javascript">
 	| var _gaq = _gaq || [];

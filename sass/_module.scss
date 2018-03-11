@@ -69,6 +69,9 @@
 		margin-bottom: 2 / $base-font-size-unitless * 1em;
 	}
 }
+.list + p {
+	margin-top: 2.5em;
+}
 .date {
 	display: inline-block;
 	min-width: 2.75em;
