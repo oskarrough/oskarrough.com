@@ -3,9 +3,9 @@
   "private": true,
   "scripts": {
     "start": "open src/index.html",
-    "build": "rm -rf dist; cp -r src dist && workbox generate:sw"
+    "build": "rm -rf dist; cp -r src dist && workbox generateSW workbox-config.js"
   },
   "devDependencies": {
-    "workbox-cli": "^2.0.1"
+    "workbox-cli": "^3.6.3"
   }
 }
