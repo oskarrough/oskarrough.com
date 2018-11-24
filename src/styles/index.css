@@ -56,6 +56,11 @@ body {
 	margin: 0;
 }
 
+/* small { */
+/* 	font-size: 0.875rem; */
+/* 	line-height: calc(24 / 14); */
+/* } */
+
 /* Vertical rhythm */
 
 html {
@@ -96,7 +101,6 @@ a:visited {
 .Grid {
 	display: flex;
 	flex-flow: row wrap;
-	/*justify-content: space-between;*/
 }
 
 @media (min-width: 700px) {
@@ -109,28 +113,32 @@ a:visited {
 .Project h3 a {
 	display: inline-block;
 	text-decoration: none;
-	/*padding: 0.25rem 0.5rem;*/
 	padding: 0 0.5rem;
 	background-color: hsl(0, 0%, 98%);
 	color: hsl(0, 0%, 0%);
 }
 
-.Project p {
-	font-size: 0.875rem;
-	line-height: calc(24 / 14);
-	/*margin-bottom: 0;*/
+.Project h3 a::after {
+	content: "→";
+	display: inline-block;
+	margin-left: 0.3em;
+	position: relative;
+	top: -0.05em;
+	opacity: 0.75;
 }
 
-canvas {
-	max-width: 100%;
-}
-
+/* Music player */
 .Prince {
 	background: hsl(260, 10%, 92%);
 	border: 1px solid black;
 }
 
+.Prince iframe {
+	width: 100%;
+}
+
 .Prince,
+.Prince iframe,
 radio4000-player {
 	height: 502px !important;
 	font-family: inherit !important;
@@ -138,6 +146,7 @@ radio4000-player {
 
 @media (min-width: 600px) {
 	.Prince,
+	.Prince iframe,
 	radio4000-player {
 		height: calc(21rem - 2px) !important;
 	}
@@ -147,6 +156,12 @@ radio4000-player .Layout {
 	border: 0 !important;
 }
 
+/* Little canvas animation */
+
+canvas {
+	max-width: 100%;
+}
+
 #starwarswrap,
 #starwars {
 	width: 320px;
@@ -154,7 +169,6 @@ radio4000-player .Layout {
 	height: 10.5rem;
 }
 #starwarswrap {
-	/*min-width: 320px;*/
 	background: rgb(20,15,15);
 }
 
@@ -205,7 +219,7 @@ radio4000-player .Layout {
 }
 .Project--can h3 a {
 	background-color: #136c6c;
-	color: #F3B685;
+	color: #fdd5b5;
 }
 .Project--strrr h3 a {
 	background-color: brown;
@@ -213,7 +227,7 @@ radio4000-player .Layout {
 }
 .Project--opensource h3 a {
 	background: black;
-	color: hsl(0, 0%, 90%) !important;
+	color: hsl(0, 0%, 95%) !important;
 }
 
 .mr0 {
