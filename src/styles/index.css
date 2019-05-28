@@ -84,7 +84,8 @@ h3 {
 	font-size: 1rem;
 }
 
-p {
+p,
+.Grid-item ul {
 	margin: 1.5rem 0;
 }
 
