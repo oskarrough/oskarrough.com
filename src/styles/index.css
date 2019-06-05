@@ -114,19 +114,26 @@ a:visited {
 .Project h3 a {
 	display: inline-block;
 	text-decoration: none;
-	padding: 0 0.5rem;
+	padding: 0.5rem 1rem;
 	background-color: hsl(0, 0%, 98%);
 	color: hsl(0, 0%, 0%);
+	margin-bottom: 0.5rem;
 }
 
 .Project h3 a::after {
 	content: "→";
 	display: inline-block;
-	margin-left: 0.3em;
+	margin-left: 0.4em;
 	position: relative;
 	top: -0.05em;
 	opacity: 0.75;
 }
+
+.Project h3 a:hover {
+	/* box-shadow: 0 0 0.5em 1em hsla(0, 0%, 0%, 0.1); */
+	outline: 3px dotted purple;
+}
+
 
 /* Music player */
 .Prince {
