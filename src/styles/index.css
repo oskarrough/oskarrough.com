@@ -99,6 +99,11 @@ a:visited {
 	color: black;
 }
 
+a:hover {
+	outline: 3px dotted purple;
+	text-decoration: none;
+}
+
 .Grid {
 	display: flex;
 	flex-flow: row wrap;
