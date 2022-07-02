@@ -5,3 +5,5 @@ dist
 *.sublime-workspace
 *.DS_Store
 src/.dat/
+yarn.lock
+package-lock.json
