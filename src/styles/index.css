@@ -242,6 +242,11 @@ canvas {
 	background: black;
 	color: hsl(0, 0%, 95%) !important;
 }
+.Project--uni h3 a {
+	background: #00b2c2;
+	color: hsl(0, 0%, 95%) !important;
+}
+
 
 .mr0 {
 	margin-right: 0;
