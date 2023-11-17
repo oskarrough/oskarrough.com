@@ -90,6 +90,7 @@ p,
 }
 
 img {
+	max-width: 100%;
 	height: auto;
 	vertical-align: bottom;
 }
@@ -113,6 +114,7 @@ a:hover {
 	.Grid-item {
 		max-width: calc(100% / 2 - 3rem);
 		margin-right: 3rem;
+		margin-bottom: 2rem;
 	}
 }
 
