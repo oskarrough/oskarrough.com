@@ -158,7 +158,7 @@
 <script>
 	if (navigator.serviceWorker) {
 		navigator.serviceWorker
-			.register('/sw.js')
+			.register('/service-worker.js')
 			.catch(function(err) {
 				console.error('Unable to register service worker.', err);
 			});
