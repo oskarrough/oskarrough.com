@@ -205,6 +205,11 @@ canvas {
 	color: hsl(0, 0%, 90%);
 }
 
+.theme-dark .Project h3 a,
+.theme-dark .Project h3 a:visited {
+	 color: hsl(0, 0%, 10%);
+ }
+
 .theme-dark #starwarswrap canvas {
 	position: fixed;
 	width: 100%;
