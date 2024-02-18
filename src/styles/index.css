@@ -1,3 +1,7 @@
+.DonaldByrd {
+	margin: 1rem;
+}
+
 #ok {
 	background: url(../images/1775166611.gif) repeat;
 	height: 1.5rem;
@@ -41,14 +45,14 @@
 }
 
 html {
-	margin: 3rem 1rem 1.5rem;
-	background-color: hsl(0, 0%, 100%);
-	color: hsl(0, 0%, 5%);
+	/* margin: 3rem 1rem 1.5rem; */
+	/* background-color: hsl(0, 0%, 100%); */
+	/* color: hsl(0, 0%, 5%); */
 }
 
 @media (min-width: 600px) {
 	html {
-		margin: 3rem 3rem 1.5rem 10%;
+		/* margin: 3rem 3rem 1.5rem 10%; */
 	}
 }
 
@@ -56,17 +60,11 @@ body {
 	margin: 0;
 }
 
-/* small { */
-/* 	font-size: 0.875rem; */
-/* 	line-height: calc(24 / 14); */
-/* } */
-
 /* Vertical rhythm */
-
-html {
-	background-image: linear-gradient(hsla(0, 0%, 70%, 0.15) 5%, transparent 5%);
-	background-size: 100% 1.5em;
-}
+/* html { */
+/* 	background-image: linear-gradient(hsla(0, 0%, 70%, 0.15) 5%, transparent 5%); */
+/* 	background-size: 100% 1.5em; */
+/* } */
 
 h1,
 h3 {
@@ -89,6 +87,10 @@ p,
 	margin: 1.5rem 0;
 }
 
+small {
+	font-size: 0.875rem;
+}
+
 img {
 	max-width: 100%;
 	height: auto;
@@ -106,15 +108,18 @@ a:hover {
 }
 
 .Grid {
-	display: flex;
-	flex-flow: row wrap;
+	/* background: bisque; */
+}
+.Grid-item {
+	/* background: black; */
+	margin-bottom: 3rem;
 }
 
 @media (min-width: 700px) {
-	.Grid-item {
-		max-width: calc(100% / 2 - 3rem);
-		margin-right: 3rem;
-		margin-bottom: 2rem;
+	.Grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 3rem;
 	}
 }
 
@@ -140,7 +145,6 @@ a:hover {
 	/* box-shadow: 0 0 0.5em 1em hsla(0, 0%, 0%, 0.1); */
 	outline: 3px dotted purple;
 }
-
 
 /* Music player */
 .Prince {
@@ -192,13 +196,12 @@ canvas {
 }
 
 /* Dark theme */
-
 .theme-dark {
-	background-color: hsl(0, 0%, 0%);
+	/* background-color: hsl(0, 0%, 0%); */
 	background-color: hsl(0, 14%, 7%);
 	color: hsl(0, 0%, 90%);
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	/* -webkit-font-smoothing: antialiased; */
+	/* -moz-osx-font-smoothing: grayscale; */
 }
 .theme-dark a,
 .theme-dark a:visited {
@@ -210,17 +213,22 @@ canvas {
 	 color: hsl(0, 0%, 10%);
  }
 
-.theme-dark #starwarswrap canvas {
+.theme-dark #starwarswrap {
 	position: fixed;
 	width: 100%;
 	height: 100%;
 	z-index: -1;
 	top: 0;
 	left: 0;
+	pointer-events: none;
+}
+
+#starwarswrap canvas {
+	width: 100%;
+	height: 100%;
 }
 
 /* Project colors */
-
 .Project--danskdynamit h3 a {
 	background-color: hsl(0, 94%, 60%);
 	color: white;
@@ -245,6 +253,9 @@ canvas {
 	background-color: brown;
 	color: white;
 }
+.theme-dark .Project--strrr h3 a {
+	color: white;
+}
 .Project--opensource h3 a {
 	background: black;
 	color: hsl(0, 0%, 95%) !important;
@@ -254,7 +265,15 @@ canvas {
 	color: hsl(0, 0%, 95%) !important;
 }
 
-
 .mr0 {
 	margin-right: 0;
+}
+
+.Wall {
+	margin-top: 10vh;
+	overflow: auto;
+}
+
+.R4 {
+	margin-left: 3vw;
 }
