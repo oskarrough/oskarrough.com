@@ -1,11 +1,35 @@
-.DonaldByrd {
-	margin: 1rem;
+.DonaldByrd > section {
+	padding: 1rem;
 }
 
 #ok {
 	background: url(../images/1775166611.gif) repeat;
 	height: 1.5rem;
 }
+
+section[light] {
+	background: linear-gradient(45deg, #000cff91, transparent);
+}
+
+/* Dark theme */
+section[dark] {
+	/* background-color: hsl(0, 0%, 0%); */
+	background-color: hsl(0, 14%, 7%);
+	color: hsl(0, 0%, 90%);
+	/* -webkit-font-smoothing: antialiased; */
+	/* -moz-osx-font-smoothing: grayscale; */
+
+	a,
+	a:visited {
+		color: hsl(0, 0%, 90%);
+	}
+
+	.Project h3 a,
+	.Project h3 a:visited {
+		color: hsl(0, 0%, 10%);
+	}
+}
+
 
 /* Webfonts */
 
@@ -195,25 +219,7 @@ canvas {
 	display: block;
 }
 
-/* Dark theme */
-.theme-dark {
-	/* background-color: hsl(0, 0%, 0%); */
-	background-color: hsl(0, 14%, 7%);
-	color: hsl(0, 0%, 90%);
-	/* -webkit-font-smoothing: antialiased; */
-	/* -moz-osx-font-smoothing: grayscale; */
-}
-.theme-dark a,
-.theme-dark a:visited {
-	color: hsl(0, 0%, 90%);
-}
-
-.theme-dark .Project h3 a,
-.theme-dark .Project h3 a:visited {
-	 color: hsl(0, 0%, 10%);
- }
-
-.theme-dark #starwarswrap {
+html:not(.theme-dark) #starwarswrap {
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -270,8 +276,22 @@ canvas {
 }
 
 .Wall {
-	margin-top: 10vh;
+	background: #eee;
+	padding: 2rem;
+	margin: 2rem;
 	overflow: auto;
+
+	columns: 20rem;
+	column-gap: 1rem;
+
+	img {
+		vertical-align: bottom;
+		margin-bottom: 1rem;
+	}
+
+	a {
+		display: block;
+	}
 }
 
 .R4 {
