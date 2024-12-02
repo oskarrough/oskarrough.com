@@ -1,11 +1,12 @@
 import { defineCollection, z } from 'astro:content';
 
+// These help type-checking frontmatter using schemas
+
 const blog = defineCollection({
 	type: 'content',
-	// Type-check frontmatter using a schema
 	schema: z.object({
 		title: z.string(),
-		description: z.string(),
+		description: z.string().optional(),
 		// Transform string to Date object
 		pubDate: z.coerce.date(),
 		updatedDate: z.coerce.date().optional(),
@@ -13,4 +14,15 @@ const blog = defineCollection({
 	}),
 });
 
-export const collections = { blog };
+const project = defineCollection({
+	type: 'content',
+	schema: z.object({
+		title: z.string(),
+		description: z.string(),
+		// Transform string to Date object
+		pubDate: z.coerce.date(),
+		image: z.string().optional(),
+	}),
+});
+
+export const collections = { blog, project };

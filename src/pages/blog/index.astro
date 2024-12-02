@@ -1,45 +1,9 @@
 ---
-import { getCollection } from 'astro:content';
-import FormattedDate from '../../components/FormattedDate.astro';
-import Normal from '../../layouts/Normal.astro';
-
-const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-)
+import Normal from '../../layouts/Normal.astro'
+import BlogLatest from '../../components/BlogLatest.astro'
 ---
 
-<style>
-	li {
-		margin-bottom: 1rem;
-	}
-	li a {
-		text-decoration: none;
-	}
-	h4,
-	p {
-		margin: 0;
-	}
-	.date {
-		color: initial;
-	}
-</style>
-
 <Normal>
-	<section>
-		<ul>
-			{
-				posts.map((post) => (
-					<li>
-						<a href={`/blog/${post.slug}/`}>
-							<!-- <img width={720} height={360} src={post.data.heroImage} alt="" /> -->
-							<h4 class="title">{post.data.title}</h4>
-							<p class="date">
-								<FormattedDate date={post.data.pubDate} />
-							</p>
-						</a>
-					</li>
-				))
-			}
-		</ul>
-	</section>
+	<h1>(B)Log</h1>
+	<BlogLatest />
 </Normal>

@@ -9,14 +9,15 @@ import { SITE_TITLE } from '../consts'
 		<div class="internal-links">
 			<HeaderLink href="/projects">Projects</HeaderLink>
 			<HeaderLink href="/music">Music</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
+			<HeaderLink href="/blog">Log</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
 		</div>
 	</nav>
 </header>
+
 <style>
 	header {
-		margin-bottom: calc(4vh - 1rem);
+		margin: 1rem 0 calc(4vh - 1rem) 2rem;
 	}
 	nav {
 		display: flex;
@@ -27,15 +28,17 @@ import { SITE_TITLE } from '../consts'
 	}
 	h2 {
 		margin: 0;
+		font-weight: inherit;
 		font-size: 1em;
 	}
+	nav {
+	}
 	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
+		font-weight: 400;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
 		text-decoration: none;
 	}
 	nav a.active {
-		text-decoration: none;
-		color: var(--accent);
 	}
 </style>
