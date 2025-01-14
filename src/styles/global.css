@@ -7,7 +7,8 @@
 :root {
 	--accent: #f0ccdf;
 	/* --accent-dark: maroon; */
-	--bg1: hsl(328.41deg 13.36% 27.36%);
+	/* --bg1: hsl(328.41deg 13.36% 27.36%); */
+	--bg1: hsl(238.67deg 91.01% 38.9%);
 	--bg2: #dbd1c8;
 	--black: #151515;
 	--gray: gray;
@@ -94,7 +95,7 @@ h2 {
 
 h3 {
 	text-transform: uppercase;
-	letter-spacing: 0.05em;
+	letter-spacing: 0.04em;
 }
 
 ul,
@@ -116,7 +117,7 @@ a {
 a:not(:has(img)):hover {
 	/* color: var(--accent); */
 	/* background: #fcc; */
-	background: hsla(0 0% 50% / 0.2);
+	background: hsla(0 0% 90% / 0.5);
 	transition-duration: 200ms;
 	/* background: var(--bg1); */
 	/* color: var(--accent); */
@@ -166,24 +167,6 @@ hr {
 	border-top: 1px solid rgb(var(--gray-light));
 }
 
-.sr-only {
-	border: 0;
-	padding: 0;
-	margin: 0;
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-	/* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
-	clip: rect(1px 1px 1px 1px);
-	/* maybe deprecated but we need to support legacy browsers */
-	clip: rect(1px, 1px, 1px, 1px);
-	/* modern browsers, clip-path works inwards from each corner */
-	clip-path: inset(50%);
-	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
-	white-space: nowrap;
-}
-
 figure {
 	margin: 0;
 }
@@ -205,6 +188,10 @@ article>figure {
 	list-style: none;
 	padding: 0 0 0 0.5rem;
 
+	li {
+		margin-bottom: 0.25rem;
+	}
+
 	a {
 		position: relative;
 		display: block;
@@ -219,7 +206,7 @@ article>figure {
 
 	h3 + p:has(time) {
 		margin-left: 0.5rem;
-		margin-top: -0.2rem;
+		margin-top: -0.5rem;
 	}
 
 	h3 {
@@ -228,6 +215,6 @@ article>figure {
 
 	p {
 		margin: 0;
-		opacity: 0.6;
+		/* opacity: 0.6; */
 	}
 }

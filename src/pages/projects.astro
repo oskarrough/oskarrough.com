@@ -7,7 +7,7 @@ const projects = (await getCollection('projects')).toSorted((a,b) => a.data.titl
 ---
 
 <Normal title="Projects">
-	<p>… and here are some of my projects:</p>
+	<p>… and here are some the projects I'm involved in:</p>
 
 	<ul class="list">
 		{
@@ -26,14 +26,15 @@ const projects = (await getCollection('projects')).toSorted((a,b) => a.data.titl
 
 		}
 	</ul>
+</Normal>
 
+<section class="white">
 	<p>I maintain several community projects such as <a href="https://github.com/internet4000/media-now">media-now</a>, <a href="https://github.com/internet4000/radio4000">Radio4000</a>, <a href="https://github.com/oskarrough/ember-youtube">ember-youtube</a>, <a href="https://github.com/oskarrough/ember-date-fns">ember-date-fns</a> and <a href="https://github.com/oskarrough/ember-wordpress">ember-wordpress</a> and the <a href="https://github.com/oskarrough/rough">rough boilerplate</a>. The source for <a href="https://github.com/oskarrough/codesandnotes">Codes &amp; Notes</a> is also available.</p>
-
-	<p>You can have a look at my <a href="https://github.com/oskarrough">GitHub profile</a></p>
-
+	<p>You can have a look at my <a href="https://github.com/oskarrough">GitHub profile</a>.</p>
+	<p>And a few more things to mention:</p>
 	<ul>
 		<li><a href="https://port-zero.com" rel="noopener">Port Zero</a></li>
-		<li><a href="https://masse.video" rel="noopener">Brandt Brauer Frick - Masse Video</a></li>
+		<!-- <li><a href="https://masse.video" rel="noopener">Brandt Brauer Frick - Masse Video</a></li> -->
 		<li><a href="https://www.jitwam.com" rel="noopener">Jitwam</a></li>
 		<li><a href="https://www.no-hablo.com" rel="noopener">Max Graef - Lo siento mucho pero no hablo tu idioma</a></li>
 		<li><a href="https://freedomtv.cc" rel="noopener">Wayne Snow - Freedom TV</a></li>
@@ -42,4 +43,18 @@ const projects = (await getCollection('projects')).toSorted((a,b) => a.data.titl
 		<li><a href="http://arkov.co" rel="noopener">Arkov</a></li>
 		<li><a href="http://gt-cinetype.com" rel="noopener">GT Cinetype</a> (slow browsers beware)</li>
 	</ul>
-</Normal>
+</section>
+
+<style>
+		.white {
+			background: white;
+			padding: 2rem 2rem 0.5rem;
+		}
+		.white p,
+		.white ul {
+			max-width: 50rem;
+		}
+		.white :global(a) {
+			color: var(--bg1);
+		}
+</style>
