@@ -1,6 +1,7 @@
 ---
 title: Brandt Brauer Frick - Masse
 url: https://masse.video
+draft: true
 ---
 An interactive video version of Brandt Brauer Frick's song "Masse".
 
