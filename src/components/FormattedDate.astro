@@ -3,7 +3,7 @@ interface Props {
 	date: Date;
 }
 
-const { date } = Astro.props;
+let date = new Date(Astro.props.date)
 ---
 
 <time datetime={date.toISOString()}>
