@@ -52,7 +52,7 @@ projects = projects.toSorted((a,b) => a.data.title.localeCompare(b.data.title))
 		<ul class="grid">
 			{
 			projects.map(async (post) => {
-			const { Content, headings } = await render(post);
+			const {Content} = await render(post);
 			return (<li>
 				<h3>
 					{post.data.url ?
@@ -91,7 +91,9 @@ projects = projects.toSorted((a,b) => a.data.title.localeCompare(b.data.title))
 			<li><a href="https://www.arkov.co/" rel="noopener">Arkov</a></li>
 			<!-- <li><a href="https://www.everland.dk" rel="noopener">Everland</a></li> -->
 			<li><a href="https://port-zero.com" rel="noopener">Port Zero</a></li>
+			<li><a href="https://port-zero.com" rel="noopener">Port Zero</a></li>
 		</ul>
+
 		<p>Helped Tartelet Records with a few websites:</p>
 		<ul>
 			<li><a href="https://www.no-hablo.com" rel="noopener">Max Graef - Lo siento mucho pero no hablo tu idioma</a></li>
