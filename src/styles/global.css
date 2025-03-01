@@ -10,6 +10,7 @@
 	/* --bg1: hsl(328.41deg 13.36% 27.36%); */
 	--bg1: hsl(238.67deg 91.01% 38.9%);
 	--bg1: hsl(238.67deg 91.01% 38.9%);
+	--bg1: hsl(123.6, 82.7%, 15.9%);
 	--bg2: #dbd1c8;
 	--black: #151515;
 	--gray: gray;
@@ -30,12 +31,6 @@ body {
 	overflow-y: scroll;
 }
 
-@media (min-width: 800px) {
-	body {
-		/* font-size: 20px; */
-	}
-}
-
 /* ::-moz-selection { */
 /*     background: var(--text); */
 /*     color: var(--bg); */
@@ -44,36 +39,6 @@ body {
 /*     background: var(--text); */
 /*     color: var(--bg); */
 /* } */
-
-main {
-	max-width: 80ch;
-	background: var(--bg2);
-	padding: 4rem 2rem 1.3rem;
-	margin: 2vh 0.5rem 0 5vw;
-	position: relative;
-
-	a {
-		color: inherit;
-		text-underline-offset: max(0.1em, 2px);
-		text-decoration-thickness: from-font;
-		text-decoration-color: hsla(0 0% 50% / 0.8);
-	}
-	a:hover {
-		text-decoration: none;
-	}
-}
-
-main::before {
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 0;
-	height: 0;
-	content: '';
-	border-width: 1rem;
-	border-style: solid;
-	border-color: var(--bg1) var(--bg1) #E8A2A2 #E8A2A2;
-}
 
 h1,
 h2,
@@ -118,10 +83,21 @@ a {
 a:not(:has(img)):hover {
 	/* color: var(--accent); */
 	/* background: #fcc; */
-	background: hsla(0 0% 90% / 0.5);
+	/* background: hsla(0 0% 90% / 0.5); */
 	transition-duration: 200ms;
 	/* background: var(--bg1); */
 	/* color: var(--accent); */
+}
+
+main a {
+	color: inherit;
+	text-underline-offset: max(0.1em, 2px);
+	text-decoration-thickness: from-font;
+	text-decoration-color: hsla(0 0% 50% / 0.8);
+}
+
+main a:hover {
+	text-decoration: none;
 }
 
 textarea,

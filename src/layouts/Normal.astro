@@ -23,3 +23,25 @@ const smartTitle = title ? `${title} - ${SITE_TITLE}` : SITE_TITLE
 	</body>
 </html>
 
+<style>
+
+main {
+	max-width: 80ch;
+	background: var(--bg2);
+	padding: 4rem 3vw 1.3rem;
+	margin: 2vh 0.5rem 0 4vw;
+	position: relative;
+}
+
+main::before {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 0;
+	height: 0;
+	content: '';
+	border-width: 1rem;
+	border-style: solid;
+	border-color: var(--bg1) var(--bg1) #E8A2A2 #E8A2A2;
+}
+</style>

@@ -1,27 +1,28 @@
 ---
-import {getCollection} from 'astro:content'
+import {getCollection, render} from 'astro:content'
 import Normal from '../layouts/Normal.astro'
 
-const projects = (await getCollection('projects'))
-	.filter(project => !project.data.draft)
-	.toSorted((a,b) => a.data.title.localeCompare(b.data.title))
+let projects = await getCollection('projects')
+projects = projects.filter(project => !project.data.draft)
+projects = projects.toSorted((a,b) => a.data.title.localeCompare(b.data.title))
 ---
 
 <Normal title="Projects">
-	<p>Projects I am or was involved in, prototypes and experiments in no particular order.</p>
+	<p>Projects I am or was involved in, prototypes and experiments in no particular order. Basically ideas I like to be part of.</p>
 
 	<ul class="list">
 		{
 		projects.map(async (post) => {
-		const { Content, headings } = await post.render();
+		const { Content, headings } = await render(post);
 		return (<li>
 			<h3>
 				{post.data.url ?
 				<a href={post.data.url}>{post.data.title} </a>
 				: post.data.title}
 			</h3>
+			<p set:html={post.data.description}></p>
 			{/* <p class="date">{post.data.pubDate}</p> */}
-			{/* <Content /> */}
+			{!post.data.description && <Content />}
 		</li>)
 		})
 

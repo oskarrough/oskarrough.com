@@ -1,6 +1,8 @@
 ---
 title: Alive Festival
 url: https://www.alivefestival.dk
+whatever: 42
+description: A cozy, yearly and very fun music festival located in my homearea Thy, Denmark. Started it with Mads & Jakob back in 2009. I left it in good hands around 2014. Now it's 2025 and still going!
 ---
 A cozy, yearly and very fun music festival located in my homearea Thy, Denmark. Started it with Mads & Jakob back in 2009. I left it in good hands around 2014. Now it's 2025 and still going!
 

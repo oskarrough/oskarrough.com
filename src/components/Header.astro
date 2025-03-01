@@ -5,40 +5,33 @@ import { SITE_TITLE } from '../consts'
 
 <header>
 	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
-		<div class="internal-links">
-			<HeaderLink href="/projects">Projects</HeaderLink>
-			<HeaderLink href="/music">Music</HeaderLink>
-			<HeaderLink href="/blog">Log</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
-		</div>
+		<HeaderLink href="/">{SITE_TITLE}</HeaderLink>
+		<HeaderLink href="/projects">Projects</HeaderLink>
+		<HeaderLink href="/music">Music</HeaderLink>
+		<HeaderLink href="/blog">Log</HeaderLink>
+		<HeaderLink href="/about">About</HeaderLink>
 	</nav>
 </header>
 
 <style>
 	header {
-		margin: 1rem 0 calc(4vh - 1rem) 5vw;
+		margin: 5rem 0 calc(4vh - 1rem) 4vw;
 	}
 	nav {
 		display: flex;
 		align-items: center;
-		gap: 1rem;
-		margin-left: -0.5rem;
-		/* justify-content: space-between; */
-	}
-	h2 {
-		margin: 0;
-		font-weight: inherit;
-		font-size: 1em;
-	}
-	nav {
+		line-height: 1.1;
+		gap: 1em;
 	}
 	nav a {
-		font-weight: 400;
-		padding-left: 0.5rem;
-		padding-right: 0.5rem;
+		/* padding-left: 0.2rem; */
+		/* padding-right: 0.2rem; */
 		text-decoration: none;
 	}
 	nav a.active {
+		/* color: black; */
+		/* font-weight: bolder; */
+		text-decoration: underline;
 	}
+</style>
 </style>
