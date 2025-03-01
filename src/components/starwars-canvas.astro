@@ -1,0 +1,101 @@
+---
+
+---
+
+<starwars-canvas></starwars-canvas>
+
+
+<script>
+	/**
+	 * Starfield with HTML5 canvas
+	 * based on http://codentronix.com/2011/07/22/html5-canvas-3d-starfield/
+	 */
+	class StarwarsCanvas extends HTMLElement {
+		settings = {
+			backgroundColor: 'rgb(20,15,15)',
+			// backgroundColor: 'rgb(250,250,250)',
+			amount: 20,
+			maxDepth: 60,
+			warpFactor: 0.01,
+			xfactor: 64.0,
+		}
+
+        /** @type {HTMLCanvasElement} */
+		canvas = null
+
+		connectedCallback() {
+			const canvas = document.createElement('canvas')
+			this.appendChild(canvas)
+			this.canvas = canvas
+			this.enable()
+		}
+
+		// Creates an an array of star objects [{x, y, z}, …]
+		createStars(amount = this.settings.amount, maxDepth = this.settings.maxDepth) {
+			const arr = new Array(amount)
+			for (let i = 0; i < arr.length; i++) {
+				arr[i] = {
+					x: this.randomRange(-25, 25),
+					y: this.randomRange(-25, 25),
+					z: this.randomRange(1, maxDepth),
+				}
+			}
+			return arr
+		}
+
+		// Returns a random number in the range [minVal,maxVal]
+		randomRange(minVal, maxVal) {
+			return Math.floor(Math.random() * (maxVal - minVal - 1)) + minVal
+		}
+
+		render(canvas, ctx, stars, width, height) {
+			ctx.fillStyle = this.settings.backgroundColor
+			ctx.fillRect(0, 0, canvas.width, canvas.height)
+
+			for (let i = 0; i < stars.length; i++) {
+				const star = stars[i]
+
+				// Create some variation…
+				star.z -= this.settings.warpFactor
+				// … and if going out view, reposition far away.
+				if (star.z <= 0) {
+					star.x = this.randomRange(-25, 25)
+					star.y = this.randomRange(-25, 25)
+					star.z = this.settings.maxDepth
+				}
+
+				// Map to 2D. This is called 'perspective projection'.
+				const k = this.settings.xfactor / star.z
+				const px = star.x * k + width / 2
+				const py = star.y * k + height / 2
+
+				if (px >= 0 && px <= width && py >= 0 && py <= height) {
+					// Change size and color based on the depth (Z value)
+					// e.g. make distant stars smaller and vice versa
+					const size = (1 - star.z / this.settings.maxDepth) * 5
+					const color = Math.round((1 - star.z / this.settings.maxDepth) * 255)
+					ctx.fillStyle = `rgb(${color},${color},${color})`
+					ctx.fillRect(px, py, size, size)
+				}
+			}
+		}
+
+		enable() {
+			const canvas = this.canvas
+			if (!canvas || !canvas.getContext) {
+				throw new Error('naaa')
+			}
+			const ctx = canvas.getContext('2d')
+			const stars = this.createStars()
+			const width = canvas.width
+			const height = canvas.width
+			const loop = () => {
+				this.render(canvas, ctx, stars, width, height)
+				requestAnimationFrame(loop)
+			}
+			requestAnimationFrame(loop)
+		}
+	}
+
+	customElements.define('starwars-canvas', StarwarsCanvas)
+</script>

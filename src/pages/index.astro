@@ -1,0 +1,63 @@
+---
+import Wall from '../components/Wall.astro'
+import Normal from '../layouts/Normal.astro'
+import BlogLatest from '../components/BlogLatest.astro'
+import StarwarsCanvas from '../components/starwars-canvas.astro'
+---
+
+<Normal>
+	<img class="eyes" src="images/eyes.jpg" alt="" />
+	<div class="Doc">
+		<p>
+			HEJ! This is Oskar Rough Mosumgaard. Design, music and web technology. I can help you build things, mostly on the
+			internet. Tools that last, software you can change.
+		</p>
+		<p>Here you'll find bits and pieces of me, ideas I like, things I helped make.</p>
+	</div>
+</Normal>
+
+<div class="blog">
+	<BlogLatest />
+	<StarwarsCanvas></StarwarsCanvas>
+</div>
+
+<Wall />
+
+<style>
+	.Doc {
+		max-width: 100ch;
+	}
+	.eyes {
+		float: right;
+	}
+	.blog {
+		position: relative;
+		background: white url('./images/pixelpattern.gif') repeat;
+		/* background: #d3d3e9a8; */
+		padding: 2rem 2rem 0.5rem;
+		overflow: hidden;
+	}
+
+	.blog::before {
+		content : '';
+		background: linear-gradient(to bottom, #d3d3e9a8, #d3d3e9a8 50%, transparent 50%);
+		width: 33%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 33%;
+		z-index: 2;
+		pointer-events: none;
+	}
+
+	:global(.blog canvas) {
+		pointer-events: none;
+		z-index: 1;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 50%;
+		height: auto;
+	}
+</style>
