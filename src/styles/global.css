@@ -8,10 +8,12 @@
 	--accent: #f0ccdf;
 	/* --accent-dark: maroon; */
 	/* --bg1: hsl(328.41deg 13.36% 27.36%); */
-	--bg1: hsl(238.67deg 91.01% 38.9%);
-	--bg1: hsl(238.67deg 91.01% 38.9%);
-	--bg1: hsl(123.6, 82.7%, 15.9%);
-	--bg2: #dbd1c8;
+	--bg1: hsl(238.67deg 91% 39%);
+	--bg1: hsl(238.67deg 91% 39%);
+	--bg1: hsl(123, 57%, 15%);
+	--bg2: hsl(28, 21%, 82%);
+	--bg3: hsl(27, 33%, 93%);
+	--bg4: hsl(229, 33%, 90%);
 	--black: #151515;
 	--gray: gray;
 	--gray-light: lightgray;
@@ -29,6 +31,51 @@
 body {
 	margin: 0;
 	overflow-y: scroll;
+}
+
+.Doc {
+	max-width: 80ch;
+	background: var(--bg2);
+	padding: 3rem 3vw 0.5rem;
+	margin: 2vh 0.5rem 2vh 4vw;
+	position: relative;
+	border: 1px solid;
+	/* box-shadow: 2px 2px #ddd; */
+	box-shadow: 2px 2px #253126;
+
+	a {
+		color: hsl(0 0% 0%);
+		text-underline-offset: max(0.1em, 2px);
+		text-decoration-thickness: from-font;
+		text-decoration-color: hsla(0 0% 50% / 0.8);
+	}
+
+	a:hover {
+		text-decoration: none;
+	}
+}
+
+.Doc::before,
+.Doc::after {
+	position: absolute;
+	right: 0;
+	top: 0;
+	content: '';
+}
+.Doc::before {
+	width: 2px;
+	height: 2rem;
+	background: var(--bg1);
+	z-index: 10;
+	right: -3px
+}
+.Doc::after {
+	z-index: 11;
+	width: 0;
+	height: 0;
+	border-width: 1rem;
+	border-style: solid;
+	border-color: var(--bg1) var(--bg1) #E8A2A2 #E8A2A2;
 }
 
 /* ::-moz-selection { */
@@ -87,17 +134,6 @@ a:not(:has(img)):hover {
 	transition-duration: 200ms;
 	/* background: var(--bg1); */
 	/* color: var(--accent); */
-}
-
-main a {
-	color: inherit;
-	text-underline-offset: max(0.1em, 2px);
-	text-decoration-thickness: from-font;
-	text-decoration-color: hsla(0 0% 50% / 0.8);
-}
-
-main a:hover {
-	text-decoration: none;
 }
 
 textarea,
@@ -160,7 +196,6 @@ article>figure {
 	margin-bottom: 0.5rem;
 }
 
-
 .list {
 	list-style: none;
 	padding: 0 0 0 0.5rem;
@@ -181,7 +216,9 @@ article>figure {
 	a:hover::before {
 		content: "o";
 		position: absolute;
+		font-size: 0.75rem;
 		left: -1rem;
+		top: 0.25rem;
 	}
 
 	h3 + p:has(time) {
