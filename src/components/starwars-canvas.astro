@@ -20,12 +20,13 @@
 			xfactor: 64.0,
 		}
 
-        /** @type {HTMLCanvasElement} */
-		canvas = null
+		// @ts-ignore
+		canvas;
 
 		connectedCallback() {
 			const canvas = document.createElement('canvas')
 			this.appendChild(canvas)
+			// Store canvas reference directly on the instance
 			this.canvas = canvas
 			this.enable()
 		}
@@ -46,6 +47,20 @@
 		// Returns a random number in the range [minVal,maxVal]
 		randomRange(minVal, maxVal) {
 			return Math.floor(Math.random() * (maxVal - minVal - 1)) + minVal
+		}
+
+		enable() {
+			const canvas = this.canvas
+			if (!canvas) return
+			const ctx = canvas.getContext('2d')
+			const stars = this.createStars()
+			const width = canvas.width
+			const height = canvas.width
+			const loop = () => {
+				this.render(canvas, ctx, stars, width, height)
+				requestAnimationFrame(loop)
+			}
+			requestAnimationFrame(loop)
 		}
 
 		render(canvas, ctx, stars, width, height) {
@@ -78,22 +93,6 @@
 					ctx.fillRect(px, py, size, size)
 				}
 			}
-		}
-
-		enable() {
-			const canvas = this.canvas
-			if (!canvas || !canvas.getContext) {
-				throw new Error('naaa')
-			}
-			const ctx = canvas.getContext('2d')
-			const stars = this.createStars()
-			const width = canvas.width
-			const height = canvas.width
-			const loop = () => {
-				this.render(canvas, ctx, stars, width, height)
-				requestAnimationFrame(loop)
-			}
-			requestAnimationFrame(loop)
 		}
 	}
 
