@@ -5,4 +5,3 @@ description: A (deprecated?) guide from 2015 for anyone wanting to learn more ab
 ---
 
 <img loading="lazy" src="./images/codesandnotes.jpg" alt="" width="640">
-

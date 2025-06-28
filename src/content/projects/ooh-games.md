@@ -1,7 +1,6 @@
 ---
 title: Ooh Games
 description: A collection of prototypes of games I made
-draft: true
 ---
 <ul>
     <li><a href="https://donleche.itch.io/shroomium" rel="noopener">Shroomium (1 week game jam)</a></li>

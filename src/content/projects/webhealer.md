@@ -2,7 +2,6 @@
 title: WebHealer42
 url: https://webhealer.0sk.ar
 whatever: 42
-draft: true
 image: webhealer-game.webp
 ---
 
