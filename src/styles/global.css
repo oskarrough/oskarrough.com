@@ -1,10 +1,22 @@
 @import url('./linlibertine.css');
 
-* {
+*,
+*::before,
+*::after {
 	box-sizing: border-box;
 }
 
+/* @link https://utopia.fyi/type/calculator?c=320,16,1.2,2560,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 :root {
+  --step--2: clamp(0.6944rem, 0.6565rem + 0.1897vw, 0.96rem);
+  --step--1: clamp(0.8333rem, 0.781rem + 0.2619vw, 1.2rem);
+  --step-0: clamp(1rem, 0.9286rem + 0.3571vw, 1.5rem);
+  --step-1: clamp(1.2rem, 1.1036rem + 0.4821vw, 1.875rem);
+  --step-2: clamp(1.44rem, 1.3109rem + 0.6455vw, 2.3438rem);
+  --step-3: clamp(1.728rem, 1.5563rem + 0.8583vw, 2.9297rem);
+  --step-4: clamp(2.0736rem, 1.8467rem + 1.1346vw, 3.6621rem);
+  --step-5: clamp(2.4883rem, 2.1898rem + 1.4924vw, 4.5776rem);
+
 	--accent: #f0ccdf;
 	/* --accent-dark: maroon; */
 	/* --bg1: hsl(328.41deg 13.36% 27.36%); */
@@ -23,7 +35,7 @@
 		0 16px 32px rgba(var(--gray), 33%);
 
 	font-family: Libertinus Sans, cursive;
-	font-size: 18px;
+	font-size: var(--step-0);
 	line-height: 1.4;
 	background: var(--bg1);
 }
@@ -89,26 +101,31 @@ body {
 
 h1,
 h2,
-h3,
 h4,
 h5 {
-	font-family: Libertinus Serif Display;
+	font-family: Libertinus Serif Display, serif;
+	margin: 0;
+}
+
+h3 {
+	font-family: Libertinus Serif, serif;
 	margin: 0;
 }
 
 h1 {
-	font-size: 2rem;
+	font-size: var(--step-0);
 	margin-bottom: 2rem;
 }
 
 h2 {
-	font-size: 1.5rem;
+	font-size: var(--step-3);
 	margin-bottom: 1rem;
 }
 
 h3 {
-	text-transform: uppercase;
-	letter-spacing: 0.04em;
+	font-size: var(--step-0);
+	font-weight: bold;
+	/* letter-spacing: 0.04em; */
 }
 
 ul,
@@ -161,7 +178,7 @@ pre {
 
 pre {
 	padding: 1em;
-	font-size: 16px;
+	font-size: var(--step-0);
 }
 
 pre>code {
@@ -172,7 +189,7 @@ blockquote {
 	border-left: 4px solid var(--accent);
 	padding: 0 0 0 1rem;
 	margin: 0 0 0 1rem;
-	font-size: 1.333em;
+	font-size: var(--step-2);
 }
 
 hr {
@@ -216,7 +233,7 @@ article>figure {
 	a:hover::before {
 		content: "o";
 		position: absolute;
-		font-size: 0.75rem;
+		font-size: var(--step--1);
 		left: -1rem;
 		top: 0.25rem;
 	}
