@@ -251,3 +251,8 @@ article>figure {
 		margin: 0;
 	}
 }
+
+
+iframe {
+	max-width: 100%;
+}
