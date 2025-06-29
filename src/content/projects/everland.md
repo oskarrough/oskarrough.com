@@ -1,2 +1,4 @@
-
-			<li><a href="https://www.everland.dk" rel="noopener">Everland</a></li>
+---
+title: Everland
+url: https://www.everland.dk
+---
