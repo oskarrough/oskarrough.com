@@ -1,5 +1,7 @@
 ---
 title: Emojimind
+url: https://emojimind.0sk.ar/
+tags: ["game"]
 ---
 
-todo
+An old Mastermind game.
