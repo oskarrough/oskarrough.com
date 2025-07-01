@@ -255,8 +255,11 @@ article>figure {
 }
 
 
-iframe {
+img,
+iframe,
+video {
 	max-width: 100%;
+	height: auto;
 }
 
 lite-youtube {

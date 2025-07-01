@@ -7,4 +7,4 @@ I love vim. It was hard to learn, but it really pays of. It makes writing more f
 
 Although I'm considering to switch to `ed` https://www.gnu.org/fun/jokes/ed-msg.html.
 
-<img src="/images/written-in-vi.gif" alt="written in vi">
+<img src="/src/assets/written-in-vi.gif" alt="written in vi">
