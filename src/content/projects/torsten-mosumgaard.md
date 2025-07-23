@@ -1,6 +1,6 @@
 ---
 title: Torsten Mosumgaard
-url: https:/www.torstenmosumgaard.dk
+url: https://www.torstenmosumgaard.dk
 ---
 
 Min far was a håndværker, full of solutions and aesthetics. He'd find it weird to be digitized like this, but he deserves it.
