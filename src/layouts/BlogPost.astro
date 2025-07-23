@@ -4,12 +4,12 @@ import FormattedDate from '../components/FormattedDate.astro'
 
 type Props = CollectionEntry<'blog'>['data']
 
-const { title, pubDate, thumbnail } = Astro.props
+const { title, date, thumbnail } = Astro.props
 ---
 
 <article class="Doc">
 	<div class="date">
-		<FormattedDate date={pubDate} />
+		<FormattedDate date={date} />
 	</div>
 	<h1>{title}</h1>
 	{thumbnail && <img src={thumbnail} alt="" />}

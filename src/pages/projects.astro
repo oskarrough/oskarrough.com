@@ -60,7 +60,7 @@ projects = projects.toSorted((a,b) => a.data.title.localeCompare(b.data.title))
 					: post.data.title}
 				</h3>
 				<p set:html={post.data.description}></p>
-				{/* <p class="date">{post.data.pubDate}</p> */}
+				{/* <p class="date">{post.data.date}</p> */}
 				{!post.data.description && <Content />}
 			</li>)
 			})

@@ -15,11 +15,11 @@ This is an **Astro 5.x static site** for Oskar Rough Mosumgaard's personal blog/
 
 ### Content Collections
 The site uses Astro's content collections with schema validation (`src/content.config.js`):
-- **Blog collection**: Markdown posts with title, pubDate, optional thumbnail
+- **Blog collection**: Markdown posts with title, date, optional thumbnail
 - **Projects collection**: Portfolio items with title, url, description, image, draft status
 
 Content is stored in:
-- `src/content/blog/` - Blog posts (supports both .md and .mdx)  
+- `src/content/blog/` - Blog posts (supports both .md and .mdx)
 - `src/content/projects/` - Portfolio projects
 
 ### Component Architecture
@@ -42,14 +42,14 @@ Content is stored in:
 The `Wall.astro` component creates a masonry-style image gallery using CSS columns (3-column layout). Used for showcasing visual portfolio work.
 
 ### Content Management
-- Blog posts support frontmatter with title, pubDate, optional thumbnail
+- Blog posts support frontmatter with title, date, optional thumbnail
 - Projects support draft status for unpublished work
 - MDX integration allows components within markdown content
 
 ## Deployment
 
 - **Target**: Cloudflare Pages via Wrangler
-- **Domain**: https://0sk.ar  
+- **Domain**: https://0sk.ar
 - **Config**: `wrangler.jsonc` (project name: "oskarrough")
 - **Build output**: `dist/` directory
 - **Process**: TypeScript check → Astro build → Cloudflare deployment

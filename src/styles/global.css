@@ -27,6 +27,7 @@
 	--bg3: hsl(27, 33%, 93%);
 	--bg4: hsl(229, 33%, 90%);
 	--black: #151515;
+	--white: #fafafa;
 	--gray: gray;
 	--gray-light: lightgray;
 	--gray-dark: darkgray;
@@ -103,14 +104,9 @@ body {
 
 h1,
 h2,
+h3,
 h4,
 h5 {
-	font-family: Libertinus Serif Display, serif;
-	margin: 0;
-}
-
-h3 {
-	font-family: Libertinus Serif, serif;
 	margin: 0;
 }
 
@@ -120,7 +116,8 @@ h1 {
 }
 
 h2 {
-	font-size: var(--step-3);
+	font-size: var(--step-1);
+	/* line-height: 1.1; */
 	margin-bottom: 1rem;
 }
 
@@ -223,13 +220,13 @@ article>figure {
 		margin-bottom: 0.25rem;
 	}
 
-	a {
-		position: relative;
-		text-decoration: none;
-	}
-
 	h3 a {
 		display: block;
+	}
+
+	a {
+		position: relative;
+		text-decoration: underline;
 	}
 
 	a:hover::before {
@@ -264,4 +261,26 @@ video {
 
 lite-youtube {
 	margin-bottom: 1rem;
+}
+
+
+article h2:has(+ p time) {
+	margin: 0;
+}
+
+p:has(time) {
+	color: var(--gray);
+
+}
+
+article + article {
+	margin-top: 2rem;
+}
+
+figure.row {
+	display: flex;
+	flex-flow: row nowrap;
+	> * {
+		flex: 1;
+	}
 }
