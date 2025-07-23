@@ -6,4 +6,4 @@ image: webhealer-game.webp
 
 More of a hobby playground for game devs than a game, it is playable!
 
-<img loading="lazy" src="/src/assets/webhealer-game.webp" alt="" width="460">
+<img loading="lazy" src="/assets/webhealer-game.webp" alt="" width="460">

@@ -6,11 +6,11 @@ weight: 42
 A cozy, yearly and very fun music festival located in my homearea Thy, Denmark. Started it with Mads & Jakob & more friends back in 2009. I left it in good hands around 2014. Now it's 2025 and still going!
 
 <figure class="row">
-	<img loading="lazy" src="/src/assets/alivefestival-2009-web.webp" alt="Alive Festival 2009" width="120">
-	<img loading="lazy" src="/src/assets/alivefestival-2010-web.webp" alt="Alive Festival 2010" width="120">
-	<img loading="lazy" src="/src/assets/alivefestival-2011-web.webp" alt="Alive Festival 2011" width="120">
-	<img loading="lazy" src="/src/assets/alivefestival-2012-web.webp" alt="Alive Festival 2012" width="120">
-	<img loading="lazy" src="/src/assets/alivefestival-2013-web.webp" alt="Alive Festival 2013" width="120">
+	<img loading="lazy" src="/assets/alivefestival-2009-web.webp" alt="Alive Festival 2009" width="120">
+	<img loading="lazy" src="/assets/alivefestival-2010-web.webp" alt="Alive Festival 2010" width="120">
+	<img loading="lazy" src="/assets/alivefestival-2011-web.webp" alt="Alive Festival 2011" width="120">
+	<img loading="lazy" src="/assets/alivefestival-2012-web.webp" alt="Alive Festival 2012" width="120">
+	<img loading="lazy" src="/assets/alivefestival-2013-web.webp" alt="Alive Festival 2013" width="120">
 </figure>
 
 <!-- <img src="/src/assets/alivefestival-2012-stemning.jpg" alt=""> -->

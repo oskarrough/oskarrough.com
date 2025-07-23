@@ -5,4 +5,4 @@ description: 2017. Real recognize real. Hyper-stimulated downtime, a curated onl
 ---
 
 <!-- <img loading="lazy" src="/src/assets/strrr.jpg" alt="Screenshot from strrr.tv buffering" width="640"> -->
-<img loading="lazy" src="/src/assets/strrr.webp" alt="Screenshot from strrr.tv episode page" width="640">
+<img loading="lazy" src="/assets/strrr.webp" alt="Screenshot from strrr.tv episode page" width="640">

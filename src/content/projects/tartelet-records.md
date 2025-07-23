@@ -11,4 +11,4 @@ Here are a few websites I made with them:
 - Wayne Snow - Freedom TV (no longer online, but see the <a href="https://github.com/oskarrough/freedomtv.cc">repo</a>)
 
 
-<img src="/src/assets/max.jpg" />
+<img src="/assets/max.jpg" />

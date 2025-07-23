@@ -1,7 +1,7 @@
 ---
 title: New site
 date: 11-30-2024
-thumbnail: '/src/assets/western-landscape.webp'
+thumbnail: '/assets/western-landscape.webp'
 ---
 Hej. Most people know it already. Some even do it. Now I want to, too. Again.
 
