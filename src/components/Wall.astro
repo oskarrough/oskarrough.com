@@ -1,17 +1,3 @@
-<style>
-	.Wall {
-		columns: 3;
-		gap: 0;
-		background: url(/src/assets/dark-texture.png) repeat;
-		padding: 1vw 1vw;
-	}
-	a:has(img) {
-		display: block;
-	}
-	img {
-	}
-</style>
-
 <figure class="Wall">
 	<img loading="lazy" src="/src/assets/strrr.jpg" alt="">
 	<img loading="lazy" src="/src/assets/E4Pl2S1X0AIJeq7.jpg" alt="">
@@ -46,8 +32,34 @@
 		/>
 	</a>
 	<img loading="lazy" src="/src/assets/dksvin.webp" alt="" />
-	<img loading="lazy" src="/src/assets/eyes.jpg" alt="" />
 	<a href="https://www.vim.org/"><img loading="lazy" src="/src/assets/written-in-vi.gif" alt="" /></a>
 </figure>
 
-<img loading="lazy" src="/src/assets/F6Erk-iWQAAAjTB.jpg" alt="dont know where I found this image, sorry" />
+<style>
+	.Wall {
+  /* display: grid; */
+  columns: 3;
+  gap: 0;
+  /* gap: 1vw; */
+  padding: 2vw;
+  /* grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); */
+  /* grid-template-rows: masonry; */
+  background-image: linear-gradient(to top, var(--bg1), white);
+
+  img {
+  margin-bottom: auto;
+  width: 100%;
+  /* height: 100%; */
+  object-fit: cover;
+  }
+		/* columns: 3; */
+		/* gap: 0; */
+		/* background: url(/src/assets/dark-texture.png) repeat; */
+		/* padding: 1vw 1vw; */
+		/* background: red; */
+	}
+
+	a:has(img) {
+		display: block;
+	}
+</style>
