@@ -1,0 +1,93 @@
+<h1>Pong</h1>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.11.2/lib/addons/p5.sound.min.js"></script> -->
+
+<script type="module" is:inline>
+  import p5 from 'https://cdn.jsdelivr.net/npm/p5/+esm'
+
+/** @param {p5} p */
+const sketch = (p) => {
+  const screenDim = 500
+  let score = [0, 0]
+  let ball = { x: 250, y: 100, vx: 2, vy: 2 }
+  let play1 = { x: 30, y: 250, height: 100, width: 20 }
+  let play2 = { x: screenDim - 50, y: 250, height: 100, width: 20 }
+
+  p.setup = () => {
+    p.frameRate(100)
+    p.createCanvas(screenDim, screenDim)
+  }
+
+  // p.windowResized = () => {
+  //   p.resizeCanvas(p.windowWidth, p.windowHeight)
+  // }
+
+  p.draw = () => { // Runs on loop according to frameRate
+    p.fill("transparent")
+    p.rect(0, 0, screenDim, screenDim) // Draw the box around our game
+    // Show Score
+    p.fill("black")
+    p.textSize(32)
+    p.text(score[0] + " - " + score[1], screenDim / 2 - 40, 100)
+    // Draw ball
+    p.fill("red")
+    p.ellipse(ball.x, ball.y, 10, 10) 
+    // Draw paddles
+    p.fill("black")
+    p.rect(play1.x, play1.y, play1.width, play1.height)
+    p.rect(play2.x, play2.y, play2.width, play2.height)
+
+    if (ball.y > screenDim - 10 || ball.y < 10) { // Bounce off top and bottom
+      ball.vy *= -1
+    }
+
+    if ( // If intersecting with Paddle #1
+      ball.x < play1.x + play1.width + 10 &&
+      ball.y > play1.y &&
+      ball.y < play1.y + play1.height
+    ) {
+      ball.vx *= -1.1 // Invert and increase velocity by 10%
+      ball.vy = p.random(8) - 4 // Random y velocity between -4 and 4
+    }
+
+    if ( // If intersecting with Paddle #2
+      ball.x > play2.x - 10 && // If it
+      ball.y > play2.y &&
+      ball.y < play2.y + play2.height
+    ) {
+      ball.vx *= -1.1 // Invert and increase velocity by 10%
+      ball.vy = p.random(8) - 4 // Random y velocity between -4 and 4
+    }
+
+    // Move Paddles
+    if (p.keyIsDown(87) && play1.y > 5) { // W is pressed
+      play1.y -= 4
+    }
+    if (p.keyIsDown(83) && play1.y < screenDim - play1.height) { // S is pressed
+      play1.y += 4
+    }
+    if (p.keyIsDown(p.UP_ARROW) && play2.y > 5) {
+      play2.y -= 4
+    }
+    if (p.keyIsDown(p.DOWN_ARROW) && play2.y < screenDim - play1.height) {
+      play2.y += 4
+    }
+
+    // Update score
+    if (ball.x < 0) {
+      score[1] += 1
+      ball = { x: 250, y: 100, vx: 2, vy: 2 }
+    }
+    if (ball.x > screenDim) {
+      score[0] += 1
+      ball = { x: 250, y: 100, vx: -2, vy: 2 }
+    }
+
+    // Move the ball
+    ball.x += ball.vx
+    ball.y += ball.vy
+  }
+}
+
+new p5(sketch)
+</script>

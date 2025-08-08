@@ -1,0 +1,63 @@
+---
+import Normal from '../layouts/Normal.astro'
+
+const mixcloud = 'oskar'
+const mixtapes = [
+	'oskar-rough-los-conquistadores-chocolates-balcony-sessions-5',
+	'schlagerbits-balcony-sessions-1',
+	'oskar-rough-80s-rain',
+	'am-balcony',
+	'disco-yas-balcony-sessions-2',
+	'house-quickie-balcony-sessions-10',
+	'house-palmtree',
+	'earthbound-balcony-sessions-9',
+	'adult-orientated-rough-disco',
+	'raja-radiata-balcony-sessions-3'
+]
+---
+
+<style>
+	iframe {border:0}
+</style>
+
+<Normal title="Music">
+	<div class="Doc">
+		<h2>Radio4000</h2>
+	<p>
+		Here's one <a href="https://radio4000.com/oskar">big list of songs</a> I've enjoyed since 2013. Shuffle it.<br />
+		You can create your own &rarr; <a href="https://radio4000.com/auth/signup">Radio4000.com</a>.
+	</p>
+	<iframe src="https://player.radio4000.com/v2/?slug=oskar" width="400" height="600"></iframe>
+</div>
+
+	<div class="Doc">
+	<h2><a href={`https://mixcloud.com/${mixcloud}`}>Mixtapes &rarr;</a></h2>
+	<p>Here are some of mixtapes I've made.</p>
+	<iframe
+		width="100%"
+		height="120"
+		src={`https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2F${mixcloud}%2F${mixtapes[0]}%2F`}
+	></iframe>
+	{
+		mixtapes.slice(1).map((mixtape) => (
+			<iframe width="100%" height="60" src={`https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&feed=%2F${mixcloud}%2F${mixtape}%2F`}></iframe>
+		))
+	}
+
+</div>
+<div class="Doc">
+	<p>
+		<a href="https://spotify-youtube.0sk.ar/" rel="noreferrer">Spotify to YouTube to Radio4000</a> is a 
+		tool that allows you match a Spotify playlist to a list of YouTube videos and import them into your Radio4000.</p>
+		<p>Credits to 
+		<a href="https://github.com/internet4000/media-now" rel="noreferrer">media-now</a> &
+		<a href="https://github.com/yt-dlp/yt-dlp" rel="noopener noreferrer">yt-dlp</a>.
+	</p>
+</div>
+
+	<p></p>
+		<a href="https://radio4000.com/elevator-music" title="Elevator Music Radio">
+			<img src="/assets/dynamitmusik.png" width="140" alt="">
+		</a>
+	</p>
+</Normal>

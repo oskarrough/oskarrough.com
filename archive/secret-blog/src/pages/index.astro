@@ -1,0 +1,80 @@
+---
+import Wall from '../components/Wall.astro'
+import Normal from '../layouts/Normal.astro'
+import BlogLatest from '../components/BlogLatest.astro'
+import StarwarsCanvas from '../components/starwars-canvas.astro'
+import FooterAnimation from '../components/footer-animation.astro'
+---
+
+<Normal>
+	<div class="Doc">
+		<p>HEJ I'm Oskar Rough Mosumgaard.<br/>Design, music and web technology. I enjoy helping people build things, mostly on the internet. Tools that last, software you can change.</p>
+		<p>Here you'll find <a href="/music">my radio and mixtapes</a>, ideas I like, <a href="/projects">projects</a> I am or was part of, and some more or less random <a href="/links">links</a>.</p>
+	</div>
+</Normal>
+
+<img loading="lazy" src="/assets/eyes.jpg" alt="" class="eyeswideshut" />
+
+<div class="blog">
+	<BlogLatest/>
+	<StarwarsCanvas />
+</div>
+
+<Wall />
+
+<FooterAnimation />
+
+<style>
+.eyeswideshut {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+	.blog {
+		position: relative;
+		background: var(--white) url('/assets/pixelpattern.gif') repeat;
+		padding: 2rem 2rem 0.5rem;
+
+		a {
+			color: var(--black);
+		}
+
+		article {
+			position: relative;
+			z-index: 3;
+		}
+
+		h3 {
+			display: inline-flex;
+			background: var(--white);
+		}
+
+		&::before {
+		 	content: "";
+		    background: linear-gradient(to bottom, #d3d3e9a8, #d3d3e9a8 50%, transparent 50%);
+		    width: 33%;
+		    height: 33%;
+		    position: absolute;
+		    left: 33%;
+		    top: 0;
+		    z-index: 2;
+		    pointer-events: none;
+		}
+	}
+	.blog :global(starwars-canvas) {
+	    pointer-events: none;
+	    z-index: 1;
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    height: 100%;
+	    width: 50%;
+	    height: auto;
+
+					canvas {
+						width: 100%;
+						height: 100%;
+					}
+	}
+</style>
