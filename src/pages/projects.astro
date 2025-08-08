@@ -1,0 +1,77 @@
+---
+import {getCollection, render} from 'astro:content'
+import Normal from '../layouts/Normal.astro'
+
+let projects = await getCollection('projects')
+projects = projects.filter(project => !project.data.draft)
+projects = projects.toSorted((a,b) => a.data.title.localeCompare(b.data.title))
+---
+
+<style>
+	section.light {
+			background: white;
+	}
+	section.alt {
+			background: var(--bg2);
+	}
+		section {
+			padding: 2rem 2rem 0.5rem;
+		}
+		section p {
+			max-inline-size: 50rem;
+		}
+		section :global(a) {
+			color: var(--bg1);
+		}
+		.grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+			padding: 0;
+			gap: 0.5rem;
+			> li {
+				list-style: none;
+				margin: 0;
+				background: var(--bg4);
+				padding: 2rem 1rem 0rem;
+				/* border-radius: 0.3rem; */
+				border: 1px solid;
+				box-shadow: 2px 2px #9d968e;
+			}
+			h3 {
+				margin-bottom: 0.2rem;
+			}
+		}
+</style>
+
+<Normal title="Projects">
+	<div class="Doc">
+		<p>Projects I am or was involved in, prototypes and experiments in no particular order. Basically ideas I like to be part of.</p>
+		<p>Please contact me at <a href="mailto:oskar@rough.dk">oskar@rough.dk</a> if you could imagine making something together.</p>
+		<p><a href="/helpmehelpyou">helpmehelpyou</a></p>
+	</div>
+
+	<section class="alt">
+		<ul class="grid">
+			{
+			projects.map(async (post) => {
+			const {Content} = await render(post);
+			return (<li>
+				<h3>
+					{post.data.url ?
+					<a href={post.data.url}>{post.data.title} </a>
+					: post.data.title}
+				</h3>
+				<p set:html={post.data.description}></p>
+				{/* <p class="date">{post.data.date}</p> */}
+				{!post.data.description && <Content />}
+			</li>)
+			})
+
+			}
+		</ul>
+	</section>
+
+	<section class="light">
+		<p>oskar@rough.dk</p>
+	</section>
+</Normal>

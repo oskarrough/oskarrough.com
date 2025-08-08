@@ -1,0 +1,132 @@
+---
+
+---
+
+<starwars-canvas></starwars-canvas>
+
+<script>
+	/**
+	 * Starfield with HTML5 canvas
+	 * based on http://codentronix.com/2011/07/22/html5-canvas-3d-starfield/
+	 */
+	interface Star {
+		x: number;
+		y: number;
+		z: number;
+	}
+
+	class StarwarsCanvas extends HTMLElement {
+		private settings = {
+			backgroundColor: 'rgb(20,15,15)',
+			amount: 20,
+			maxDepth: 60,
+			warpFactor: 0.01,
+			xfactor: 64.0,
+			starRange: 25,
+			maxStarSize: 5,
+		}
+
+		private canvas: HTMLCanvasElement | null = null;
+		private animationId: number | null = null;
+
+		connectedCallback() {
+			const canvas = document.createElement('canvas')
+			this.appendChild(canvas)
+			// Store canvas reference directly on the instance
+			this.canvas = canvas
+			this.enable()
+		}
+
+		/**
+		 * Creates an array of star objects with random positions
+		 */
+		private createStars(amount: number = this.settings.amount, maxDepth: number = this.settings.maxDepth): Star[] {
+			const arr = new Array(amount)
+			for (let i = 0; i < arr.length; i++) {
+				arr[i] = {
+					x: this.randomRange(-this.settings.starRange, this.settings.starRange),
+					y: this.randomRange(-this.settings.starRange, this.settings.starRange),
+					z: this.randomRange(1, maxDepth),
+				}
+			}
+			return arr
+		}
+
+		/**
+		 * Returns a random number in the specified range
+		 */
+		private randomRange(minVal: number, maxVal: number): number {
+			return Math.floor(Math.random() * (maxVal - minVal - 1)) + minVal
+		}
+
+		/**
+		 * Initializes the canvas and starts the animation loop
+		 */
+		private enable(): void {
+			const canvas = this.canvas
+			if (!canvas) return
+			
+			// Set canvas size to match its display size
+			const rect = canvas.getBoundingClientRect()
+			canvas.width = rect.width
+			canvas.height = rect.height
+			
+			const ctx = canvas.getContext('2d')
+			if (!ctx) return
+			
+			const stars = this.createStars()
+			const loop = () => {
+				this.render(canvas, ctx, stars)
+				this.animationId = requestAnimationFrame(loop)
+			}
+			this.animationId = requestAnimationFrame(loop)
+		}
+
+		/**
+		 * Renders a single frame of the starfield animation
+		 */
+		private render(canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D, stars: Star[]): void {
+			const { width, height } = canvas
+			
+			ctx.fillStyle = this.settings.backgroundColor
+			ctx.fillRect(0, 0, width, height)
+
+			for (const star of stars) {
+				// Create some variation…
+				star.z -= this.settings.warpFactor
+				// … and if going out view, reposition far away.
+				if (star.z <= 0) {
+					star.x = this.randomRange(-this.settings.starRange, this.settings.starRange)
+					star.y = this.randomRange(-this.settings.starRange, this.settings.starRange)
+					star.z = this.settings.maxDepth
+				}
+
+				// Map to 2D. This is called 'perspective projection'.
+				const k = this.settings.xfactor / star.z
+				const px = star.x * k + width / 2
+				const py = star.y * k + height / 2
+
+				if (px >= 0 && px <= width && py >= 0 && py <= height) {
+					// Change size and color based on the depth (Z value)
+					// e.g. make distant stars smaller and vice versa
+					const size = (1 - star.z / this.settings.maxDepth) * this.settings.maxStarSize
+					const color = Math.round((1 - star.z / this.settings.maxDepth) * 255)
+					ctx.fillStyle = `rgb(${color},${color},${color})`
+					ctx.fillRect(px, py, size, size)
+				}
+			}
+		}
+
+		/**
+		 * Cleanup when element is disconnected
+		 */
+		disconnectedCallback(): void {
+			if (this.animationId !== null) {
+				cancelAnimationFrame(this.animationId)
+				this.animationId = null
+			}
+		}
+	}
+
+	customElements.define('starwars-canvas', StarwarsCanvas)
+</script>

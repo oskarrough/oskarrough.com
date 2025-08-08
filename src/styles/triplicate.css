@@ -1,0 +1,29 @@
+@font-face {
+	font-family: 'triplicate-t4';
+	src: url('../fonts/triplicate-t4/triplicate_t4_regular-webfont.woff2') format('woff2'),
+		url('../fonts/triplicate-t4/triplicate_t4_regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+/*@font-face {
+	font-family: 'triplicate-t4';
+	src: url('../fonts/triplicate-t4/triplicate_t4_italic-webfont.woff2') format('woff2'),
+		url('../fonts/triplicate-t4/triplicate_t4_italic-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+}*/
+@font-face {
+	font-family: 'triplicate-t4';
+	src: url('../fonts/triplicate-t4/triplicate_t4_bold-webfont.woff2') format('woff2'),
+		url('../fonts/triplicate-t4/triplicate_t4_bold-webfont.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'triplicate-t4';
+	src: url('../fonts/triplicate-t4/triplicate_t4_bold_italic-webfont.woff2') format('woff2'),
+		url('../fonts/triplicate-t4/triplicate_t4_bold_italic-webfont.woff') format('woff');
+	font-weight: bold;
+	font-style: italic;
+}
+
