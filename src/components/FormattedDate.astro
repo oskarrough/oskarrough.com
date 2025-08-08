@@ -1,9 +1,9 @@
 ---
 interface Props {
-	date: Date;
+	date: Date
 }
 
-let date = new Date(Astro.props.date)
+const date = new Date(Astro.props.date)
 ---
 
 <time datetime={date.toISOString()}>

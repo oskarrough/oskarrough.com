@@ -1,112 +1,98 @@
 @font-face {
-    font-family: 'Libertinus Keyboard'; /* Regular */
-    src: 
-         url('/fonts/linlibertine/LibertinusKeyboard-Regular.woff2') format('woff2');
-    font-display: swap;
-    font-weight: normal;
-    font-style: normal;
+	font-family: "Libertinus Keyboard"; /* Regular */
+	src: url("/fonts/linlibertine/LibertinusKeyboard-Regular.woff2") format("woff2");
+	font-display: swap;
+	font-weight: normal;
+	font-style: normal;
 }
 @font-face {
-    font-family: 'Libertinus Math'; /* Regular */
-    src: 
-         url('/fonts/linlibertine/LibertinusMath-Regular.woff2') format('woff2');
-    font-display: swap;
-    font-weight: normal;
-    font-style: normal;
+	font-family: "Libertinus Math"; /* Regular */
+	src: url("/fonts/linlibertine/LibertinusMath-Regular.woff2") format("woff2");
+	font-display: swap;
+	font-weight: normal;
+	font-style: normal;
 }
 @font-face {
-    font-family: 'Libertinus Mono'; /* Regular */
-    src: 
-         url('/fonts/linlibertine/LibertinusMono-Regular.woff2') format('woff2');
-    font-display: swap;
-    font-weight: normal;
-    font-style: normal;
+	font-family: "Libertinus Mono"; /* Regular */
+	src: url("/fonts/linlibertine/LibertinusMono-Regular.woff2") format("woff2");
+	font-display: swap;
+	font-weight: normal;
+	font-style: normal;
 }
 @font-face {
-    font-family: 'Libertinus Sans'; /* Bold */
-    src: 
-         url('/fonts/linlibertine/LibertinusSans-Bold.woff2') format('woff2');
-    font-display: swap;
-    font-weight: bold;
-    font-style: normal;
+	font-family: "Libertinus Sans"; /* Bold */
+	src: url("/fonts/linlibertine/LibertinusSans-Bold.woff2") format("woff2");
+	font-display: swap;
+	font-weight: bold;
+	font-style: normal;
 }
 @font-face {
-    font-family: 'Libertinus Sans'; /* Italic */
-    src: 
-         url('/fonts/linlibertine/LibertinusSans-Italic.woff2') format('woff2');
-    font-display: swap;
-    font-weight: normal;
-    font-style: italic;
+	font-family: "Libertinus Sans"; /* Italic */
+	src: url("/fonts/linlibertine/LibertinusSans-Italic.woff2") format("woff2");
+	font-display: swap;
+	font-weight: normal;
+	font-style: italic;
 }
 @font-face {
-    font-family: 'Libertinus Sans'; /* Regular */
-    src: 
-         url('/fonts/linlibertine/LibertinusSans-Regular.woff2') format('woff2');
-    font-display: swap;
-    font-weight: normal;
-    font-style: normal;
+	font-family: "Libertinus Sans"; /* Regular */
+	src: url("/fonts/linlibertine/LibertinusSans-Regular.woff2") format("woff2");
+	font-display: swap;
+	font-weight: normal;
+	font-style: normal;
 }
 @font-face {
-    font-family: 'Libertinus Serif'; /* Bold Italic */
-    src: 
-         url('/fonts/linlibertine/LibertinusSerif-BoldItalic.woff2') format('woff2');
-    font-display: swap;
-    font-weight: bold;
-    font-style: italic;
+	font-family: "Libertinus Serif"; /* Bold Italic */
+	src: url("/fonts/linlibertine/LibertinusSerif-BoldItalic.woff2") format("woff2");
+	font-display: swap;
+	font-weight: bold;
+	font-style: italic;
 }
 @font-face {
-    font-family: 'Libertinus Serif'; /* Bold */
-    src: 
-         url('/fonts/linlibertine/LibertinusSerif-Bold.woff2') format('woff2');
-    font-display: swap;
-    font-weight: bold;
-    font-style: normal;
+	font-family: "Libertinus Serif"; /* Bold */
+	src: url("/fonts/linlibertine/LibertinusSerif-Bold.woff2") format("woff2");
+	font-display: swap;
+	font-weight: bold;
+	font-style: normal;
 }
 @font-face {
-    font-family: 'Libertinus Serif Display'; /* Regular */
-    src: 
-         url('/fonts/linlibertine/LibertinusSerifDisplay-Regular.woff2') format('woff2');
-    font-display: swap;
-    font-weight: normal;
-    font-style: normal;
+	font-family: "Libertinus Serif Display"; /* Regular */
+	src: url("/fonts/linlibertine/LibertinusSerifDisplay-Regular.woff2") format("woff2");
+	font-display: swap;
+	font-weight: normal;
+	font-style: normal;
 }
 @font-face {
-    font-family: 'Libertinus Serif Initials'; /* Regular */
-    src: 
-         url('/fonts/linlibertine/LibertinusSerifInitials-Regular.woff2') format('woff2');
-    font-display: swap;
-    font-weight: normal;
-    font-style: normal;
+	font-family: "Libertinus Serif Initials"; /* Regular */
+	src: url("/fonts/linlibertine/LibertinusSerifInitials-Regular.woff2") format("woff2");
+	font-display: swap;
+	font-weight: normal;
+	font-style: normal;
 }
 @font-face {
-    font-family: 'Libertinus Serif'; /* Italic */
-    src: 
-         url('/fonts/linlibertine/LibertinusSerif-Italic.woff2') format('woff2');
-    font-display: swap;
-    font-weight: normal;
-    font-style: italic;
+	font-family: "Libertinus Serif"; /* Italic */
+	src: url("/fonts/linlibertine/LibertinusSerif-Italic.woff2") format("woff2");
+	font-display: swap;
+	font-weight: normal;
+	font-style: italic;
 }
 @font-face {
-    font-family: 'Libertinus Serif'; /* Regular */
-    src: 
-         url('/fonts/linlibertine/LibertinusSerif-Regular.woff2') format('woff2');
-    font-display: swap;
-    font-weight: normal;
-    font-style: normal;
+	font-family: "Libertinus Serif"; /* Regular */
+	src: url("/fonts/linlibertine/LibertinusSerif-Regular.woff2") format("woff2");
+	font-display: swap;
+	font-weight: normal;
+	font-style: normal;
 }
 @font-face {
-    font-family: 'Libertinus Serif Semibold Italic'; /* Regular */
-    src: 
-         url('/fonts/linlibertine/LibertinusSerif-SemiboldItalic.woff2') format('woff2');
-    font-display: swap;
-    font-weight: 600;
-    font-style: normal;
+	font-family: "Libertinus Serif Semibold Italic"; /* Regular */
+	src: url("/fonts/linlibertine/LibertinusSerif-SemiboldItalic.woff2") format("woff2");
+	font-display: swap;
+	font-weight: 600;
+	font-style: normal;
 }
 @font-face {
-    font-family: 'Libertinus Serif Semibold'; /* Regular */
-    src: 
-         url('/fonts/linlibertine/LibertinusSerif-Semibold.woff2') format('woff2');
-    font-display: swap;
-    font-weight: 600;
-    font-style: normal;
+	font-family: "Libertinus Serif Semibold"; /* Regular */
+	src: url("/fonts/linlibertine/LibertinusSerif-Semibold.woff2") format("woff2");
+	font-display: swap;
+	font-weight: 600;
+	font-style: normal;
 }

@@ -1,10 +1,10 @@
 ---
 import BaseHead from '../components/BaseHead.astro'
-import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
-import { SITE_TITLE } from '../consts'
+import Header from '../components/Header.astro'
+import {SITE_TITLE} from '../consts'
 
-const { title} = Astro.props
+const {title} = Astro.props
 
 const smartTitle = title ? `${title} - ${SITE_TITLE}` : SITE_TITLE
 ---

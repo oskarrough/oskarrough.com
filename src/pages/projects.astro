@@ -3,8 +3,8 @@ import {getCollection, render} from 'astro:content'
 import Normal from '../layouts/Normal.astro'
 
 let projects = await getCollection('projects')
-projects = projects.filter(project => !project.data.draft)
-projects = projects.toSorted((a,b) => a.data.title.localeCompare(b.data.title))
+projects = projects.filter((project) => !project.data.draft)
+projects = projects.toSorted((a, b) => a.data.title.localeCompare(b.data.title))
 ---
 
 <style>

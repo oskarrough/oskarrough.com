@@ -1,17 +1,16 @@
 ---
-import { getCollection, render } from 'astro:content'
-import { YouTube } from 'astro-embed'
+import {getCollection, render} from 'astro:content'
+import {YouTube} from 'astro-embed'
+
 // import FormattedDate from './FormattedDate.astro'
 
 interface Props {
 	showContent?: boolean
 }
 
-const { showContent = false } = Astro.props
+const {showContent = false} = Astro.props
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
-)
+const posts = (await getCollection('blog')).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
 ---
 <section>
 {

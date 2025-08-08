@@ -1,4 +1,4 @@
-@import url('./linlibertine.css');
+@import url("./linlibertine.css");
 
 *,
 *::before,
@@ -8,14 +8,14 @@
 
 /* @link https://utopia.fyi/type/calculator?c=320,16,1.2,2560,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 :root {
-  --step--2: clamp(0.6944rem, 0.6565rem + 0.1897vw, 0.96rem);
-  --step--1: clamp(0.8333rem, 0.781rem + 0.2619vw, 1.2rem);
-  --step-0: clamp(1rem, 0.9286rem + 0.3571vw, 1.5rem);
-  --step-1: clamp(1.2rem, 1.1036rem + 0.4821vw, 1.875rem);
-  --step-2: clamp(1.44rem, 1.3109rem + 0.6455vw, 2.3438rem);
-  --step-3: clamp(1.728rem, 1.5563rem + 0.8583vw, 2.9297rem);
-  --step-4: clamp(2.0736rem, 1.8467rem + 1.1346vw, 3.6621rem);
-  --step-5: clamp(2.4883rem, 2.1898rem + 1.4924vw, 4.5776rem);
+	--step--2: clamp(0.6944rem, 0.6565rem + 0.1897vw, 0.96rem);
+	--step--1: clamp(0.8333rem, 0.781rem + 0.2619vw, 1.2rem);
+	--step-0: clamp(1rem, 0.9286rem + 0.3571vw, 1.5rem);
+	--step-1: clamp(1.2rem, 1.1036rem + 0.4821vw, 1.875rem);
+	--step-2: clamp(1.44rem, 1.3109rem + 0.6455vw, 2.3438rem);
+	--step-3: clamp(1.728rem, 1.5563rem + 0.8583vw, 2.9297rem);
+	--step-4: clamp(2.0736rem, 1.8467rem + 1.1346vw, 3.6621rem);
+	--step-5: clamp(2.4883rem, 2.1898rem + 1.4924vw, 4.5776rem);
 
 	--accent: #f0ccdf;
 	/* --accent-dark: maroon; */
@@ -26,19 +26,21 @@
 	--bg2: hsl(28, 21%, 86%);
 	--bg3: hsl(27, 33%, 93%);
 	--bg4: hsl(229, 33%, 90%);
+	--bg5: hsl(268.4, 9.4%, 40.8%);
 	--black: #151515;
 	--white: #fafafa;
 	--gray: gray;
 	--gray-light: lightgray;
 	--gray-dark: darkgray;
 	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
-	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
-		0 16px 32px rgba(var(--gray), 33%);
+	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%);
 
-	font-family: Libertinus Sans, cursive;
+	font-family:
+		Libertinus Sans,
+		cursive;
 	font-size: var(--step-0);
 	line-height: 1.4;
-	background: var(--bg1);
+	background: var(--bg5);
 }
 
 body {
@@ -127,7 +129,9 @@ img {
 
 code,
 pre {
-	font-family: Libertinus Mono, monospace;
+	font-family:
+		Libertinus Mono,
+		monospace;
 }
 
 pre {
@@ -135,7 +139,7 @@ pre {
 	font-size: var(--step-0);
 }
 
-pre>code {
+pre > code {
 	all: unset;
 }
 
@@ -163,7 +167,7 @@ img {
 	vertical-align: middle;
 }
 
-article>figure {
+article > figure {
 	margin-bottom: 0.5rem;
 }
 
@@ -195,14 +199,14 @@ article>figure {
 	position: absolute;
 	right: 0;
 	top: 0;
-	content: '';
+	content: "";
 }
 .Doc::before {
 	width: 2px;
 	height: 2rem;
-	background: var(--bg1);
+	background: var(--bg5);
 	z-index: 10;
-	right: -3px
+	right: -3px;
 }
 .Doc::after {
 	z-index: 11;
@@ -210,7 +214,26 @@ article>figure {
 	height: 0;
 	border-width: 1rem;
 	border-style: solid;
-	border-color: var(--bg1) var(--bg1) #E8A2A2 #E8A2A2;
+	border-color: var(--bg5) var(--bg5) #e8a2a2 #e8a2a2;
+}
+
+img,
+iframe,
+video {
+	max-width: 100%;
+	height: auto;
+}
+
+lite-youtube {
+	margin-bottom: 1rem;
+}
+
+article h2:has(+ p time) {
+	margin: 0;
+}
+
+p:has(time) {
+	color: var(--gray);
 }
 
 .list {
@@ -252,28 +275,6 @@ article>figure {
 	}
 }
 
-
-img,
-iframe,
-video {
-	max-width: 100%;
-	height: auto;
-}
-
-lite-youtube {
-	margin-bottom: 1rem;
-}
-
-
-article h2:has(+ p time) {
-	margin: 0;
-}
-
-p:has(time) {
-	color: var(--gray);
-
-}
-
 article + article {
 	margin-top: 1rem;
 }
@@ -285,5 +286,27 @@ figure.row {
 
 	> * {
 		flex: 1;
+	}
+}
+
+.tracks {
+	position: absolute;
+	right: 0.5rem;
+	bottom: 0;
+	z-index: 3;
+	color: white;
+	text-align: right;
+	font-size: var(--step--2);
+	ul {
+		list-style: none;
+	}
+	a {
+		color: white;
+		opacity: 0.9;
+		&:hover {
+			background: var(--accent);
+			color: black;
+			opacity: 1;
+		}
 	}
 }

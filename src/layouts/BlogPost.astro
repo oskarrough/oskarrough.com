@@ -1,10 +1,10 @@
 ---
-import type { CollectionEntry } from 'astro:content'
+import type {CollectionEntry} from 'astro:content'
 import FormattedDate from '../components/FormattedDate.astro'
 
 type Props = CollectionEntry<'blog'>['data']
 
-const { title, date, thumbnail } = Astro.props
+const {title, date, thumbnail} = Astro.props
 ---
 
 <article class="Doc">

@@ -1,9 +1,10 @@
 ---
+import BlogLatest from '../components/BlogLatest.astro'
+import FooterAnimation from '../components/footer-animation.astro'
+import LatestTracks from '../components/LatestTracks.astro'
+import StarwarsCanvas from '../components/starwars-canvas.astro'
 import Wall from '../components/Wall.astro'
 import Normal from '../layouts/Normal.astro'
-import BlogLatest from '../components/BlogLatest.astro'
-import StarwarsCanvas from '../components/starwars-canvas.astro'
-import FooterAnimation from '../components/footer-animation.astro'
 ---
 
 <Normal>
@@ -43,13 +44,13 @@ import FooterAnimation from '../components/footer-animation.astro'
 		background: var(--white) url('/assets/pixelpattern.gif') repeat;
 		padding: 2rem 2rem 0.5rem;
 
-		a {
-			color: var(--black);
-		}
 
 		article {
 			position: relative;
 			z-index: 3;
+		a {
+			color: var(--black);
+		}
 		}
 
 		h3 {
