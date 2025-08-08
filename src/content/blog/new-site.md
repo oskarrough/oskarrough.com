@@ -11,3 +11,5 @@ Writing is good for you. It helps you clear your thoughts, you can share what yo
 There's also something about publishing on your own domain, compared to posting on whatever. Platforms come and go, this is my space. It is time to take time.
 
 EDIT: This was written in november 2024, and it's still not published. Well, now it's August 2025 and this is still not online. 
+
+EDIT: it's almost published now, august 2025.

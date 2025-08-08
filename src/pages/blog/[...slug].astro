@@ -18,7 +18,7 @@ const post = Astro.props
 const {Content} = await render(post)
 const posts = await getCollection('blog')
 const sortedPosts = posts.toSorted((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
-const currentPostIndex = sortedPosts.findIndex((post) => post.id == Astro.params.slug)
+const currentPostIndex = sortedPosts.findIndex((post) => post.id === Astro.params.slug)
 const previousPost = currentPostIndex + 1 === sortedPosts.length ? undefined : sortedPosts[currentPostIndex + 1]
 const nextPost = currentPostIndex === 0 ? undefined : sortedPosts[currentPostIndex - 1]
 ---
