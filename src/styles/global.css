@@ -275,7 +275,7 @@ p:has(time) {
 }
 
 article + article {
-	margin-top: 2rem;
+	margin-top: 1rem;
 }
 
 figure.row {
