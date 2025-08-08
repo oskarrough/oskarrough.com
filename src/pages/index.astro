@@ -8,14 +8,16 @@ import FooterAnimation from '../components/footer-animation.astro'
 
 <Normal>
 	<div class="Doc">
-		<p>HEJ I'm Oskar Rough Mosumgaard.<br/>Design, music and web technology. I enjoy helping people build things, mostly on the internet. Tools that last, software you can change.</p>
-		<p>Here you'll find <a href="/music">my radio and mixtapes</a>, ideas I like, <a href="/projects">projects</a> I am or was part of, and some more or less random <a href="/links">links</a>.</p>
+		<p>HEJ I'm Oskar Rough Mosumgaard, this is my website today.</p>
+		<!-- <p>Design, music and web technology.  I enjoy helping people build things, mostly on the internet. Tools that last, software you can change.</p> -->
+		<!-- <p>Here you'll find <a href="/music">my radio and mixtapes</a>, ideas I like, <a href="/projects">projects</a> I am or was part of, and some more or less random <a href="/links">links</a>.</p> -->
 	</div>
 </Normal>
 
 <img loading="lazy" src="/assets/eyes.jpg" alt="" class="eyeswideshut" />
 
 <div class="blog">
+	<h2 class="upsidedown">Log</h2>
 	<BlogLatest/>
 	<StarwarsCanvas />
 </div>
@@ -25,6 +27,12 @@ import FooterAnimation from '../components/footer-animation.astro'
 <FooterAnimation />
 
 <style>
+	.upsidedown {
+		margin-top: -2rem;
+		display: inline-block;
+		transform-origin: center;
+		transform: rotate(180deg);
+	}
 .eyeswideshut {
 	position: absolute;
 	top: 0;

@@ -1,9 +1,8 @@
 <h1>Pong</h1>
 
-<!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.11.2/lib/addons/p5.sound.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/p5@1.11.9/lib/p5.min.js"></script>
 
 <script type="module" is:inline>
-  import p5 from 'https://cdn.jsdelivr.net/npm/p5/+esm'
 
 /** @param {p5} p */
 const sketch = (p) => {
@@ -17,10 +16,6 @@ const sketch = (p) => {
     p.frameRate(100)
     p.createCanvas(screenDim, screenDim)
   }
-
-  // p.windowResized = () => {
-  //   p.resizeCanvas(p.windowWidth, p.windowHeight)
-  // }
 
   p.draw = () => { // Runs on loop according to frameRate
     p.fill("transparent")

@@ -281,6 +281,8 @@ article + article {
 figure.row {
 	display: flex;
 	flex-flow: row nowrap;
+	overflow-x: auto;
+
 	> * {
 		flex: 1;
 	}

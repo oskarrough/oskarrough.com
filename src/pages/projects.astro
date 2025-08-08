@@ -45,8 +45,8 @@ projects = projects.toSorted((a,b) => a.data.title.localeCompare(b.data.title))
 
 <Normal title="Projects">
 	<div class="Doc">
-		<p>Projects I am or was involved in, prototypes and experiments in no particular order. Basically ideas I like to be part of.</p>
-		<p>Please contact me at <a href="mailto:oskar@rough.dk">oskar@rough.dk</a> if you could imagine making something together.</p>
+		<p>I love projects. Here are some projects I am or was involved in, prototypes and experiments in no particular order. Well, it's actually a-z but still. Basically ideas I enjoy relating to.</p>
+		<p>Write me at <a href="mailto:oskar@rough.dk">oskar@rough.dk</a> if you could imagine making something together.</p>
 		<p><a href="/helpmehelpyou">helpmehelpyou</a></p>
 	</div>
 
@@ -62,7 +62,6 @@ projects = projects.toSorted((a,b) => a.data.title.localeCompare(b.data.title))
 					: post.data.title}
 				</h3>
 				<p set:html={post.data.description}></p>
-				{/* <p class="date">{post.data.date}</p> */}
 				{!post.data.description && <Content />}
 			</li>)
 			})

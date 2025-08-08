@@ -1,2 +1,0 @@
-# Netlify doesn't deploy "dot folders" so use a redirect.
-/.well-known/dat /dat 200
