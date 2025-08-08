@@ -4,7 +4,13 @@ import Normal from '../layouts/Normal.astro'
 
 let projects = await getCollection('projects')
 projects = projects.filter((project) => !project.data.draft)
-projects = projects.toSorted((a, b) => a.data.title.localeCompare(b.data.title))
+projects = projects.toSorted((a, b) => {
+	// Sort by order field first (if present), then alphabetically by title
+	const orderA = a.data.order ?? 999
+	const orderB = b.data.order ?? 999
+	if (orderA !== orderB) return orderA - orderB
+	return a.data.title.localeCompare(b.data.title)
+})
 ---
 
 <style>
@@ -62,7 +68,7 @@ projects = projects.toSorted((a, b) => a.data.title.localeCompare(b.data.title))
 					: post.data.title}
 				</h3>
 				<p set:html={post.data.description}></p>
-				{!post.data.description && <Content />}
+				<Content />
 			</li>)
 			})
 

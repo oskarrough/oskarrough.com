@@ -18,6 +18,8 @@
 	--step-5: clamp(2.4883rem, 2.1898rem + 1.4924vw, 4.5776rem);
 
 	--accent: #f0ccdf;
+	--accent-2: hsl(328.3, 54.5%, 87.1%);
+
 	/* --accent-dark: maroon; */
 	/* --bg1: hsl(328.41deg 13.36% 27.36%); */
 	/* --bg1: hsl(238.67deg 91% 39%); */
@@ -103,8 +105,9 @@ a {
 a:not(:has(img)):hover {
 	/* color: var(--accent); */
 	/* background: #fcc; */
-	/* background: hsla(0 0% 90% / 0.5); */
+	background: var(--accent);
 	transition-duration: 200ms;
+	color: var(--black);
 	/* background: var(--bg1); */
 	/* color: var(--accent); */
 }
@@ -182,14 +185,16 @@ article > figure {
 	box-shadow: 2px 2px #253126;
 
 	a {
-		background: var(--accent);
+		/* background: var(--accent-2); */
 		color: var(--black);
 		text-underline-offset: max(0.1em, 2px);
 		text-decoration-thickness: from-font;
-		text-decoration-color: hsla(0 0% 50% / 0.8);
+		text-decoration-color: hsla(0 0% 40% / 0.8);
 	}
 
 	a:hover {
+		background: var(--accent);
+		text-decoration-color: hsla(0 0% 0% / 1);
 		/* text-decoration: none; */
 	}
 }
