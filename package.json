@@ -12,16 +12,16 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/mdx": "^4.3.1",
+    "@astrojs/mdx": "^4.3.3",
     "@astrojs/rss": "^4.0.12",
-    "@astrojs/sitemap": "^3.4.1",
-    "astro": "^5.12.2",
+    "@astrojs/sitemap": "^3.4.2",
+    "astro": "^5.12.8",
     "astro-embed": "^0.9.0",
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.2"
   },
   "devDependencies": {
-    "wrangler": "^4.25.1"
+    "wrangler": "^4.28.1"
   }
 }

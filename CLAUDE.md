@@ -2,16 +2,9 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Development Commands
-
-- `bun run dev` - Start development server
-- `bun run build` - Build for production (includes type checking via `astro check`)
-- `bun run preview` - Preview production build locally
-- `bun run deploy` - Full deployment to Cloudflare Pages (check + build + deploy)
-
 ## Architecture Overview
 
-This is an **Astro 5.x static site** for Oskar Rough Mosumgaard's personal blog/portfolio. Key architectural patterns:
+This is an **Astro 5.x static site** for Oskar Rough Mosumgaard's personal website (blog/portfolio). 
 
 ### Content Collections
 The site uses Astro's content collections with schema validation (`src/content.config.js`):

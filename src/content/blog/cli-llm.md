@@ -9,3 +9,7 @@ We've had the copy/pasting era of the LLMs, we have AI assistants inside our edi
 [`claude`](https://github.com/anthropics/claude-code) just works really well.
 
 [`gemini`](https://github.com/google-gemini/gemini-cli) (Google's AI) released their CLI tool and made it open source. It was interesting to read their [system prompt]( https://github.com/google-gemini/gemini-cli/blob/main/packages/core/src/core/prompts.ts).
+
+[`cursor-agent`](https://cursor.com/cli)
+
+[`jules`](https://jules.google/)
