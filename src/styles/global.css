@@ -1,4 +1,5 @@
 @import url("./linlibertine.css");
+/* @import url("./triplicate.css"); */
 
 *,
 *::before,
@@ -6,8 +7,10 @@
 	box-sizing: border-box;
 }
 
-/* @link https://utopia.fyi/type/calculator?c=320,16,1.2,2560,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 :root {
+	--typeface: nop_triplicate-t4, Libertinus Sans, cursive;
+
+	/* @link https://utopia.fyi/type/calculator?c=320,16,1.2,2560,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 	--step--2: clamp(0.6944rem, 0.6565rem + 0.1897vw, 0.96rem);
 	--step--1: clamp(0.8333rem, 0.781rem + 0.2619vw, 1.2rem);
 	--step-0: clamp(1rem, 0.9286rem + 0.3571vw, 1.5rem);
@@ -18,9 +21,7 @@
 	--step-5: clamp(2.4883rem, 2.1898rem + 1.4924vw, 4.5776rem);
 
 	--accent: #f0ccdf;
-	--accent-2: hsl(328.3, 54.5%, 87.1%);
-
-	/* --accent-dark: maroon; */
+	--accent-2: hsl(328.3, 54%, 87%);
 	/* --bg1: hsl(328.41deg 13.36% 27.36%); */
 	/* --bg1: hsl(238.67deg 91% 39%); */
 	/* --bg1: hsl(238.67deg 91% 39%); */
@@ -37,19 +38,21 @@
 	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
 	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%);
 
-	font-family:
-		Libertinus Sans,
-		cursive;
+	--bg: var(--bg5);
+	--text: var(--black);
+
+	background: var(--bg);
+	color: var(--text);
+	font-family: var(--typeface);
 	font-size: var(--step-0);
 	line-height: 1.4;
-	background: var(--bg5);
+	scrollbar-gutter: stable;
+	transition: background 1s ease-in;
 }
 
 body {
 	margin: 0;
 	min-block-size: 100%;
-	/* overflow-y: scroll; */
-	/* scrollbar-width: thin; */
 }
 
 /* ::-moz-selection { */
@@ -103,13 +106,9 @@ a {
 }
 
 a:not(:has(img)):hover {
-	/* color: var(--accent); */
-	/* background: #fcc; */
 	background: var(--accent);
 	transition-duration: 200ms;
 	color: var(--black);
-	/* background: var(--bg1); */
-	/* color: var(--accent); */
 }
 
 textarea,
@@ -181,11 +180,9 @@ article > figure {
 	margin: 2vh 0.5rem 2vh 4vw;
 	position: relative;
 	border: 1px solid;
-	/* box-shadow: 2px 2px #ddd; */
 	box-shadow: 2px 2px #253126;
 
 	a {
-		/* background: var(--accent-2); */
 		color: var(--black);
 		text-underline-offset: max(0.1em, 2px);
 		text-decoration-thickness: from-font;
@@ -195,7 +192,6 @@ article > figure {
 	a:hover {
 		background: var(--accent);
 		text-decoration-color: hsla(0 0% 0% / 1);
-		/* text-decoration: none; */
 	}
 }
 
@@ -294,24 +290,3 @@ figure.row {
 	}
 }
 
-.tracks {
-	position: absolute;
-	right: 0.5rem;
-	bottom: 0;
-	z-index: 3;
-	color: white;
-	text-align: right;
-	font-size: var(--step--2);
-	ul {
-		list-style: none;
-	}
-	a {
-		color: white;
-		opacity: 0.9;
-		&:hover {
-			background: var(--accent);
-			color: black;
-			opacity: 1;
-		}
-	}
-}

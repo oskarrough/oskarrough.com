@@ -1,16 +1,17 @@
 ---
+import {bluesky, mastodon} from '../../consts.js'
 import BlogLatest from '../../components/BlogLatest.astro'
 import Normal from '../../layouts/Normal.astro'
 
-const mastodon = 'https://toot.cafe/@oskar'
-const bluesky = 'https://bsky.app/profile/oskarrough.bsky.social'
 ---
+<style>
+	/* :root { --bg: var(--bg4); } */
+</style>
 
 <Normal>
 	<div class="Doc">
 		<h1>(B)Log</h1>
-		<p>not sure I want this blog thing again, but here we are. if nothing else I can post images.</p>
-		<p>Technically I'm also on <a href={bluesky}>Bluesky</a> and <a href={mastodon}>Mastodon</a>.</p>
+		<p>not sure I want this blog thing again, but here we are. if nothing else I can post images. Technically I'm also on <a href={bluesky}>Bluesky</a> and <a href={mastodon}>Mastodon</a>.</p>
 		<br/>
 	</div>
 	<BlogLatest showContent={true} />

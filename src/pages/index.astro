@@ -90,4 +90,26 @@ import Normal from '../layouts/Normal.astro'
 						height: 100%;
 					}
 	}
+
+.tracks {
+	position: absolute;
+	right: 0.5rem;
+	bottom: 0;
+	z-index: 3;
+	color: white;
+	text-align: right;
+	font-size: var(--step--2);
+	ul {
+		list-style: none;
+	}
+	a {
+		color: white;
+		opacity: 0.9;
+		&:hover {
+			background: var(--accent);
+			color: black;
+			opacity: 1;
+		}
+	}
+}
 </style>
