@@ -23,7 +23,7 @@ const previousPost = currentPostIndex + 1 === sortedPosts.length ? undefined : s
 const nextPost = currentPostIndex === 0 ? undefined : sortedPosts[currentPostIndex - 1]
 ---
 
-<Normal>
+<Normal title={post.data.title}>
 <BlogPost {...post.data}>
 	<Content />
 </BlogPost>
