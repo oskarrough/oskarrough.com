@@ -138,7 +138,7 @@ pre {
 
 pre {
 	padding: 1em;
-	font-size: var(--step-0);
+	font-size: var(--step--2);
 }
 
 pre > code {
