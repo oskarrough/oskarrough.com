@@ -5,12 +5,13 @@ import {YouTube} from 'astro-embed'
 // import FormattedDate from './FormattedDate.astro'
 
 interface Props {
+	max?: number
 	showContent?: boolean
 }
 
-const {showContent = false} = Astro.props
+const {max = 10, showContent = false} = Astro.props
 
-const posts = (await getCollection('blog')).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+const posts = (await getCollection('blog')).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()).slice(0, max)
 ---
 <section>
 {
