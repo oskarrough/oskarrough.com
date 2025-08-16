@@ -18,8 +18,8 @@ import Normal from '../layouts/Normal.astro'
 <img loading="lazy" src="/assets/eyes.jpg" alt="" class="eyeswideshut" />
 
 <div class="blog">
-	<h2 class="upsidedown">Log</h2>
-	<BlogLatest max="5" />
+	<h2 class="upsidedown"><a href="/blog">Log</a></h2>
+	<BlogLatest max={5} />
 	<StarwarsCanvas />
 	<div class="tracks">
 		<p>Latest tracks on <a href="https://radio4000.com/oskar">Radio Oskar</a></p>
@@ -48,12 +48,14 @@ import Normal from '../layouts/Normal.astro'
 		background: var(--white) url('/assets/pixelpattern.gif') repeat;
 		padding: 2rem 1rem 0.5rem;
 
+		h2 a,
+		article a {
+			color: var(--black);
+		}
+
 		article {
 			position: relative;
 			z-index: 3;
-			a {
-				color: var(--black);
-			}
 		}
 
 		h3 {
