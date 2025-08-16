@@ -6,14 +6,16 @@
 
 <style>
 	footer {
+		--height: 60vh;
+
 		position: relative;
-		height: 40vh;
+		height: var(--height);
 	}
 
 	figure.reveal {
 		position: absolute;
 		inset: 0;
-		height: 40vh;
+		height: var(--height);
 		margin: 0;
 		overflow: hidden;
 
@@ -22,7 +24,7 @@
 			height: 100%;
 			object-fit: cover;
 			transform: scaleY(0%);
-			transform-origin: bottom;
+			transform-origin: top;
 			will-change: transform;
 		}
 	}
@@ -48,8 +50,10 @@
 				progress = 1;
 			}
 
+
 			progress = Math.max(0, Math.min(1, progress));
 			const scale = progress * 100;
+			console.log(progress)
 			image.style.transform = `scaleY(${scale}%)`;
 		}
 
