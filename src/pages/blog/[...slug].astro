@@ -5,7 +5,9 @@ import Normal from '../../layouts/Normal.astro'
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blog')
-	return posts.map((post) => ({
+	return posts
+	.filter((post) => !post.draft)
+	.map((post) => ({
 		params: {slug: post.id},
 		props: post,
 	}))
