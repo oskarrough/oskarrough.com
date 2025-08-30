@@ -3,6 +3,8 @@
  * based on http://codentronix.com/2011/07/22/html5-canvas-3d-starfield/
  */
 
+import { createAbstractBuilder } from "typescript"
+
 /*
 	<canvas id="starwars"></canvas>
 */
