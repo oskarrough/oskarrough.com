@@ -7,10 +7,10 @@ const blog = defineCollection({
 		base: './src/content/blog',
 	}),
 	schema: z.object({
+		draft: z.boolean().optional(),
 		title: z.string(),
 		date: z.coerce.date(),
 		thumbnail: z.string().optional(),
-		draft: z.boolean().optional()
 	}),
 })
 
@@ -20,11 +20,11 @@ const projects = defineCollection({
 		base: './src/content/projects',
 	}),
 	schema: z.object({
+		draft: z.boolean().optional(),
 		title: z.string(),
 		url: z.string().optional(),
 		description: z.string().optional(),
 		image: z.string().optional(),
-		draft: z.boolean().optional(),
 		order: z.number().optional(),
 	}),
 })

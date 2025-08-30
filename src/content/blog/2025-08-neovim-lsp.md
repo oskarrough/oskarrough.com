@@ -46,6 +46,7 @@ Tab to select completion
 C-k to show signature
 
 For navigating, this is the beauty of it:
+
 ```
 "grn" is mapped in Normal mode to vim.lsp.buf.rename()
 "gra" is mapped in Normal and Visual mode to vim.lsp.buf.code_action()
@@ -56,4 +57,5 @@ For navigating, this is the beauty of it:
 CTRL-S is mapped in Insert mode to vim.lsp.buf.signature_help()
 ```
 
+You can skip through diagnostics using `[d` and `]d`.
 
