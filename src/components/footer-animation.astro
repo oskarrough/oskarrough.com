@@ -1,0 +1,64 @@
+<footer>
+	<figure class="reveal">
+		<img loading="lazy" src="/assets/F6Erk-iWQAAAjTB.webp" alt="dont know where I found this image, sorry" />
+	</figure>
+</footer>
+
+<style>
+	footer {
+		--height: 60vh;
+
+		position: relative;
+		height: var(--height);
+	}
+
+	figure.reveal {
+		position: absolute;
+		inset: 0;
+		height: var(--height);
+		margin: 0;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transform: scaleY(0%);
+			transform-origin: top;
+			will-change: transform;
+		}
+	}
+
+</style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const container = document.querySelector('.reveal');
+		const image = container?.querySelector('img');
+
+		function updateImageScale() {
+			if (!image || !container) return
+			const rect = container.getBoundingClientRect();
+			const viewportHeight = window.innerHeight;
+			const containerTop = rect.top;
+			const containerHeight = rect.height;
+
+			let progress = 0;
+			if (containerTop <= viewportHeight && containerTop >= viewportHeight - containerHeight) {
+				progress = (viewportHeight - containerTop) / containerHeight;
+			} else if (containerTop < viewportHeight - containerHeight) {
+				progress = 1;
+			}
+
+
+			progress = Math.max(0, Math.min(1, progress));
+			const scale = progress * 100;
+			console.log(progress)
+			image.style.transform = `scaleY(${scale}%)`;
+		}
+
+		window.addEventListener('scroll', updateImageScale);
+		window.addEventListener('resize', updateImageScale);
+		updateImageScale();
+	});
+</script>

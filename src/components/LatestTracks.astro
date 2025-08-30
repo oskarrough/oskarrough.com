@@ -1,0 +1,39 @@
+---
+const apiKey =
+	'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im91cGd1ZGxrc3BzbXprbWVvdmxoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTM0NTIwNzQsImV4cCI6MjAyOTAyODA3NH0.KAbKFBChJHtxTmOZM2pdeppIyNbcnQkEgSi6RA7OQdo'
+
+type Track = {id: string; url: string; title: string}
+
+let tracks: Track[] = []
+
+try {
+	const response = await fetch(
+		'https://oupgudlkspsmzkmeovlh.supabase.co/rest/v1/channel_tracks?select=*&slug=eq.oskar&order=created_at.desc&offset=0&limit=10',
+		{
+			headers: {
+				apikey: apiKey,
+				Authorization: `Bearer ${apiKey}`,
+			},
+		},
+	)
+
+	if (response.ok) {
+		const data = (await response.json()) as Track[]
+		tracks = data
+	}
+} catch (error) {
+	console.error('Failed to fetch Radio4000 tracks:', error)
+}
+---
+
+{tracks.length > 0 && (
+	<ul>
+		{tracks.map(track => (
+			<li>
+				<a href={`https://radio4000.com/oskar/tracks/${track.id}`} target="_blank" rel="noopener">
+					{track.title}
+				</a>
+			</li>
+		))}
+	</ul>
+)}

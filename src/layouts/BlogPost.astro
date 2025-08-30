@@ -1,0 +1,23 @@
+---
+import type {CollectionEntry} from 'astro:content'
+import FormattedDate from '../components/FormattedDate.astro'
+
+type Props = CollectionEntry<'blog'>['data']
+
+const {title, date, thumbnail} = Astro.props
+---
+
+<article class="Doc">
+	<div class="date">
+		<FormattedDate date={date} />
+	</div>
+	<h1>{title}</h1>
+	{thumbnail && <img src={thumbnail} alt="" />}
+	<slot />
+</article>
+
+<style>
+	img {
+		margin-bottom: 1rem;
+	}
+</style>

@@ -1,0 +1,17 @@
+---
+import BlogLatest from '../../components/BlogLatest.astro'
+import {bluesky, mastodon} from '../../consts.js'
+import Normal from '../../layouts/Normal.astro'
+---
+<style>
+	/* :root { --bg: var(--bg4); } */
+</style>
+
+<Normal>
+	<div class="Doc">
+		<p>Blog. Different ramblings on mostly web development. Technically I'm also on <a href={bluesky}>Bluesky</a> and <a href={mastodon}>Mastodon</a>.</p>
+		<br/>
+	</div>
+	<BlogLatest showContent={true} />
+	<img src="/assets/early-computer-japan.jpg" alt="" />
+</Normal>
