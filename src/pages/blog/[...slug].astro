@@ -6,11 +6,11 @@ import Normal from '../../layouts/Normal.astro'
 export async function getStaticPaths() {
 	const posts = await getCollection('blog')
 	return posts
-	.filter((post) => !post.data.draft)
-	.map((post) => ({
-		params: {slug: post.id},
-		props: post,
-	}))
+		.filter((post) => !post.data.draft)
+		.map((post) => ({
+			params: {slug: post.id},
+			props: post,
+		}))
 }
 
 type Props = CollectionEntry<'blog'>

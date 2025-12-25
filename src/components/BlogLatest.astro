@@ -12,7 +12,7 @@ interface Props {
 const {max = 10, showContent = false} = Astro.props
 
 const posts = (await getCollection('blog'))
-	.filter(x => !x.data.draft)
+	.filter((x) => !x.data.draft)
 	.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
 	.slice(0, max)
 ---
