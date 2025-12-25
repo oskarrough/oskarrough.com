@@ -5,4 +5,4 @@ export const SITE_TITLE = "Oskar's website"
 export const SITE_DESCRIPTION = ''
 
 export const mastodon = 'https://toot.cafe/@oskar'
-export const bluesky = 'https://bsky.app/profile/oskarrough.bsky.social'
+export const bluesky = 'https://bsky.app/profile/0sk.ar'
