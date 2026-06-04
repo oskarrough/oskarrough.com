@@ -187,15 +187,13 @@ article > figure {
 
 	a {
 		color: var(--black);
-		text-underline-offset: max(0.1em, 2px);
-		text-decoration-thickness: from-font;
-		text-decoration-color: hsla(0 0% 40% / 0.8);
+		text-decoration: none;
+		background: url(/assets/underline.svg) no-repeat bottom / 100% 0.5em;
 		overflow-wrap: break-word;
 	}
 
 	a:hover {
-		background: var(--accent);
-		text-decoration-color: hsla(0 0% 0% / 1);
+		background-color: var(--accent);
 	}
 
 	ul,
