@@ -3,7 +3,7 @@ title: Alive Festival
 url: https://www.alivefestival.dk
 weight: 42
 ---
-A cozy, yearly and very fun music festival located in my homearea Thy, Denmark. Started it with Mads & Jakob & more friends back in 2009. I left it in good hands around 2014. Now it's 2025 and still going!
+A cozy, yearly and very fun music festival located in my homearea Thy, Denmark. Started it with Mads & Jakob & more friends back in 2008. I left it in good hands around 2014. Now it's 2025 and still going!
 
 <figure class="row">
 	<img loading="lazy" src="/assets/alivefestival-2009-web.webp" alt="Alive Festival 2009" width="120">
